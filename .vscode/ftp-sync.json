@@ -1,0 +1,22 @@
+{
+    "remotePath": "/var/www/game",
+    "host": "51.255.167.114",
+    "username": "root",
+    "password": "o6UBYIvJ",
+    "port": 22,
+    "secure": false,
+    "protocol": "sftp",
+    "uploadOnSave": true,
+    "passive": false,
+    "debug": false,
+    "privateKeyPath": null,
+    "passphrase": null,
+    "ignore": [
+        "\\.vscode",
+        "\\.git",
+        "\\.DS_Store",
+        "\\.pyc",
+        "__pycache__",
+        "serverenv"
+    ]
+}

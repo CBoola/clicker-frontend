@@ -1,0 +1,70 @@
+<!doctype html>
+
+<html lang="pl">
+    <head>
+        <meta charset="utf-8">
+        <title>The HTML5 Herald</title>
+
+        <script src="https://code.jquery.com/jquery-3.2.0.js" integrity="sha256-wPFJNIFlVY49B+CuAIrDr932XSb6Jk3J1M22M3E2ylQ=" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+        <h1>Przykład konsumpcji API</h1>
+        <p>Ta strona pokazuje, jak może przebiegać proces łączenia się z API udostępnianego przez serwer gry.</p>
+
+        <hr>
+
+        <table>
+            <tr>
+                <td>Status zalogowania:</td>
+                <td id="is_logged"></td>
+            </tr>
+
+            <tr>
+                <td>Imie i nazwisko:</td>
+                <td id="whoiam"></td>
+            </tr>
+        </table>
+
+        <a id="home" href="/">Strona główna</a>
+        <a id="logout" href="/logout">Wyloguj się</a>
+
+        <script type="text/javascript">
+            $(document).ready(function() {
+
+                $.ajax({
+                    dataType: "json",
+                    url: "/api/user/is_logged"
+                })
+                .done(function(data) {
+                    if (data["is_logged"])
+                    {
+                        $("#is_logged").html("zalogowany");
+                        $("#home").hide();
+                        $("#logout").show();
+                    }
+                    else
+                    {
+                        $("#is_logged").html("niezalogowany");
+                        $("#home").show();
+                        $("#logout").hide();
+                    }
+                });
+
+                $.ajax({
+                    dataType: "json",
+                    url: "/api/user/details"
+                })
+                .done(function(data) {
+                    $("#whoiam").html( data["first_name"] + " " + data["last_name"] );
+                })
+                .fail(function() {
+                    // tutaj API zwroci blad: nieautoryzowany dostep do danych
+                    $("#whoiam").html( "N/A" );
+                });
+
+            });
+        </script>
+    </body>
+
+</html> 
