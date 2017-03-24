@@ -1,1 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
+body
+{
+	background-color: black;
+	color: yellow;
+}
+
+#mainOnion
+{
+	width: 500px; 
+	height: 500px;
+	position: relative;
+}
+
+#onionContainer
+{
+	padding: 20px;
+	width: 600px; 
+	height: 600px;
+}
+
+#onionCounter
+{
+	font-size: 50px;
+}
+
+#loginContainer
+{
+	width: 100%;
+	text-align: right;
+}

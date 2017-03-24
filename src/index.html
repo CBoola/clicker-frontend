@@ -2,15 +2,56 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Angular3</title>
+  <title>Cebula Kliker</title>
   <base href="/">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="index.js"></script>
+
+<center>
+
+<div>
+	<img src="http://www.natureexports.co.in/images/red-onion-banner.jpg" width="520" height="125" />
+</div> <!-- miejsce na reklame -->
+<hr/>
+<div id="loginContainer"> <!-- obsluga zalogowania -->
+	<table>
+            <tr>
+                <td>Status zalogowania:</td>
+                <td id="is_logged"></td>
+            </tr>
+
+            <tr>
+                <td>Imie i nazwisko:</td>
+                <td id="whoiam"></td>
+            </tr>
+        </table><br/>
+
+        <a id="home" href="/">Strona główna</a>
+        <a id="logout" href="/logout">Wyloguj się</a>
+</div>
+
+
+<div id="onionCounter"><!-- sekcja na licznik -->
+	0 cebuli
+</div>
+<div> <!-- sekcja na cebule i ulepszenia -->
+	<div id="onionContainer" style="display: inline-block"> <!-- cebula -->
+		<img id="mainOnion" src="http://www.pngmart.com/files/1/Onion-Vector-PNG-Clipart.png" />
+	</div>
+	<div style="display: inline-block"> <!-- ulepszenia -->
+		ulepszenia
+	</div>
+</div>
+<div> <!-- sekcja na osiagniecia -->
+	achievementy
+</div>
 
 <app-root>Loading...</app-root>
-  <app-root>Loading...</app-root>
+</center>
 </body>
 </html>
