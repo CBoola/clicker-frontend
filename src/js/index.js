@@ -15,7 +15,7 @@ $("#mainOnion").click(function() {
 
 function updateOnionCounter()
 {
-	$("#onionCounter").html(onion+" cebuli");
+	$("#onionCounter").html(onion+" cebul");
 }
 
 //
