@@ -1,11 +1,12 @@
 .structureMain
 {
 	background-color: orange;
-	height: 70px;
+	height: 80px;
 	width: 350px;
 	border-color: blue;
 	border-style: dotted;
 	margin-bottom: 10px;
+	color: black;
 }
 
 .structureMain:hover
@@ -17,4 +18,15 @@
 {
 	font-weight: bold;
 	color: red;
+}
+
+#description
+{
+	color: yellow;
+}
+
+#numOfStructures
+{
+	font-size: 50px;
+	font-weight: bold;
 }

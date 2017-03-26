@@ -15,6 +15,8 @@ interface Structure
 	system_id:number;
 	icon:String;
 	description:String;
+	base_prize:number;
+	production_rate:number;
 }
 
 @Component({
