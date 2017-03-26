@@ -12,6 +12,9 @@ declare var require: {
 interface Structure
 {
 	name:String;
+	system_id:number;
+	icon:String;
+	description:String;
 }
 
 @Component({

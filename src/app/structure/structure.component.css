@@ -1,8 +1,20 @@
-div
+.structureMain
 {
 	background-color: orange;
 	height: 70px;
 	width: 350px;
 	border-color: blue;
 	border-style: dotted;
+	margin-bottom: 10px;
+}
+
+.structureMain:hover
+{
+	background-color: gray;
+}
+
+#name
+{
+	font-weight: bold;
+	color: red;
 }

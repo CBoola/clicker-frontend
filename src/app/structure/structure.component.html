@@ -1,3 +1,14 @@
-<div *ngFor="let str of structures">
-  {{ str.name }}
+<div class="structureMain" *ngFor="let str of structures" >
+  <table>
+	<tr>
+		<td>
+			<img src="{{ str.icon }}" />
+		</td>
+		<td>
+			<div id="name">{{ str.name }}</div>
+			<div>{{ str.description}}</div>
+		</td>
+	</tr>
+  </table>
+  
 </div>
