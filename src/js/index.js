@@ -18,8 +18,6 @@ function updateOnionCounter()
 	$("#onionCounter").html(onion+" cebul");
 }
 
-//
-
 $(document).ready(function() {
 
 	// zgodnie z metodologią REST do obsługi danych gracza
