@@ -16,6 +16,7 @@ body
 	height: 170px;
 	position: absolute;
 	bottom: 0px;
+  z-index: 500;
 }
 
 .navbar-default
