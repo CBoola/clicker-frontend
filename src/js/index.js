@@ -1,11 +1,11 @@
 var onion = 0;
 
 $("#mainOnion").mousedown(function() {
-	$("#mainOnion").css("width", 510).css("height", 510);
+	$("#mainOnion").css("width", 610).css("height", 610).css("left", 0).css("top", 0);
 });
 
 $("#mainOnion").mouseup(function() {
-	$("#mainOnion").css("width", 500).css("height", 500);
+	$("#mainOnion").css("width", 600).css("height", 600).css("left", 5).css("top", 5);
 });
 
 $("#mainOnion").click(function() {

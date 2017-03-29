@@ -9,6 +9,15 @@ body
     background: linear-gradient(#c3f1fe , #f1feff ); /* Standard syntax */
 }
 
+#grassContainer
+{	
+	background:url("assets/grass.svg") repeat-x left bottom;
+	width: 100%;
+	height: 170px;
+	position: absolute;
+	bottom: 0px;
+}
+
 .navbar-default
 {
 	background-color: #c5f3ff;
@@ -30,8 +39,8 @@ body
 
 #mainOnion
 {
-	width: 500px; 
-	height: 500px;
+	width: 600px; 
+	height: 600px;
 	position: absolute;
 	left: 5px;
 	top: 5px;
@@ -42,8 +51,8 @@ body
 {
 	position: absolute;
 	left: 5px;
-	width: 500px; 
-	height: 500px;
+	width: 600px; 
+	height: 600px;
 	top: 20px;
 	z-index: 1;
 	
@@ -69,8 +78,8 @@ body
 {
 	position: absolute;
 	left: 5px;
-	width: 500px; 
-	height: 500px;
+	width: 600px; 
+	height: 600px;
 	top: 20px;
 	z-index: 2;
 	
@@ -114,7 +123,11 @@ body
 	background: -webkit-linear-gradient(#91522c, #7a3827);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
-	font-family: "Semringah"
+	font-family: "Semringah";
+	position: absolute;
+	top: 500px;
+	right: 250px;
+	z-index: 10;
 }
 
 #loginContainer
