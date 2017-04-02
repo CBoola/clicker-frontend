@@ -16,6 +16,7 @@ body
 	height: 170px;
 	position: absolute;
 	bottom: 0px;
+	z-index: 100;
 }
 
 .navbar-default
@@ -126,7 +127,7 @@ body
 	font-family: "Semringah";
 	position: absolute;
 	top: 500px;
-	right: 250px;
+	right: 260px;
 	z-index: 10;
 }
 

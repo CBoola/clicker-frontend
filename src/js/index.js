@@ -13,6 +13,10 @@ $("#mainOnion").click(function() {
   updateOnionCounter();
 });
 
+$(".structureMain").click(function() {
+  alert("aaaa");
+});
+
 function updateOnionCounter()
 {
 	$("#onionCounter").html(onion+" cebul");

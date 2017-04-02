@@ -5,12 +5,12 @@ import { HttpModule } from '@angular/http';
 
 
 
-import { AppComponent } from './app.component';
+//import { AppComponent } from './app.component';
 import { StructureComponent } from './structure/structure.component';
+import { GameState } from './gamestate/gamestate';
 
 @NgModule({
   declarations: [
-    AppComponent,
     StructureComponent
   ],
   imports: [
@@ -19,6 +19,7 @@ import { StructureComponent } from './structure/structure.component';
     HttpModule
   ],
   providers: [],
-  bootstrap: [AppComponent, StructureComponent]
+  bootstrap: [StructureComponent]
 })
 export class AppModule { }
+
