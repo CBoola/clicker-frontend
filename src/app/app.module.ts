@@ -8,10 +8,12 @@ import { HttpModule } from '@angular/http';
 //import { AppComponent } from './app.component';
 import { StructureComponent } from './structure/structure.component';
 import { GameState } from './gamestate/gamestate';
+import { OnionComponent } from './onion/onion.component';
 
 @NgModule({
   declarations: [
-    StructureComponent
+    StructureComponent,
+    OnionComponent
   ],
   imports: [
     BrowserModule,
@@ -19,7 +21,7 @@ import { GameState } from './gamestate/gamestate';
     HttpModule
   ],
   providers: [],
-  bootstrap: [StructureComponent]
+  bootstrap: [StructureComponent, OnionComponent]
 })
 export class AppModule { }
 

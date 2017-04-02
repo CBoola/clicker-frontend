@@ -15,6 +15,7 @@ interface Structure
 export class GameState {
 
 	structures:Array<Structure> = [];
+	onions:number = 0;
 
   constructor(private http: Http) 
   { 
