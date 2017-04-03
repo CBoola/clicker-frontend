@@ -20,7 +20,7 @@ import { OnionComponent } from './onion/onion.component';
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [GameState],
   bootstrap: [StructureComponent, OnionComponent]
 })
 export class AppModule { }

@@ -5,16 +5,16 @@ import * as $ from 'jquery';
 @Component({
   selector: 'app-onion',
   templateUrl: './onion.component.html',
-  styleUrls: ['./onion.component.css'],
-  providers: [GameState]
+  styleUrls: ['./onion.component.css']
 })
 export class OnionComponent implements OnInit {
 
-  constructor(private gs: GameState) {
+  constructor(public gs: GameState) {
+ 
   }
 
   clicked(event) {
-	this.gs.onions++;
+	this.gs.onions+= this.gs.onionMultipler;
   }
   mousedown(event) {
 	$("#mainOnion").css("width", 610).css("height", 610).css("left", 0).css("top", 0);

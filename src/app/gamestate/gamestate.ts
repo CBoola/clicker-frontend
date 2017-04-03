@@ -15,7 +15,10 @@ interface Structure
 export class GameState {
 
 	structures:Array<Structure> = [];
+	numberOfStructures = [];
 	onions:number = 0;
+	onionPerSecond:number = 0;
+	onionMultipler = 1;
 
   constructor(private http: Http) 
   { 
@@ -23,7 +26,14 @@ export class GameState {
 	this.http.get('http://51.255.167.114/api/structure/?format=json')
 		.subscribe(data => this.structures = data.json() );
 		
-	//Console.log("aaaa");
+	setInterval(() => {
+                this.addGeneratedOnion(); 
+                }, 1000);
     
+  }
+  
+  addGeneratedOnion()
+  {
+	this.onions += this.onionPerSecond;
   }
 }

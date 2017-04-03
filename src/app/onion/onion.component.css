@@ -96,3 +96,16 @@
 	right: 260px;
 	z-index: 10;
 }
+
+#onionPerSecond
+{
+	font-size: 30px;
+	background: -webkit-linear-gradient(#91522c, #7a3827);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	font-family: "Semringah";
+	position: absolute;
+	top: 560px;
+	right: 290px;
+	z-index: 10;
+}

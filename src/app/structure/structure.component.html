@@ -1,4 +1,4 @@
-<div class="structureMain" *ngFor="let str of this.gs.structures">
+<div class="structureMain" *ngFor="let str of this.gs.structures; let i = index;" (click)="clicked(i)">
   <table>
 	<tr>
 		<td>
@@ -7,12 +7,12 @@
 		<td>
 			<div id="name">{{ str.name }}</div>
 			<div id="description">{{ str.description}}</div>
-			<div>Cena: {{str.base_prize}} cebul</div>
+			<div>Cena: {{ this.priceForLevel(i) }} cebul</div>
 			<div>+{{str.production_rate}} produkcja cebul/s</div>
 		</td>
 		<td>
 			<div id="numOfStructures">
-				0
+				{{ this.numberOfStructure(str.system_id) }}
 			</div>
 		</td>
 	</tr>
