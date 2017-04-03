@@ -19,6 +19,8 @@ export class GameState {
 	onions:number = 0;
 	onionPerSecond:number = 0;
 	onionMultipler = 1;
+	
+	intervalsPerSecond = 20;
 
   constructor(private http: Http) 
   { 
@@ -28,12 +30,18 @@ export class GameState {
 		
 	setInterval(() => {
                 this.addGeneratedOnion(); 
-                }, 1000);
+                }, 1000 / this.intervalsPerSecond);
     
   }
   
   addGeneratedOnion()
   {
-	this.onions += this.onionPerSecond;
+	this.onions += this.onionPerSecond / this.intervalsPerSecond;
+  }
+  
+  printOnions(value:number)
+  {
+	var num = Math.round(value);
+	return num;
   }
 }
