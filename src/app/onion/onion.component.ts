@@ -15,6 +15,12 @@ export class OnionComponent implements OnInit {
 
   clicked(event) {
 	this.gs.onions+= this.gs.onionMultipler;
+	
+	
+	var posX = event.clientX +10;
+	var posY = event.clientY -20;
+	var $newdiv1 = $( "<div style=' top: "+posY+"px; left: "+posX+"px' step='0' startX='"+posX+"' startY='"+posY+"' class='plusLabel'><img class='plusClick' src='assets/plus.svg' />"+this.gs.onionMultipler+"</div>" );
+	$("body").append($newdiv1);
   }
   mousedown(event) {
 	$("#mainOnion").css("width", 610).css("height", 610).css("left", 0).css("top", 0);
