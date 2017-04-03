@@ -50,13 +50,13 @@ $(document).ready(function() {
 
 	load_player();
 	
-	setInterval(plusLabelsInterval, 100);
+	setInterval(plusLabelsInterval, 40);
 
 	// alternatywny sposob (byc moze lepszy) to biblioteka core-api
 	// przyklady na http://51.255.167.114/docs/ po wybraniu Source Code w menu
 });
 
-var steps = 20;
+var steps = 25;
 function plusLabelsInterval()
 {
 	$(".plusLabel").each(function() {
@@ -70,14 +70,14 @@ function plusLabelsInterval()
 		var startX = parseInt($(this).attr("startX"));
 		var startY = parseInt($(this).attr("startY"));
 		
-		var newX = startX + step*2;
-		var newY = startY + ( (step-5)*(step-5) - 5 );
+		var newX = startX + step*1.5;
+		var newY = startY + ( 0.5*(step-2)*(step-2) - 15 );
 		
 		step++;
 		$(this).attr("step", step);
 		$(this).css("left", newX);
 		$(this).css("top", newY);
-		$(this).css("opacity", 1- step*0.04);
+		$(this).css("opacity", 1- step*0.02);
 		
 		//console.log(newX);
 	});
