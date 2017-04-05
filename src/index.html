@@ -1,91 +1,91 @@
 <html lang="pl-PL">
 <html>
 <head>
-  <meta charset="utf-8">
-  <base href="/">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-  <title>Cebula Kliker</title>
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+	<meta charset="utf-8">
+	<base href="/">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<title>Cebula Kliker</title>
+	<link rel="icon" type="image/x-icon" href="favicon.ico">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </head>
 <body>
-	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
- 	 <script src="js/index.js"></script>
+	<div id="grassContainer">
 
-<div id="grassContainer">
-
-</div>	 
+	</div>	 
 <center>
- <!-- miejsce na reklame -->
-<div>
-	<img src="http://www.natureexports.co.in/images/red-onion-banner.jpg" width="520" height="125" />
-</div>
+	 <!-- miejsce na reklame -->
+	<div>
+		<img src="http://www.natureexports.co.in/images/red-onion-banner.jpg" width="520" height="125" />
+	</div>
 
-<!--pasek nawigacyjny -->
-<div class="navbar navbar-default navbar-static-top>
-		<div class="container">
-			<div class="navbar-header">
-				<a href="#" class="navbar-brand"> Cebula Klicker Site </a>
+	<!--pasek nawigacyjny -->
+	<div class="navbar navbar-default navbar-static-top">
+			<div class="container">
+				<div class="navbar-header">
+					<a href="#" class="navbar-brand"> Cebula Klicker Site </a>
+					
+					<button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+						<span class ="icon-bar"></span>
+						<span class ="icon-bar"></span>
+						<span class ="icon-bar"></span>
+					</button>
+				</div>
+
+				<div class="collapse navbar-collapse navHeaderCollapse">
+					<ul class="nav navbar-nav navbar-left">
+						<div class="navbar-text">
+							<div id="is_logged">Status zalogowania:</div> 
+						</div>
+						<div class="navbar-text">
+							<div id="whoiam">Imie i nazwisko:</div>
+						</div>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li class="active"><a href ="index.html">Strona główna</a></li>
+						<li><a href ="#">Wyloguj się</a></li>
+					</ul>
+				</div>
+			</div>
+	</div>
+
+	<!-- sekcja na cebule i ulepszenia -->
+	<div class="container">
+		
+		<!-- cebula -->
+		<div class="row">
+			
+			<div id="onionContainer" class="col-md-6" >
+				<app-onion></app-onion>
 				
-				<button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
-					<span class ="icon-bar"></span>
-					<span class ="icon-bar"></span>
-					<span class ="icon-bar"></span>
-				</button>
 			</div>
-			
-			<div id="loginContainer">
-				<div class="navbar-text">
-					<div id="is_logged">Status zalogowania:</div> 
-				</div>
-				<div class="navbar-text">
-					<div id="whoiam">Imie i nazwisko:</div>
-				</div>
-			</div>
-			<div class="collapse navbar-collapse navHeaderCollapse">
-				<ul class="nav navbar-nav navbar-right">
-					<li class="active"><a href ="index.html">Strona główna</a></li>
-					<li><a href ="#">Wyloguj się</a></li>
-				</ul>
+			<!-- ulepszenia -->
+			<div class="col-sm-2">
+					<div id="sctructureContainer"> 
+						Struktury:<br/>
+						<app-structure>aaa</app-structure>
+					</div>
+				
 			</div>
 		</div>
-</div>
-<!-- sekcja na cebule i ulepszenia -->
-<div class="container">
-	
-	<!-- cebula -->
-	<div class="row">
-		
-		<div id="onionContainer" class="col-md-6" >
-			<app-onion></app-onion>
+		<!-- sekcja na licznik -->
+		<div class="row">
 			
 		</div>
-		<!-- ulepszenia -->
-		<div class="col-sm-2">
-				<div id="sctructureContainer"> 
-					Struktury:<br/>
-					<app-structure>aaa</app-structure>
-				</div>
+		<!-- ulepszenia i osiagniecia -->
+		<div class="row">
 			
+			<!-- sekcja na osiagniecia -->
+			<div class="col-sm-6">
+				<!--<div> 
+					achievementy
+				</div>-->
+			</div>
 		</div>
-	</div>
-	<!-- sekcja na licznik -->
-	<div class="row">
 		
 	</div>
-	<!-- ulepszenia i osiagniecia -->
-	<div class="row">
-		
-		<!-- sekcja na osiagniecia -->
-		<div class="col-sm-6">
-			<!--<div> 
-				achievementy
-			</div>-->
-		</div>
-	</div>
-	
-</div>
 </center>
 </body>
 </html>
