@@ -59,7 +59,7 @@ $(document).ready(function() {
 var steps = 25;
 function plusLabelsInterval()
 {
-	$(".plusLabel").each(function() {
+	$("body > .plusLabel").each(function() {
 		var step = parseInt($(this).attr("step"));
 		if(step >= steps)
 		{
@@ -74,10 +74,8 @@ function plusLabelsInterval()
 		var newY = startY + ( 0.5*(step-2)*(step-2) - 15 );
 		
 		step++;
-		$(this).attr("step", step);
-		$(this).css("left", newX);
-		$(this).css("top", newY);
-		$(this).css("opacity", 1- step*0.02);
+		$(this).attr("step", step).css("left", newX).css("top", newY).css("opacity", 1- step*0.02);
+
 		
 		//console.log(newX);
 	});
