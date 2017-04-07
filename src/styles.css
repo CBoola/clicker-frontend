@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 body
 {
-	color: yellow;
+	color:#91522c;
 	background: #c3f1fe ; /* For browsers that do not support gradients */
     background: -webkit-linear-gradient(#c3f1fe , #f1feff ); /* For Safari 5.1 to 6.0 */
     background: -o-linear-gradient(#c3f1fe , #f1feff ); /* For Opera 11.1 to 12.0 */
@@ -29,7 +29,7 @@ body
 {
     color: #7a3827;
 	font-family: "Semringah";
-	font-size: 150%;
+	font-size: 250%;
 }
 .navbar-default
 {
@@ -60,7 +60,7 @@ body
 
 .navbar-default .navbar-toggle 
 {
-    border-color: #7a3827;
+    border-color: black;
 }
 .navbar-default .navbar-toggle:hover,
 .navbar-default .navbar-toggle:focus 
@@ -69,7 +69,7 @@ body
 }
 .navbar-default .navbar-toggle .icon-bar 
 {
-    background-color: v
+    background-color: black;
 }
 .nav.navbar-nav.navbar-left .navbar-text
 {
@@ -153,4 +153,18 @@ body
 	height: 12px;
 	margin-right: 3px;
 	margin-bottom: 10px;
+}
+
+.panel > .panel-heading 
+{
+	color: #7a3827;
+	font-family: "Semringah";
+	background: linear-gradient(#c3f1fe , #f1feff );
+	
+}
+.panel > .panel-collapse.collapse
+{
+	color: #7a3827;
+	font-family: "Semringah";
+	background: white;
 }
