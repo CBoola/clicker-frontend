@@ -160,11 +160,23 @@ body
 	color: #7a3827;
 	font-family: "Semringah";
 	background: linear-gradient(#c3f1fe , #f1feff );
+	width: 350px;
 	
 }
+.panel > .panel-collapse
+{
+	color: #7a3827;
+	font-family: "Semringah";
+	background: linear-gradient(#c3f1fe , #f1feff );
+	width: 350px;
+	height: 180px;
+}
+
 .panel > .panel-collapse.collapse
 {
 	color: #7a3827;
 	font-family: "Semringah";
-	background: white;
+	background: linear-gradient(#c3f1fe , #f1feff );
+	width: 350px;
+	height: 180px;
 }
