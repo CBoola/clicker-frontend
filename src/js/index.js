@@ -9,7 +9,7 @@ $(document).ready(function() {
 	{
 		$.ajax({
 			dataType: "json",
-			url: "/api/player/is_logged"
+			url: "http://51.255.167.114/api/player/is_logged/"
 		})
 		.done(function(data) {
 			if (data["is_logged"])

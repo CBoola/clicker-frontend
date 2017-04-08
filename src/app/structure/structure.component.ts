@@ -24,20 +24,7 @@ export class StructureComponent implements OnInit {
 		this.gs.onions-= price;
 		this.gs.numberOfStructures[structureId]++;
 	}
-	this.onionsPerSecond();
-  }
-
-  onionsPerSecond()
-  {
-	var onionPerSec = 0;
-	for (let str of this.gs.structures)
-	{
-		var structureId = str.system_id;
-		var num = this.numberOfStructure(structureId);
-		var gen = num * str.production_rate;
-		onionPerSec += gen;
-	}
-	this.gs.onionPerSecond = onionPerSec;
+	this.gs.onionsPerSecond();
   }
   
   priceForLevel2(structureIndex: number, boughtLevels: number)
@@ -49,21 +36,10 @@ export class StructureComponent implements OnInit {
   priceForLevel(structureIndex: number)
   {
 	var structureId = this.gs.structures[structureIndex].system_id;
-	var price = this.priceForLevel2(structureIndex, this.numberOfStructure(structureId));
+	var price = this.priceForLevel2(structureIndex, this.gs.numOfStructure(structureId));
 	return price;
   }
-  
-  numberOfStructure(structureId: number)
-  {
-	var num = this.gs.numberOfStructures[structureId];
-	if( num == undefined )
-	{
-		this.gs.numberOfStructures[structureId]= 0;
-		return 0;
-	}
-	return num;
-  }
-  
+    
   ngOnInit() {
   }
 
