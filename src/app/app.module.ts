@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import { HttpModule, XSRFStrategy, CookieXSRFStrategy } from '@angular/http';
 
 
 
@@ -9,6 +9,10 @@ import { HttpModule } from '@angular/http';
 import { StructureComponent } from './structure/structure.component';
 import { GameState } from './gamestate/gamestate';
 import { OnionComponent } from './onion/onion.component';
+
+export function xsrfFactory() {
+  return new CookieXSRFStrategy('_csrf', 'XSRF-TOKEN');
+}
 
 @NgModule({
   declarations: [
@@ -20,7 +24,10 @@ import { OnionComponent } from './onion/onion.component';
     FormsModule,
     HttpModule
   ],
-  providers: [GameState],
+  providers: [GameState, {
+      provide: XSRFStrategy,
+      useFactory : xsrfFactory
+  }],
   bootstrap: [StructureComponent, OnionComponent]
 })
 export class AppModule { }

@@ -1,6 +1,22 @@
 import {Injectable} from '@angular/core';
 import { Http, Response, Headers, RequestOptions } from '@angular/http';
 
+function getCookie(name) {
+    var cookieValue = null;
+    if (document.cookie && document.cookie != '') {
+        var cookies = document.cookie.split(';');
+        for (var i = 0; i < cookies.length; i++) {
+            var cookie = jQuery.trim(cookies[i]);
+            // Does this cookie string begin with the name we want?
+            if (cookie.substring(0, name.length + 1) == (name + '=')) {
+                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                break;
+            }
+        }
+    }
+    return cookieValue;
+}
+
 interface Structure
 {
 	name:String;
@@ -19,12 +35,14 @@ export class GameState {
 	onions:number = 0;
 	onionPerSecond:number = 0;
 	onionMultipler = 1;
+	stateReaded = false;
 	
 	intervalsPerSecond = 20;
 
   constructor(private http: Http) 
   { 
 
+	
 	this.readState();
   
 	this.http.get('http://51.255.167.114/api/structure/?format=json')
@@ -37,6 +55,9 @@ export class GameState {
                 this.addGeneratedOnion(); 
                 }, 1000 / this.intervalsPerSecond);
     
+	setInterval(() => {
+		this.sendState();
+	}, 30000);
   }
   
   addGeneratedOnion()
@@ -70,6 +91,7 @@ export class GameState {
 			
 			});
 			this.updateAll();
+			this.stateReaded= true;
 		} );
   }
   
@@ -100,5 +122,38 @@ export class GameState {
   updateAll()
   {
 	this.onionsPerSecond();
+  }
+  
+ 
+  sendState()
+  {
+	if(!this.stateReaded)
+		return;
+		
+	var state:any = {};
+	state.current_state= {};
+	state.current_state.cash = this.onions;
+	
+	var stateJson = JSON.stringify(state);
+	//console.log(stateJson);
+
+	$.ajax({
+            headers : {
+                'Accept' : 'application/json',
+                'Content-Type' : 'application/json'
+            },
+			
+            url : 'http://51.255.167.114/api/player/3/?format=json',
+            type : 'PATCH',
+			crossDomain: true,
+			beforeSend: function (xhr) {
+                         xhr.setRequestHeader("X-CSRFToken", getCookie('csrftoken'))
+                    },
+            data : stateJson,
+            error : function(jqXHR, textStatus, errorThrown) {
+                console.log("The following error occured: " + textStatus, errorThrown);
+            }
+        });
+
   }
 }
