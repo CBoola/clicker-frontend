@@ -1,3 +1,10 @@
+#mainOnion
+{
+	background-repeat: no-repeat;
+    background-position: center;
+	background-size: 100% 100%;
+}
+
 #radialStripes1
 {
 	position: absolute;
@@ -33,22 +40,23 @@
 	height: 600px;
 	top: 20px;
 	z-index: 2;
+	opacity: 0.5;
 	
 	-webkit-animation-name: spin2;
-    -webkit-animation-duration: 30000ms;
+    -webkit-animation-duration: 40000ms;
     -webkit-animation-iteration-count: infinite;
     -webkit-animation-timing-function: linear;
     -moz-animation-name: spin2;
-    -moz-animation-duration: 30000ms;
+    -moz-animation-duration: 40000ms;
     -moz-animation-iteration-count: infinite;
     -moz-animation-timing-function: linear;
     -ms-animation-name: spin2;
-    -ms-animation-duration: 30000ms;
+    -ms-animation-duration: 40000ms;
     -ms-animation-iteration-count: infinite;
     -ms-animation-timing-function: linear;
     
     animation-name: spin2;
-    animation-duration: 30000ms;
+    animation-duration: 40000ms;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }

@@ -7,6 +7,7 @@ body
     background: -o-linear-gradient(#c3f1fe , #f1feff ); /* For Opera 11.1 to 12.0 */
     background: -moz-linear-gradient(#c3f1fe , #f1feff ); /* For Firefox 3.6 to 15 */
     background: linear-gradient(#c3f1fe , #f1feff ); /* Standard syntax */
+	height: 1500px;
 }
 
 #grassContainer
@@ -160,8 +161,7 @@ body
 	color: #7a3827;
 	font-family: "Semringah";
 	background: linear-gradient(#c3f1fe , #f1feff );
-	width: 350px;
-	
+	width: 350px;	
 }
 .panel > .panel-collapse
 {
@@ -169,7 +169,6 @@ body
 	font-family: "Semringah";
 	background: linear-gradient(#c3f1fe , #f1feff );
 	width: 350px;
-	height: 180px;
 }
 
 .panel > .panel-collapse.collapse
@@ -178,5 +177,4 @@ body
 	font-family: "Semringah";
 	background: linear-gradient(#c3f1fe , #f1feff );
 	width: 350px;
-	height: 180px;
 }

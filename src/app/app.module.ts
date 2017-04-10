@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule, XSRFStrategy, CookieXSRFStrategy } from '@angular/http';
 
-
+//ng build --base-href /game/ --prod --aot
 
 //import { AppComponent } from './app.component';
 import { StructureComponent } from './structure/structure.component';
