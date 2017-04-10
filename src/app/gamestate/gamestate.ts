@@ -132,7 +132,7 @@ export class GameState {
 		
 	var state:any = {};
 	state.current_state= {};
-	state.current_state.cash = this.onions;
+	state.current_state.cash = Math.round(this.onions);
 	
 	var stateJson = JSON.stringify(state);
 	//console.log(stateJson);
