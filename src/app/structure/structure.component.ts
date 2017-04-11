@@ -29,8 +29,8 @@ export class StructureComponent implements OnInit {
   
   priceForLevel2(structureIndex: number, boughtLevels: number)
   {
-	var price = this.gs.structures[structureIndex].base_prize * 1.4 * (boughtLevels+1);
-	return price;
+	var price = this.gs.structures[structureIndex].base_prize * Math.pow(1.15, boughtLevels);
+	return Math.round(price);
   }
   
   priceForLevel(structureIndex: number)
