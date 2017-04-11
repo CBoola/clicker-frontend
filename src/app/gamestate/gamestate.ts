@@ -135,7 +135,7 @@ export class GameState {
 	state.current_state.cash = Math.round(this.onions);
 	
 	var stateJson = JSON.stringify(state);
-	//console.log(stateJson);
+	console.log(stateJson);
 
 	$.ajax({
             headers : {

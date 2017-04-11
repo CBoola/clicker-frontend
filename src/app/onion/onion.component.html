@@ -1,9 +1,9 @@
 <div id="mainOnion" style="background-image: url('assets/onion_glow.svg')" (click)="clicked($event)" (mousedown)="mousedown()" (mouseup)="mouseup()" ></div>
-<img id="radialStripes1" src="assets/radial_stripes.svg" />
-<img id="radialStripes2" src="assets/radial_stripes.svg" />
-<div id="onionCounter">
+<div id="radialStripes1" style="background-image: url('assets/radial_stripes.svg')" ></div>
+<div id="radialStripes2" style="background-image: url('assets/radial_stripes.svg')" ></div>
+<div id="onionCounter" class="noselect">
 cebule: {{ this.gs.printOnions(this.gs.onions) }}
 </div>
-<div id="onionPerSecond">
-<img id="plusPerSecond" src="assets/plus.svg" /> {{ this.gs.onionPerSecond }} / sec
+<div id="onionPerSecond" class="noselect">
+<img id="plusPerSecond"  src="assets/plus.svg" /> {{ this.gs.onionPerSecond }} / sec
 </div>

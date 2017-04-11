@@ -19,7 +19,7 @@ export class OnionComponent implements OnInit {
 	
 	var posX = event.pageX +10;
 	var posY = event.pageY -20;
-	var $newdiv1 = $( "<div style=' top: "+posY+"px; left: "+posX+"px' step='0' startX='"+posX+"' startY='"+posY+"' class='plusLabel'><img class='plusClick' src='assets/plus.svg' />"+this.gs.onionMultipler+"</div>" );
+	var $newdiv1 = $( "<div style=' top: "+posY+"px; left: "+posX+"px' step='0' startX='"+posX+"' startY='"+posY+"' class='plusLabel noselect'><img class='plusClick' src='assets/plus.svg' />"+this.gs.onionMultipler+"</div>" );
 	$("body").append($newdiv1);
   }
   mousedown(event) {
