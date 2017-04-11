@@ -134,8 +134,23 @@ export class GameState {
 	state.current_state= {};
 	state.current_state.cash = Math.round(this.onions);
 	
+	state.structures = [];
+	for (var index in this.numberOfStructures) 
+	{
+        var value = this.numberOfStructures[index];
+		// your code goes here
+		if(value > 0)
+		{
+			var strObj = {
+				"system_id" : index+"",
+				"amount" : value
+			}
+			state.structures.push(strObj);
+		}
+	}
+	
 	var stateJson = JSON.stringify(state);
-	console.log(stateJson);
+	//console.log(stateJson);
 
 	$.ajax({
             headers : {
