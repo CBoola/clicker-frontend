@@ -1,0 +1,19 @@
+<div class="upgradeMain" *ngFor="let up of this.gs.upgrades; let i = index;" (click)="clicked(i)">
+  <table>
+	<tr>
+		<td>
+			<img src="{{ up.icon }}" />
+		</td>
+		<td>
+			<div id="name">{{ up.name }}</div>
+			<div id="description">{{ up.description}}</div>
+			<div>Cena: {{ up.base_prize }} cebul</div>
+			<div>Mnożnik: {{up.multiplier}}</div>
+		</td>
+		<td>
+			
+		</td>
+	</tr>
+  </table>
+  
+</div>

@@ -27,11 +27,24 @@ interface Structure
 	production_rate:number;
 }
 
+interface Upgrade
+{
+	name:String;
+	system_id:number;
+	icon:String;
+	description:String;
+	base_prize:number;
+	multiplier:number;
+}
+
 @Injectable()
 export class GameState {
 
 	structures:Array<Structure> = [];
 	numberOfStructures = [];
+	
+	upgrades:Array<Upgrade> = [];
+	
 	onions:number = 0;
 	onionPerSecond:number = 0;
 	onionMultipler = 1;
@@ -50,7 +63,13 @@ export class GameState {
 			this.structures = data.json() 
 			this.updateAll();
 		});
-		
+	
+	this.http.get('http://51.255.167.114/api/upgrade/?format=json')
+		.subscribe(data => {
+			this.upgrades = data.json() 
+			this.updateAll();
+		});
+	
 	setInterval(() => {
                 this.addGeneratedOnion(); 
                 }, 1000 / this.intervalsPerSecond);
@@ -90,6 +109,10 @@ export class GameState {
 				this.numberOfStructures[ parseInt(str.system_id) ] = str.amount;
 			
 			});
+			
+			//upgrades
+			
+			
 			this.updateAll();
 			this.stateReaded= true;
 		} );

@@ -9,6 +9,7 @@ import { HttpModule, XSRFStrategy, CookieXSRFStrategy } from '@angular/http';
 import { StructureComponent } from './structure/structure.component';
 import { GameState } from './gamestate/gamestate';
 import { OnionComponent } from './onion/onion.component';
+import { UpgradeComponent } from './upgrade/upgrade.component';
 
 export function xsrfFactory() {
   return new CookieXSRFStrategy('_csrf', 'XSRF-TOKEN');
@@ -17,7 +18,8 @@ export function xsrfFactory() {
 @NgModule({
   declarations: [
     StructureComponent,
-    OnionComponent
+    OnionComponent,
+    UpgradeComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +30,7 @@ export function xsrfFactory() {
       provide: XSRFStrategy,
       useFactory : xsrfFactory
   }],
-  bootstrap: [StructureComponent, OnionComponent]
+  bootstrap: [StructureComponent, OnionComponent, UpgradeComponent]
 })
 export class AppModule { }
 
