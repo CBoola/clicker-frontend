@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import {GameState} from '../gamestate/gamestate';
+import {Component, OnInit} from "@angular/core";
+import {GameState} from "../gamestate/gamestate";
 
 @Component({
   selector: 'app-upgrade',
@@ -8,13 +8,13 @@ import {GameState} from '../gamestate/gamestate';
 })
 export class UpgradeComponent implements OnInit {
 
-  constructor(public gs: GameState) { }
+  constructor(public gs: GameState) {
+  }
 
   ngOnInit() {
   }
 
-	clicked( index) 
-	{
-	
-	}
+  /*clicked(index) {
+
+  }*/
 }

@@ -1,6 +1,5 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { OnionComponent } from './onion.component';
+import {async, ComponentFixture, TestBed} from "@angular/core/testing";
+import {OnionComponent} from "./onion.component";
 
 describe('OnionComponent', () => {
   let component: OnionComponent;
@@ -8,9 +7,8 @@ describe('OnionComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ OnionComponent ]
-    })
-    .compileComponents();
+      declarations: [OnionComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {

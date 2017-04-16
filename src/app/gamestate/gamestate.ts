@@ -1,197 +1,181 @@
-import {Injectable} from '@angular/core';
-import { Http, Response, Headers, RequestOptions } from '@angular/http';
+import {Injectable} from "@angular/core";
+import {Http} from "@angular/http";
 
 function getCookie(name) {
-    var cookieValue = null;
-    if (document.cookie && document.cookie != '') {
-        var cookies = document.cookie.split(';');
-        for (var i = 0; i < cookies.length; i++) {
-            var cookie = jQuery.trim(cookies[i]);
-            // Does this cookie string begin with the name we want?
-            if (cookie.substring(0, name.length + 1) == (name + '=')) {
-                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
-                break;
-            }
-        }
+  let cookieValue = null;
+  if (document.cookie && document.cookie !== '') {
+    const cookies = document.cookie.split(';');
+    for (let i = 0; i < cookies.length; i++) {
+      const cookie = jQuery.trim(cookies[i]);
+      // Does this cookie string begin with the name we want?
+      if (cookie.substring(0, name.length + 1) === name + '=') {
+        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+        break;
+      }
     }
-    return cookieValue;
+  }
+  return cookieValue;
 }
 
-interface Structure
-{
-	name:String;
-	system_id:number;
-	icon:String;
-	description:String;
-	base_prize:number;
-	production_rate:number;
+interface Structure {
+  name: String;
+  system_id: number;
+  icon: String;
+  description: String;
+  base_prize: number;
+  production_rate: number;
 }
 
-interface Upgrade
-{
-	name:String;
-	system_id:number;
-	icon:String;
-	description:String;
-	base_prize:number;
-	multiplier:number;
+interface Upgrade {
+  name: String;
+  system_id: number;
+  icon: String;
+  description: String;
+  base_prize: number;
+  multiplier: number;
 }
 
 @Injectable()
 export class GameState {
 
-	structures:Array<Structure> = [];
-	numberOfStructures = [];
-	
-	upgrades:Array<Upgrade> = [];
-	
-	onions:number = 0;
-	onionPerSecond:number = 0;
-	onionMultipler = 1;
-	stateReaded = false;
-	
-	intervalsPerSecond = 20;
+  upgrades: Array<Upgrade> = [];
+  structures: Array<Structure> = [];
+  numberOfStructures = [];
 
-  constructor(private http: Http) 
-  { 
+  onions = 0;
+  onionPerSecond = 0.;
+  onionMultipler = 1.;
+  stateReaded = false;
 
-	
-	this.readState();
-  
-	this.http.get('http://51.255.167.114/api/structure/?format=json')
-		.subscribe(data => {
-			this.structures = data.json() 
-			this.updateAll();
-		});
-	
-	this.http.get('http://51.255.167.114/api/upgrade/?format=json')
-		.subscribe(data => {
-			this.upgrades = data.json() 
-			this.updateAll();
-		});
-	
-	setInterval(() => {
-                this.addGeneratedOnion(); 
-                }, 1000 / this.intervalsPerSecond);
-    
-	setInterval(() => {
-		this.sendState();
-	}, 30000);
-  }
-  
-  addGeneratedOnion()
-  {
-	this.onions += this.onionPerSecond / this.intervalsPerSecond;
-  }
-  
-  printOnions(value:number)
-  {
-	var num = Math.round(value);
-	return num;
-  }
-  
-  readState()
-  {
-	this.http.get('http://51.255.167.114/api/player/3/?format=json')
-		.subscribe(data => {
-			var res = data.json();
-			if(!res.hasOwnProperty("current_state"))
-			{
-				return;
-			}
-			//onion number
-			var res_onion =  res.current_state.cash;
-			this.onions = res_onion;
-			
-			//structures
-			var res_structures = res.structures;
-			res_structures.forEach( str => {
-				this.numberOfStructures[ parseInt(str.system_id) ] = str.amount;
-			
-			});
-			
-			//upgrades
-			
-			
-			this.updateAll();
-			this.stateReaded= true;
-		} );
-  }
-  
-  onionsPerSecond()
-  {
-	var onionPerSec = 0;
-	for (let str of this.structures)
-	{
-		var structureId = str.system_id;
-		var num = this.numOfStructure(structureId);
-		var gen = num * str.production_rate;
-		onionPerSec += gen;
-	}
-	this.onionPerSecond = onionPerSec;
-  }
-  
-  numOfStructure(structureId: number)
-  {
-	var num = this.numberOfStructures[structureId];
-	if( num == undefined )
-	{
-		this.numberOfStructures[structureId]= 0;
-		return 0;
-	}
-	return num;
-  }
-  
-  updateAll()
-  {
-	this.onionsPerSecond();
-  }
-  
- 
-  sendState()
-  {
-	if(!this.stateReaded)
-		return;
-		
-	var state:any = {};
-	state.current_state= {};
-	state.current_state.cash = Math.round(this.onions);
-	
-	state.structures = [];
-	for (var index in this.numberOfStructures) 
-	{
-        var value = this.numberOfStructures[index];
-		// your code goes here
-		if(value > 0)
-		{
-			var strObj = {
-				"system_id" : index+"",
-				"amount" : value
-			}
-			state.structures.push(strObj);
-		}
-	}
-	
-	var stateJson = JSON.stringify(state);
-	//console.log(stateJson);
+  intervalsPerSecond = 20;
 
-	$.ajax({
-            headers : {
-                'Accept' : 'application/json',
-                'Content-Type' : 'application/json'
-            },
-			
-            url : 'http://51.255.167.114/api/player/3/?format=json',
-            type : 'PATCH',
-			crossDomain: true,
-			beforeSend: function (xhr) {
-                         xhr.setRequestHeader("X-CSRFToken", getCookie('csrftoken'))
-                    },
-            data : stateJson,
-            error : function(jqXHR, textStatus, errorThrown) {
-                console.log("The following error occured: " + textStatus, errorThrown);
-            }
+  constructor(private http: Http) {
+
+    this.readState();
+
+    this.http.get('http://51.255.167.114/api/structure/?format=json')
+      .subscribe(data => {
+        this.structures = data.json();
+        this.updateAll();
+      });
+
+    this.http.get('http://51.255.167.114/api/upgrade/?format=json')
+      .subscribe(data => {
+        this.upgrades = data.json();
+        this.updateAll();
+      });
+
+    setInterval(() => {
+      this.addGeneratedOnion();
+    }, 1000 / this.intervalsPerSecond);
+
+    setInterval(() => {
+      this.sendState();
+    }, 30000);
+  }
+
+  addGeneratedOnion() {
+    this.onions += this.onionPerSecond / this.intervalsPerSecond;
+  }
+
+  printOnions(value: number) {
+    return Math.round(value);
+  }
+
+  readState() {
+    this.http.get('http://51.255.167.114/api/player/3/?format=json')
+      .subscribe(data => {
+        const res = data.json();
+        if (!res.hasOwnProperty('current_state')) {
+          return;
+        }
+        // onion number
+        this.onions = res.current_state.cash;
+
+        // structures
+        const res_structures = res.structures;
+        res_structures.forEach(str => {
+          this.numberOfStructures[parseInt(str.system_id, 10)] = str.amount;
         });
 
+        // upgrades
+
+
+        this.updateAll();
+        this.stateReaded = true;
+      });
+  }
+
+  onionsPerSecond() {
+    let onionPerSec = 0;
+    for (const str of this.structures) {
+      const structureId = str.system_id;
+      const num = this.numOfStructure(structureId);
+      onionPerSec += num * str.production_rate;
+    }
+    this.onionPerSecond = onionPerSec;
+  }
+
+  numOfStructure(structureId: number) {
+    const num = this.numberOfStructures[structureId];
+    if (num === undefined) {
+      this.numberOfStructures[structureId] = 0;
+      return 0;
+    }
+    return num;
+  }
+
+  updateAll() {
+    this.onionsPerSecond();
+  }
+
+
+  sendState() {
+    if (!this.stateReaded) {
+      return;
+    }
+
+    const state: any = {};
+    state.current_state = {};
+    state.current_state.cash = Math.round(this.onions);
+
+    state.structures = [];
+
+    for (const index in this.numberOfStructures) {
+      const value = this.numberOfStructures[index];
+      // your code goes here
+
+      if (value > 0) {
+        const strObj = {
+          'system_id': index + '',
+          'amount': value
+        };
+        state.structures.push(strObj);
+      }
+    }
+
+    const stateJson = JSON.stringify(state);
+    // console.log(stateJson);
+
+    $.ajax({
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+
+      url: 'http://51.255.167.114/api/player/3/?format=json',
+      type: 'PATCH',
+      crossDomain: true,
+      beforeSend: function (xhr) {
+        xhr.setRequestHeader('X-CSRFToken', getCookie('csrftoken'));
+      },
+      data: stateJson,
+      success: function () {
+        alert('works');
+      },
+      error: function (jqXHR, textStatus, errorThrown) {
+        console.log('The following error occured: ' + textStatus, errorThrown);
+      }
+    });
   }
 }

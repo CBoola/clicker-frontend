@@ -1,6 +1,5 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { UpgradeComponent } from './upgrade.component';
+import {async, ComponentFixture, TestBed} from "@angular/core/testing";
+import {UpgradeComponent} from "./upgrade.component";
 
 describe('UpgradeComponent', () => {
   let component: UpgradeComponent;
@@ -8,9 +7,8 @@ describe('UpgradeComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ UpgradeComponent ]
-    })
-    .compileComponents();
+      declarations: [UpgradeComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {

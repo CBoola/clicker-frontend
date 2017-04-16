@@ -1,4 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+html, body {
+  width: 100% !important;
+}
+
 body
 {
 	color:#91522c;
@@ -21,22 +25,22 @@ body
 }
 
 #grassContainer
-{	
+{
 	background:url("assets/grass.svg") repeat-x left bottom;
 	width: 100%;
 	height: 170px;
 	position: fixed;
-	bottom: 0px;
+	bottom: 0;
 	z-index: 100;
 }
-.navbar-default .navbar-brand 
+.navbar-default .navbar-brand
 {
     color: #91522c;
 	font-family: "Semringah";
 	font-size: 250%;
 }
 .navbar-default .navbar-brand:hover,
-.navbar-default .navbar-brand:focus 
+.navbar-default .navbar-brand:focus
 {
     color: #7a3827;
 	font-family: "Semringah";
@@ -48,14 +52,14 @@ body
 	border-color: #c5f3ff;
 }
 
-.navbar-default .navbar-nav > li > a 
+.navbar-default .navbar-nav > li > a
 {
     color: #7a3827;
 	font-family: "Semringah";
 	font-size: 150%;
 }
 .navbar-default .navbar-nav > li > a:hover,
-.navbar-default .navbar-nav > li > a:focus 
+.navbar-default .navbar-nav > li > a:focus
 {
     color: #7a3827;
 	font-family: "Semringah";
@@ -63,22 +67,22 @@ body
 }
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
-.navbar-default .navbar-nav > .active > a:focus 
+.navbar-default .navbar-nav > .active > a:focus
 {
     color: #7a3827;
     background-color: #c5f3ff;
 }
 
-.navbar-default .navbar-toggle 
+.navbar-default .navbar-toggle
 {
     border-color: black;
 }
 .navbar-default .navbar-toggle:hover,
-.navbar-default .navbar-toggle:focus 
+.navbar-default .navbar-toggle:focus
 {
     background-color: #91522c;
 }
-.navbar-default .navbar-toggle .icon-bar 
+.navbar-default .navbar-toggle .icon-bar
 {
     background-color: black;
 }
@@ -88,14 +92,14 @@ body
 	font-family: "Semringah";
 	font-size: 150%;
 }
-@media (max-width: 767px) 
+@media (max-width: 767px)
 {
-    .navbar-default .navbar-nav .open .dropdown-menu > li > a 
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a
 	{
         color: #ff0000;
     }
     .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
-    .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus 
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus
 	{
           color:#ff0000;
     }
@@ -123,18 +127,16 @@ body
 
 #mainOnion
 {
-	width: 600px; 
-	height: 600px;
+	width: 100%;
+	height: 100%;
 	position: absolute;
-	left: 5px;
-	top: 5px;
 	z-index: 5;
 }
 
 #onionContainer
 {
 	padding: 20px;
-	width: 650px; 
+	width: 650px;
 	height: 700px;
 }
 
@@ -150,7 +152,7 @@ body
 	height: 30px;
 	position: absolute;
 	z-index: 1000;
-	
+
 	font-size: 30px;
 	background: -webkit-linear-gradient(#91522c, #7a3827);
 	-webkit-background-clip: text;
@@ -166,12 +168,12 @@ body
 	margin-bottom: 10px;
 }
 
-.panel > .panel-heading 
+.panel > .panel-heading
 {
 	color: #7a3827;
 	font-family: "Semringah";
 	background: linear-gradient(#c3f1fe , #f1feff );
-	width: 350px;	
+	width: 350px;
 }
 .panel > .panel-collapse
 {
@@ -187,4 +189,8 @@ body
 	font-family: "Semringah";
 	background: linear-gradient(#c3f1fe , #f1feff );
 	width: 350px;
+}
+
+#ads img {
+  height: 100%;
 }

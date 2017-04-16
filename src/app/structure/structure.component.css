@@ -3,9 +3,8 @@
 	background-color: orange;
 	height: 80px;
 	width: 350px;
-	border-color: blue;
-	border-style: dotted;
-	margin-bottom: 10px;
+  border: dotted blue;
+  margin-bottom: 10px;
 	color: black;
 }
 
