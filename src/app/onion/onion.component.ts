@@ -17,13 +17,15 @@ export class OnionComponent implements OnInit {
 
   clicked(event) {
     this.gs.onions += this.gs.onionMultipler;
+
     const posX = event.pageX + 10;
     const posY = event.pageY - 20;
 
-    this.body.append($('<div style="top:' + posY + 'px;left:' + posX + 'px" step="0" startX="' + posX +
-      '" startY="' + posY + '" class="plusLabel noselect"><img class="plusClick" src="assets/plus.svg" />' +
-      this.gs.onionMultipler + '</div>'));
-
+    this.body.append($('<div style="top:' + posY + 'px;left:' + posX + 'px" class="plusLabel noselect jumpOut">' +
+      '<img class="plusClick" src="assets/plus.svg" />' + this.gs.onionMultipler + '</div>')
+      .one('translateend webkitAnimationEnd oAnimationEnd MSAnimationEnd', function () {
+        $(this).remove();
+      }));
   }
 
   /*

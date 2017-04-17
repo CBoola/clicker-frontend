@@ -1,7 +1,7 @@
 .center {
   position: relative;
-  width: 600px;
-  height: 600px;
+  width: 100%;
+  height: 100%;
 }
 
 #mainOnion {
@@ -10,6 +10,7 @@
 }
 
 #radialStripes1 {
+  top: 25px;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -37,6 +38,7 @@
 }
 
 #radialStripes2 {
+  top: 25px;
   position: absolute;
   width: 100%;
   height: 100%;

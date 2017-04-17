@@ -42,14 +42,14 @@ $(document).ready(function () {
 
   load_player();
 
-  setInterval(plusLabelsInterval, 40);
+  //setInterval(plusLabelsInterval, 40);
 
   // alternatywny sposob (byc moze lepszy) to biblioteka core-api
   // przyklady na http://51.255.167.114/docs/ po wybraniu Source Code w menu
 });
 
 var steps = 25;
-function plusLabelsInterval() {
+/*function plusLabelsInterval() {
   $("body > .plusLabel").each(function () {
     var step = parseInt($(this).attr("step"));
     if (step >= steps) {
@@ -63,7 +63,7 @@ function plusLabelsInterval() {
     step++;
     $(this).attr("step", step).css("left", newX).css("top", newY).css("opacity", 1 - step * 0.02);
   });
-}
+}*/
 
 function getCookie(name) {
   var cookieValue = null;

@@ -1,6 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 html, body {
   width: 100% !important;
+  cursor: default !important;
+  overflow-x: hidden;
 }
 
 body
@@ -136,8 +138,8 @@ body
 #onionContainer
 {
 	padding: 20px;
-	width: 650px;
-	height: 700px;
+	width: 600px;
+	height: 550px;
 }
 
 #loginContainer
@@ -193,4 +195,209 @@ body
 
 #ads img {
   height: 100%;
+}
+
+.jumpOut {
+  cursor: default;
+  animation: parabola 1.25s 1 normal;
+  -webkit-animation: parabola 1.25s 1 normal;
+  -moz-animation: parabola 1.25s 1 normal;
+}
+
+@keyframes parabola {
+  0% {
+    transform: translate(-10px, 15px);
+  }
+  5% {
+    transform: translate(-5px, 0px);
+  }
+  10% {
+    transform: translate(0px, -5px);
+  }
+  15% {
+    transform: translate(5px, 0px);
+  }
+  20% {
+    transform: translate(10px, 15px);
+  }
+  25% {
+    transform: translate(15px, 40px);
+  }
+  30% {
+    transform: translate(20px, 75px);
+  }
+  35% {
+    transform: translate(25px, 120px);
+  }
+  40% {
+    transform: translate(30px, 175px);
+  }
+  45% {
+    transform: translate(35px, 240px);
+  }
+  50% {
+    transform: translate(40px, 315px);
+  }
+  55% {
+    transform: translate(45px, 400px);
+  }
+  60% {
+    transform: translate(50px, 495px);
+  }
+  65% {
+    transform: translate(55px, 600px);
+  }
+  70% {
+    transform: translate(60px, 715px);
+  }
+  75% {
+    transform: translate(65px, 840px);
+  }
+  80% {
+    transform: translate(70px, 975px);
+  }
+  85% {
+    transform: translate(75px, 1120px);
+  }
+  90% {
+    transform: translate(80px, 1275px);
+  }
+  95% {
+    transform: translate(85px, 1440px);
+  }
+  100% {
+    transform: translate(90px, 1615px);
+  }
+}
+
+@-webkit-keyframes parabola {
+  0% {
+    -webkit-transform: translate(-10px, 15px);
+  }
+  5% {
+    -webkit-transform: translate(-5px, 0px);
+  }
+  10% {
+    -webkit-transform: translate(0px, -5px);
+  }
+  15% {
+    -webkit-transform: translate(5px, 0px);
+  }
+  20% {
+    -webkit-transform: translate(10px, 15px);
+  }
+  25% {
+    -webkit-transform: translate(15px, 40px);
+  }
+  30% {
+    -webkit-transform: translate(20px, 75px);
+  }
+  35% {
+    -webkit-transform: translate(25px, 120px);
+  }
+  40% {
+    -webkit-transform: translate(30px, 175px);
+  }
+  45% {
+    -webkit-transform: translate(35px, 240px);
+  }
+  50% {
+    -webkit-transform: translate(40px, 315px);
+  }
+  55% {
+    -webkit-transform: translate(45px, 400px);
+  }
+  60% {
+    -webkit-transform: translate(50px, 495px);
+  }
+  65% {
+    -webkit-transform: translate(55px, 600px);
+  }
+  70% {
+    -webkit-transform: translate(60px, 715px);
+  }
+  75% {
+    -webkit-transform: translate(65px, 840px);
+  }
+  80% {
+    -webkit-transform: translate(70px, 975px);
+  }
+  85% {
+    -webkit-transform: translate(75px, 1120px);
+  }
+  90% {
+    -webkit-transform: translate(80px, 1275px);
+  }
+  95% {
+    -webkit-transform: translate(85px, 1440px);
+  }
+  100% {
+    -webkit-transform: translate(90px, 1615px);
+  }
+}
+
+@-moz-keyframes parabola {
+  0% {
+    -moz-transform: translate(-10px, 15px);
+  }
+  5% {
+    -moz-transform: translate(-5px, 0px);
+  }
+  10% {
+    -moz-transform: translate(0px, -5px);
+  }
+  15% {
+    -moz-transform: translate(5px, 0px);
+  }
+  20% {
+    -moz-transform: translate(10px, 15px);
+  }
+  25% {
+    -moz-transform: translate(15px, 40px);
+  }
+  30% {
+    -moz-transform: translate(20px, 75px);
+  }
+  35% {
+    -moz-transform: translate(25px, 120px);
+  }
+  40% {
+    -moz-transform: translate(30px, 175px);
+  }
+  45% {
+    -moz-transform: translate(35px, 240px);
+  }
+  50% {
+    -moz-transform: translate(40px, 315px);
+  }
+  55% {
+    -moz-transform: translate(45px, 400px);
+  }
+  60% {
+    -moz-transform: translate(50px, 495px);
+  }
+  65% {
+    -moz-transform: translate(55px, 600px);
+  }
+  70% {
+    -moz-transform: translate(60px, 715px);
+  }
+  75% {
+    -moz-transform: translate(65px, 840px);
+  }
+  80% {
+    -moz-transform: translate(70px, 975px);
+  }
+  85% {
+    -moz-transform: translate(75px, 1120px);
+  }
+  90% {
+    -moz-transform: translate(80px, 1275px);
+  }
+  95% {
+    -moz-transform: translate(85px, 1440px);
+  }
+  100% {
+    -moz-transform: translate(90px, 1615px);
+  }
 }
