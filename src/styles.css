@@ -1,18 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
-html, body {
-  width: 100% !important;
-  cursor: default !important;
-  overflow-x: hidden;
-}
-
 body
 {
 	color:#91522c;
 	background: #c3f1fe ; /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(#c3f1fe , #f1feff ); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(#c3f1fe , #f1feff ); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(#c3f1fe , #f1feff ); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(#c3f1fe , #f1feff ); /* Standard syntax */
+  background: -webkit-linear-gradient(#c3f1fe , #f1feff ); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#c3f1fe , #f1feff ); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#c3f1fe , #f1feff ); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#c3f1fe , #f1feff ); /* Standard syntax */
 	height: 1500px;
 }
 
@@ -37,14 +31,17 @@ body
 }
 .navbar-default .navbar-brand
 {
-    color: #91522c;
+  background: -webkit-linear-gradient(#91522c, #7a3827);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 	font-family: "Semringah";
 	font-size: 250%;
 }
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus
 {
-    color: #7a3827;
+  color: #7a3827;
 	font-family: "Semringah";
 	font-size: 250%;
 }
@@ -154,9 +151,9 @@ body
 	height: 30px;
 	position: absolute;
 	z-index: 1000;
-
-	font-size: 30px;
+  font-size: 30px;
 	background: -webkit-linear-gradient(#91522c, #7a3827);
+  background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	font-family: "Semringah";
@@ -169,7 +166,12 @@ body
 	margin-right: 3px;
 	margin-bottom: 10px;
 }
-
+.panel-default
+{
+  color: #7a3827;
+	font-family: "Semringah";
+	width: 350px;
+}
 .panel > .panel-heading
 {
 	color: #7a3827;
@@ -189,7 +191,6 @@ body
 {
 	color: #7a3827;
 	font-family: "Semringah";
-	background: linear-gradient(#c3f1fe , #f1feff );
 	width: 350px;
 }
 
