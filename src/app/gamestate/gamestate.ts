@@ -82,6 +82,8 @@ export class GameState {
     return Math.round(value);
   }
 
+  
+  
   readState() {
     this.http.get('http://51.255.167.114/api/player/3/?format=json')
       .subscribe(data => {
