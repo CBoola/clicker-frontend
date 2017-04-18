@@ -7,7 +7,7 @@ body
   background: -o-linear-gradient(#c3f1fe , #f1feff ); /* For Opera 11.1 to 12.0 */
   background: -moz-linear-gradient(#c3f1fe , #f1feff ); /* For Firefox 3.6 to 15 */
   background: linear-gradient(#c3f1fe , #f1feff ); /* Standard syntax */
-	height: 1500px;
+	height: 2500px;
 }
 
 .noselect {
@@ -53,7 +53,7 @@ body
 
 .navbar-default .navbar-nav > li > a
 {
-    color: #7a3827;
+  color: #7a3827;
 	font-family: "Semringah";
 	font-size: 150%;
 }
@@ -71,7 +71,10 @@ body
     color: #7a3827;
     background-color: #c5f3ff;
 }
-
+.navbar-collapse
+{
+    border-top: none;
+}
 .navbar-default .navbar-toggle
 {
     border-color: black;
@@ -90,38 +93,6 @@ body
     color:#7a3827;
 	font-family: "Semringah";
 	font-size: 150%;
-}
-@media (max-width: 767px)
-{
-    .navbar-default .navbar-nav .open .dropdown-menu > li > a
-	{
-        color: #ff0000;
-    }
-    .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
-    .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus
-	{
-          color:#ff0000;
-    }
-}
-
-.navbar-default .navbar-nav > li > a {
-    color: #91522c;
-}
-.navbar-default .navbar-nav > li > a:hover,
-.navbar-default .navbar-nav > li > a:focus {
-    color: #91522c;
-}
-.navbar-default .navbar-nav > .active > a,
-.navbar-default .navbar-nav > .active > a:hover,
-.navbar-default .navbar-nav > .active > a:focus {
-    color: #91522c;
-    background-color: #c5f3ff;
-}
-.navbar-default .navbar-nav > .open > a,
-.navbar-default .navbar-nav > .open > a:hover,
-.navbar-default .navbar-nav > .open > a:focus {
-    color: #91522c;
-    background-color: #D5D5D5;
 }
 
 #mainOnion
@@ -170,7 +141,9 @@ body
 {
   color: #7a3827;
 	font-family: "Semringah";
-	width: 350px;
+  background-color: unset;
+  border: unset;
+  width: 350px;
 }
 .panel > .panel-heading
 {
@@ -192,6 +165,11 @@ body
 	color: #7a3827;
 	font-family: "Semringah";
 	width: 350px;
+}
+
+.col-sm-2
+{
+  margin-top: 50px;
 }
 
 #ads img {
