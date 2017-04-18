@@ -42,6 +42,7 @@ export class GameState {
   structures: Array<Structure> = [];
   numberOfStructures = [];
 
+  player_id = -1;
   onions = 0;
   onionPerSecond = 0.;
   onionMultipler = 1.;
@@ -51,7 +52,7 @@ export class GameState {
 
   constructor(private http: Http) {
 
-    this.readState();
+    this.readPlayerId();
 
     this.http.get('http://51.255.167.114/api/structure/?format=json')
       .subscribe(data => {
@@ -82,10 +83,28 @@ export class GameState {
     return Math.round(value);
   }
 
-  
+	readPlayerId()
+	{
+	  this.http.get('http://51.255.167.114/api/player/is_logged')
+      .subscribe(data => {
+        const res = data.json();
+        if (res.hasOwnProperty('player_id')) 
+		{
+			this.player_id = res.player_id;
+			this.readState();
+		}
+		else
+		{
+          //return;
+		  this.player_id = 3;
+		  this.readState();
+        }
+         
+      });
+	}
   
   readState() {
-    this.http.get('http://51.255.167.114/api/player/3/?format=json')
+    this.http.get('http://51.255.167.114/api/player/'+this.player_id+'/?format=json')
       .subscribe(data => {
         const res = data.json();
         if (!res.hasOwnProperty('current_state')) {
@@ -165,7 +184,7 @@ export class GameState {
         'Content-Type': 'application/json'
       },
 
-      url: 'http://51.255.167.114/api/player/3/?format=json',
+      url: 'http://51.255.167.114/api/player/'+this.player_id+'/?format=json',
       type: 'PATCH',
       crossDomain: true,
       beforeSend: function (xhr) {
