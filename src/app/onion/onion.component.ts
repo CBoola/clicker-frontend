@@ -18,7 +18,7 @@ export class OnionComponent implements OnInit {
   clicked(event) {
     this.gs.onions += this.gs.onionMultipler;
 
-    const posX = event.pageX + 10;
+    const posX = event.pageX + 20;
     const posY = event.pageY - 20;
 
     this.body.append($('<div style="top:' + posY + 'px;left:' + posX + 'px" class="plusLabel noselect jumpOut">' +
@@ -28,14 +28,14 @@ export class OnionComponent implements OnInit {
       }));
   }
 
-  /*
+  
    mousedown(event) {
    $("#mainOnion").css("width", 610).css("height", 610).css("left", 0).css("top", 0);
    }
 
    mouseup(event) {
    $("#mainOnion").css("width", 600).css("height", 600).css("left", 5).css("top", 5);
-   }*/
+   }
 
   ngOnInit() {
   }
