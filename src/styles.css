@@ -3,11 +3,12 @@ body
 {
 	color:#91522c;
 	background: #c3f1fe ; /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(#c3f1fe , #f1feff ); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(#c3f1fe , #f1feff ); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(#c3f1fe , #f1feff ); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(#c3f1fe , #f1feff ); /* Standard syntax */
+	background: -webkit-linear-gradient(#c3f1fe , #f1feff ); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(#c3f1fe , #f1feff ); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(#c3f1fe , #f1feff ); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(#c3f1fe , #f1feff ); /* Standard syntax */
 	height: 2500px;
+	overflow-x: hidden;
 }
 
 .noselect 
@@ -159,7 +160,7 @@ body
 .panel > .panel-heading
 {
   position: relative;
-  margin-left: -10px;
+  margin-left: 0px;
 	color: #7a3827;
 	font-family: "Semringah";
   background-image: url("assets/trunk.svg"),url("assets/trunk.svg"),
@@ -177,6 +178,7 @@ body
   background-color: transparent;
   height: 40px;
 	width: 370px;
+  z-index: 100;
 }
 
 .panel-default .panel-body
@@ -195,16 +197,7 @@ body
                    80px 19px,80px 19px,80px 19px,
                    80px 19px,80px 19px;
   background-repeat: no-repeat;
-}
-
-.body-layout
-{
-   background-image:  url("assets/nav_background.svg");
-   background-position: 0% 0%;
-   background-size: 20px;
-   background-repeat: no-repeat;
-   -ms-transform: rotate(7deg);
-   -webkit-transform: rotate(7deg);
+  z-index: 20;
 }
 
 .panel > .panel-heading > a:focus,
@@ -222,6 +215,7 @@ body
 {
   height: 100%;
 }
+
 
 .jumpOut
  {

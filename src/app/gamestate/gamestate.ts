@@ -108,6 +108,7 @@ export class GameState {
       .subscribe(data => {
         const res = data.json();
         if (!res.hasOwnProperty('current_state')) {
+		  this.onions= 0;
           return;
         }
         // onion number
@@ -192,7 +193,7 @@ export class GameState {
       },
       data: stateJson,
       success: function () {
-        alert('works');
+        //alert('works');
       },
       error: function (jqXHR, textStatus, errorThrown) {
         console.log('The following error occured: ' + textStatus, errorThrown);
