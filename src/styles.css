@@ -47,7 +47,7 @@ body
 }
 .navbar-default
 {
-	background-color: #c5f3ff;
+	background-color: unset;
 	border-color: #c5f3ff;
 }
 
@@ -60,7 +60,7 @@ body
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus
 {
-    color: #7a3827;
+  color: #7a3827;
 	font-family: "Semringah";
 	font-size: 150%;
 }
@@ -145,13 +145,45 @@ body
   border: unset;
   width: 350px;
 }
+.panel-title
+{
+  font-family: "Semringah";
+  background: -webkit-linear-gradient(#91522c, #7a3827);
+  background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+  text-decoration: none;
+}
+
 .panel > .panel-heading
 {
+  position: relative;
+  margin-left: -10px;
 	color: #7a3827;
 	font-family: "Semringah";
-	background: linear-gradient(#c3f1fe , #f1feff );
-	width: 350px;
+  background-image: url("assets/trunk.svg"),url("assets/trunk.svg"),
+                    url("assets/nav_background.svg"),url("assets/nav_background.svg"),url("assets/nav_background.svg"),url("assets/nav_background.svg"),
+                    url("assets/trunk.svg"),url("assets/trunk.svg"),
+                    url("assets/nav_background.svg");
+  background-position: 0% 0%, 0% 100%, 
+                       4% 0%, 31% 0%, 58% 0%, 85% 0% , 100% 0% , 100% 100% , 
+                       97% 0%;
+  background-size: 20px , 20px, 
+                   80px 40px , 80px 40px , 80px 40px , 80px 40px , 
+                   20px, 20px, 
+                   80px 40px;
+  background-repeat: no-repeat,no-repeat,no-repeat;
+  background-color: transparent;
+  height: 40px;
+	width: 370px;
 }
+
+.panel > .panel-heading > a:focus,
+.panel > .panel-heading > a:hover
+{
+  text-decoration: none;
+}
+
 .panel > .panel-collapse
 {
 	color: #7a3827;
@@ -172,18 +204,21 @@ body
   margin-top: 50px;
 }
 
-#ads img {
+#ads img 
+{
   height: 100%;
 }
 
-.jumpOut {
+.jumpOut
+ {
   cursor: default;
   animation: parabola 1.25s 1 normal;
   -webkit-animation: parabola 1.25s 1 normal;
   -moz-animation: parabola 1.25s 1 normal;
 }
 
-@keyframes parabola {
+@keyframes parabola 
+{
   0% {
     transform: translate(-10px, 15px);
   }
