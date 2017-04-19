@@ -10,7 +10,8 @@ body
 	height: 2500px;
 }
 
-.noselect {
+.noselect 
+{
   -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
      -khtml-user-select: none; /* Konqueror HTML */
@@ -90,7 +91,7 @@ body
 }
 .nav.navbar-nav.navbar-left .navbar-text
 {
-    color:#7a3827;
+  color:#7a3827;
 	font-family: "Semringah";
 	font-size: 150%;
 }
@@ -178,25 +179,38 @@ body
 	width: 370px;
 }
 
+.panel-default .panel-body
+{
+  position: relative;
+  background-image:  url("assets/trunk.svg"),url("assets/trunk.svg"),
+                     url("assets/nav_background.svg"),url("assets/nav_background.svg"),url("assets/nav_background.svg"),
+                     url("assets/nav_background.svg"),url("assets/nav_background.svg"),url("assets/nav_background.svg"),
+                     url("assets/nav_background.svg"),url("assets/nav_background.svg"),url("assets/nav_background.svg");
+  background-position: 0% 100%, 97% 100%, 
+                      -5% 100%, 7% 100%, 22% 100%, 
+                      36% 100%, 50% 100%, 64% 100%,
+                      78% 100%, 93% 100%, 100% 100%;
+  background-size: 20px, 20px, 80px 19px,
+                   80px 19px,80px 19px,80px 19px,
+                   80px 19px,80px 19px,80px 19px,
+                   80px 19px,80px 19px;
+  background-repeat: no-repeat;
+}
+
+.body-layout
+{
+   background-image:  url("assets/nav_background.svg");
+   background-position: 0% 0%;
+   background-size: 20px;
+   background-repeat: no-repeat;
+   -ms-transform: rotate(7deg);
+   -webkit-transform: rotate(7deg);
+}
+
 .panel > .panel-heading > a:focus,
 .panel > .panel-heading > a:hover
 {
   text-decoration: none;
-}
-
-.panel > .panel-collapse
-{
-	color: #7a3827;
-	font-family: "Semringah";
-	background: linear-gradient(#c3f1fe , #f1feff );
-	width: 350px;
-}
-
-.panel > .panel-collapse.collapse
-{
-	color: #7a3827;
-	font-family: "Semringah";
-	width: 350px;
 }
 
 .col-sm-2
