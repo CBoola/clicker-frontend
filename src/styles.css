@@ -1,450 +1,493 @@
 /* You can add global styles to this file, and also import other style files */
-body
-{
-	color:#91522c;
-	background: #c3f1fe ; /* For browsers that do not support gradients */
-	background: -webkit-linear-gradient(#c3f1fe , #f1feff ); /* For Safari 5.1 to 6.0 */
-	background: -o-linear-gradient(#c3f1fe , #f1feff ); /* For Opera 11.1 to 12.0 */
-	background: -moz-linear-gradient(#c3f1fe , #f1feff ); /* For Firefox 3.6 to 15 */
-	background: linear-gradient(#c3f1fe , #f1feff ); /* Standard syntax */
-	height: 2500px;
-	overflow-x: hidden;
+body {
+  color: #91522c;
+  background: #c3f1fe; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(#c3f1fe, #f1feff); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#c3f1fe, #f1feff); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#c3f1fe, #f1feff); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#c3f1fe, #f1feff); /* Standard syntax */
+  height: 2500px;
+  overflow-x: hidden;
 }
 
-.noselect 
-{
+.noselect {
   -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-     -khtml-user-select: none; /* Konqueror HTML */
-       -moz-user-select: none; /* Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none; /* Non-prefixed version, currently
-                                  supported by Chrome and Opera */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+                                   supported by Chrome and Opera */
 }
 
-#grassContainer
-{
-	background:url("assets/grass.svg") repeat-x left bottom;
-	width: 100%;
-	height: 170px;
-	position: fixed;
-	bottom: 0;
-	z-index: 110;
+#grassContainer {
+  background: url("assets/grass.svg") repeat-x left bottom;
+  width: 100%;
+  height: 170px;
+  position: fixed;
+  bottom: 0;
+  z-index: 110;
 }
-.navbar-default .navbar-brand
-{
+
+.navbar-default .navbar-brand {
   background: -webkit-linear-gradient(#91522c, #7a3827);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-	font-family: "Semringah";
-	font-size: 250%;
-}
-.navbar-default .navbar-brand:hover,
-.navbar-default .navbar-brand:focus
-{
-  color: #7a3827;
-	font-family: "Semringah";
-	font-size: 250%;
-}
-.navbar-default
-{
-	background-color: unset;
-	border-color: #c5f3ff;
+  font-family: "Semringah";
+  font-size: 250%;
 }
 
-.navbar-default .navbar-nav > li > a
-{
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
   color: #7a3827;
-	font-family: "Semringah";
-	font-size: 150%;
+  font-family: "Semringah";
+  font-size: 250%;
 }
+
+.navbar-default {
+  background-color: unset;
+  border-color: #c5f3ff;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: #7a3827;
+  font-family: "Semringah";
+  font-size: 150%;
+}
+
 .navbar-default .navbar-nav > li > a:hover,
-.navbar-default .navbar-nav > li > a:focus
-{
+.navbar-default .navbar-nav > li > a:focus {
   color: #7a3827;
-	font-family: "Semringah";
-	font-size: 150%;
+  font-family: "Semringah";
+  font-size: 150%;
 }
+
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
-.navbar-default .navbar-nav > .active > a:focus
-{
-    color: #7a3827;
-    background-color: #c5f3ff;
-}
-.navbar-collapse
-{
-    border-top: none;
-}
-.navbar-default .navbar-toggle
-{
-    border-color: black;
-}
-.navbar-default .navbar-toggle:hover,
-.navbar-default .navbar-toggle:focus
-{
-    background-color: #91522c;
-}
-.navbar-default .navbar-toggle .icon-bar
-{
-    background-color: black;
-}
-.nav.navbar-nav.navbar-left .navbar-text
-{
-  color:#7a3827;
-	font-family: "Semringah";
-	font-size: 150%;
-}
-
-#mainOnion
-{
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	z-index: 5;
-}
-
-#onionContainer
-{
-	padding: 20px;
-	width: 600px;
-	height: 570px;
-}
-
-#loginContainer
-{
-	width: 100%;
-	text-align: right;
-}
-
-.plusLabel
-{
-	width: 50px;
-	height: 30px;
-	position: absolute;
-	z-index: 1000;
-  font-size: 30px;
-	background: -webkit-linear-gradient(#91522c, #7a3827);
-  background-clip: text;
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	font-family: "Semringah";
-}
-
-.plusClick
-{
-	width: 12px;
-	height: 12px;
-	margin-right: 3px;
-	margin-bottom: 10px;
-}
-
-.panel-default
-{
+.navbar-default .navbar-nav > .active > a:focus {
   color: #7a3827;
-	font-family: "Semringah";
+  background-color: #c5f3ff;
+}
+
+.navbar-collapse {
+  border-top: none;
+}
+
+.navbar-default .navbar-toggle {
+  border-color: black;
+}
+
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background-color: #91522c;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: black;
+}
+
+.nav.navbar-nav.navbar-left .navbar-text {
+  color: #7a3827;
+  font-family: "Semringah";
+  font-size: 150%;
+}
+
+#mainOnion {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 5;
+}
+
+#onionContainer {
+  padding: 20px;
+  width: 600px;
+  height: 570px;
+}
+
+#loginContainer {
+  width: 100%;
+  text-align: right;
+}
+
+.plusLabel {
+  width: 50px;
+  height: 30px;
+  position: absolute;
+  z-index: 1000;
+  font-size: 30px;
+  background: -webkit-linear-gradient(#91522c, #7a3827);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Semringah";
+}
+
+.plusClick {
+  width: 12px;
+  height: 12px;
+  margin-right: 3px;
+  margin-bottom: 10px;
+}
+
+.panel-default {
+  color: #7a3827;
+  font-family: "Semringah";
   background-color: unset;
   border: none;
   box-shadow: none;
   width: 350px;
 }
 
-.panel-title
-{
+.panel-title {
   font-family: "Semringah";
   background: -webkit-linear-gradient(#91522c, #7a3827);
   background-clip: text;
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   text-decoration: none;
 }
 
-.panel > .panel-heading
-{
+.panel > .panel-heading {
   position: relative;
-	color: #7a3827;
+  color: #7a3827;
   margin-left: 13px;
-	font-family: "Semringah";
-  background-image: url("assets/trunk.svg"),url("assets/trunk.svg"),
-                    url("assets/nav_background.svg"),url("assets/nav_background.svg"),url("assets/nav_background.svg"),url("assets/nav_background.svg"),
-                    url("assets/trunk.svg"),url("assets/trunk.svg"),
-                    url("assets/nav_background.svg"),url("assets/nav_background.svg");
-  background-position: 0% 0%, 0% 100%, 
-                       2% 0%, 22% 0%, 42% 0%, 62% 0% , 
-                       100% 0% , 100% 100% , 
-                       82% 0%, 98% 0%;
-  background-size: 20px , 20px, 
-                   80px 40px , 80px 40px , 80px 40px , 80px 40px , 
-                   20px, 20px, 
-                   80px 40px, 80px 40px;
+  font-family: "Semringah";
+  background-image: url("assets/trunk.svg"), url("assets/trunk.svg"),
+  url("assets/nav_background.svg"), url("assets/nav_background.svg"), url("assets/nav_background.svg"), url("assets/nav_background.svg"),
+  url("assets/trunk.svg"), url("assets/trunk.svg"),
+  url("assets/nav_background.svg"), url("assets/nav_background.svg");
+  background-position: 0% 0%, 0% 100%,
+  2% 0%, 22% 0%, 42% 0%, 62% 0%,
+  100% 0%, 100% 100%,
+  82% 0%, 98% 0%;
+  background-size: 20px, 20px,
+  80px 40px, 80px 40px, 80px 40px, 80px 40px,
+  20px, 20px,
+  80px 40px, 80px 40px;
   background-repeat: no-repeat;
   background-color: transparent;
   border: none;
   box-shadow: none;
   height: 40px;
-	width: 455px;
+  width: 455px;
   z-index: 100;
 }
 
-.panel-default .panel-body
-{
-  position: relative; 
-  background-image:  url("assets/trunk.svg"),url("assets/trunk.svg"),
-                     url("assets/nav_background.svg"),url("assets/nav_background.svg"),url("assets/nav_background.svg"),
-                     url("assets/nav_background.svg"),url("assets/nav_background.svg"),url("assets/nav_background.svg"),
-                     url("assets/nav_background.svg"),url("assets/nav_background.svg"),url("assets/nav_background.svg"),
-                     url("assets/nav_background.svg"),url("assets/nav_background.svg"),url("assets/nav_background.svg");
-  background-position: 3% 100%, 100% 100%, 
-                      0% 100%, 10% 100%, 20% 100%, 
-                      30% 100%, 40% 100%, 50% 100%,
-                      60% 100%, 70% 100%, 80% 100%,
-                      90% 100%, 100% 100%, 102% 100%;
+.panel-default .panel-body {
+  position: relative;
+  background-image: url("assets/trunk.svg"), url("assets/trunk.svg"),
+  url("assets/nav_background.svg"), url("assets/nav_background.svg"), url("assets/nav_background.svg"),
+  url("assets/nav_background.svg"), url("assets/nav_background.svg"), url("assets/nav_background.svg"),
+  url("assets/nav_background.svg"), url("assets/nav_background.svg"), url("assets/nav_background.svg"),
+  url("assets/nav_background.svg"), url("assets/nav_background.svg"), url("assets/nav_background.svg");
+  background-position: 3% 100%, 100% 100%,
+  0% 100%, 10% 100%, 20% 100%,
+  30% 100%, 40% 100%, 50% 100%,
+  60% 100%, 70% 100%, 80% 100%,
+  90% 100%, 100% 100%, 102% 100%;
   background-size: 20px, 20px, 80px 19px,
-                   80px 19px,80px 19px,80px 19px,
-                   80px 19px,80px 19px,80px 19px,
-                   80px 19px,80px 19px,80px 19px,
-                   80px 19px, 80px 19px;
+  80px 19px, 80px 19px, 80px 19px,
+  80px 19px, 80px 19px, 80px 19px,
+  80px 19px, 80px 19px, 80px 19px,
+  80px 19px, 80px 19px;
   background-repeat: no-repeat;
   width: 468px;
   z-index: 20;
   border-style: none;
 }
 
-.panel > .panel-collapse
-{
+.panel > .panel-collapse {
   width: 468px;
   z-index: 100;
   background-color: transparent;
-  box-shadow:none;
-  border:none;
+  box-shadow: none;
+  border: none;
   text-decoration: none;
 }
 
-
 .panel > .panel-heading > a:focus,
-.panel > .panel-heading > a:hover
-{
+.panel > .panel-heading > a:hover {
   text-decoration: none;
   border: none;
   box-shadow: none;
   border-color: none;
 }
 
-.col-sm-2
-{
+.col-sm-2 {
   margin-top: 50px;
 }
 
-#ads img 
-{
+#ads img {
   height: 100%;
 }
 
-
-.jumpOut
- {
+.jumpOut {
   cursor: default;
   animation: parabola 1.25s 1 normal;
   -webkit-animation: parabola 1.25s 1 normal;
   -moz-animation: parabola 1.25s 1 normal;
 }
 
-@keyframes parabola 
-{
+@keyframes parabola {
   0% {
-    transform: translate(-10px, 15px);
+    transform: translate(-10px, 3px);
+    opacity: 1;
   }
   5% {
-    transform: translate(-5px, 0px);
+    transform: translate(-5px, 1px);
+    opacity: 0.95;
   }
   10% {
-    transform: translate(0px, -5px);
+    transform: translate(0px, 0px);
+    opacity: 0.9;
   }
   15% {
-    transform: translate(5px, 0px);
+    transform: translate(5px, 1px);
+    opacity: 0.85;
   }
   20% {
-    transform: translate(10px, 15px);
+    transform: translate(10px, 3px);
+    opacity: 0.8;
   }
   25% {
-    transform: translate(15px, 40px);
+    transform: translate(15px, 7px);
+    opacity: 0.75;
   }
   30% {
-    transform: translate(20px, 75px);
+    transform: translate(20px, 13px);
+    opacity: 0.7;
   }
   35% {
-    transform: translate(25px, 120px);
+    transform: translate(25px, 21px);
+    opacity: 0.65;
   }
   40% {
-    transform: translate(30px, 175px);
+    transform: translate(30px, 30px);
+    opacity: 0.6;
   }
   45% {
-    transform: translate(35px, 240px);
+    transform: translate(35px, 41px);
+    opacity: 0.55;
   }
   50% {
-    transform: translate(40px, 315px);
+    transform: translate(40px, 53px);
+    opacity: 0.5;
   }
   55% {
-    transform: translate(45px, 400px);
+    transform: translate(45px, 68px);
+    opacity: 0.45;
   }
   60% {
-    transform: translate(50px, 495px);
+    transform: translate(50px, 83px);
+    opacity: 0.4;
   }
   65% {
-    transform: translate(55px, 600px);
+    transform: translate(55px, 101px);
+    opacity: 0.35;
   }
   70% {
-    transform: translate(60px, 715px);
+    transform: translate(60px, 120px);
+    opacity: 0.3;
   }
   75% {
-    transform: translate(65px, 840px);
+    transform: translate(65px, 141px);
+    opacity: 0.25;
   }
   80% {
-    transform: translate(70px, 975px);
+    transform: translate(70px, 163px);
+    opacity: 0.2;
   }
   85% {
-    transform: translate(75px, 1120px);
+    transform: translate(75px, 188px);
+    opacity: 0.15;
   }
   90% {
-    transform: translate(80px, 1275px);
+    transform: translate(80px, 213px);
+    opacity: 0.1;
   }
   95% {
-    transform: translate(85px, 1440px);
+    transform: translate(85px, 241px);
+    opacity: 0.05;
   }
   100% {
-    transform: translate(90px, 1615px);
+    transform: translate(90px, 270px);
+    opacity: 0;
   }
 }
 
 @-webkit-keyframes parabola {
   0% {
-    -webkit-transform: translate(-10px, 15px);
+    transform: translate(-10px, 3px);
+    opacity: 1;
   }
   5% {
-    -webkit-transform: translate(-5px, 0px);
+    transform: translate(-5px, 1px);
+    opacity: 0.95;
   }
   10% {
-    -webkit-transform: translate(0px, -5px);
+    transform: translate(0px, 0px);
+    opacity: 0.9;
   }
   15% {
-    -webkit-transform: translate(5px, 0px);
+    transform: translate(5px, 1px);
+    opacity: 0.85;
   }
   20% {
-    -webkit-transform: translate(10px, 15px);
+    transform: translate(10px, 3px);
+    opacity: 0.8;
   }
   25% {
-    -webkit-transform: translate(15px, 40px);
+    transform: translate(15px, 7px);
+    opacity: 0.75;
   }
   30% {
-    -webkit-transform: translate(20px, 75px);
+    transform: translate(20px, 13px);
+    opacity: 0.7;
   }
   35% {
-    -webkit-transform: translate(25px, 120px);
+    transform: translate(25px, 21px);
+    opacity: 0.65;
   }
   40% {
-    -webkit-transform: translate(30px, 175px);
+    transform: translate(30px, 30px);
+    opacity: 0.6;
   }
   45% {
-    -webkit-transform: translate(35px, 240px);
+    transform: translate(35px, 41px);
+    opacity: 0.55;
   }
   50% {
-    -webkit-transform: translate(40px, 315px);
+    transform: translate(40px, 53px);
+    opacity: 0.5;
   }
   55% {
-    -webkit-transform: translate(45px, 400px);
+    transform: translate(45px, 68px);
+    opacity: 0.45;
   }
   60% {
-    -webkit-transform: translate(50px, 495px);
+    transform: translate(50px, 83px);
+    opacity: 0.4;
   }
   65% {
-    -webkit-transform: translate(55px, 600px);
+    transform: translate(55px, 101px);
+    opacity: 0.35;
   }
   70% {
-    -webkit-transform: translate(60px, 715px);
+    transform: translate(60px, 120px);
+    opacity: 0.3;
   }
   75% {
-    -webkit-transform: translate(65px, 840px);
+    transform: translate(65px, 141px);
+    opacity: 0.25;
   }
   80% {
-    -webkit-transform: translate(70px, 975px);
+    transform: translate(70px, 163px);
+    opacity: 0.2;
   }
   85% {
-    -webkit-transform: translate(75px, 1120px);
+    transform: translate(75px, 188px);
+    opacity: 0.15;
   }
   90% {
-    -webkit-transform: translate(80px, 1275px);
+    transform: translate(80px, 213px);
+    opacity: 0.1;
   }
   95% {
-    -webkit-transform: translate(85px, 1440px);
+    transform: translate(85px, 241px);
+    opacity: 0.05;
   }
   100% {
-    -webkit-transform: translate(90px, 1615px);
+    transform: translate(90px, 270px);
+    opacity: 0;
   }
 }
 
 @-moz-keyframes parabola {
   0% {
-    -moz-transform: translate(-10px, 15px);
+    transform: translate(-10px, 3px);
+    opacity: 1;
   }
   5% {
-    -moz-transform: translate(-5px, 0px);
+    transform: translate(-5px, 1px);
+    opacity: 0.95;
   }
   10% {
-    -moz-transform: translate(0px, -5px);
+    transform: translate(0px, 0px);
+    opacity: 0.9;
   }
   15% {
-    -moz-transform: translate(5px, 0px);
+    transform: translate(5px, 1px);
+    opacity: 0.85;
   }
   20% {
-    -moz-transform: translate(10px, 15px);
+    transform: translate(10px, 3px);
+    opacity: 0.8;
   }
   25% {
-    -moz-transform: translate(15px, 40px);
+    transform: translate(15px, 7px);
+    opacity: 0.75;
   }
   30% {
-    -moz-transform: translate(20px, 75px);
+    transform: translate(20px, 13px);
+    opacity: 0.7;
   }
   35% {
-    -moz-transform: translate(25px, 120px);
+    transform: translate(25px, 21px);
+    opacity: 0.65;
   }
   40% {
-    -moz-transform: translate(30px, 175px);
+    transform: translate(30px, 30px);
+    opacity: 0.6;
   }
   45% {
-    -moz-transform: translate(35px, 240px);
+    transform: translate(35px, 41px);
+    opacity: 0.55;
   }
   50% {
-    -moz-transform: translate(40px, 315px);
+    transform: translate(40px, 53px);
+    opacity: 0.5;
   }
   55% {
-    -moz-transform: translate(45px, 400px);
+    transform: translate(45px, 68px);
+    opacity: 0.45;
   }
   60% {
-    -moz-transform: translate(50px, 495px);
+    transform: translate(50px, 83px);
+    opacity: 0.4;
   }
   65% {
-    -moz-transform: translate(55px, 600px);
+    transform: translate(55px, 101px);
+    opacity: 0.35;
   }
   70% {
-    -moz-transform: translate(60px, 715px);
+    transform: translate(60px, 120px);
+    opacity: 0.3;
   }
   75% {
-    -moz-transform: translate(65px, 840px);
+    transform: translate(65px, 141px);
+    opacity: 0.25;
   }
   80% {
-    -moz-transform: translate(70px, 975px);
+    transform: translate(70px, 163px);
+    opacity: 0.2;
   }
   85% {
-    -moz-transform: translate(75px, 1120px);
+    transform: translate(75px, 188px);
+    opacity: 0.15;
   }
   90% {
-    -moz-transform: translate(80px, 1275px);
+    transform: translate(80px, 213px);
+    opacity: 0.1;
   }
   95% {
-    -moz-transform: translate(85px, 1440px);
+    transform: translate(85px, 241px);
+    opacity: 0.05;
   }
   100% {
-    -moz-transform: translate(90px, 1615px);
+    transform: translate(90px, 270px);
+    opacity: 0;
   }
 }
