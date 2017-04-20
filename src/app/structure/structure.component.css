@@ -4,14 +4,14 @@
 	background-color: fdf5e0;
 	height: 95px;
 	width: 450px;
-	color: black;
+	color: #9a6d38;
 	padding-top: 15px;
-
+	font-family: lovemonster;
 }
 
-.structureMain:hover
+.structureMain:hover > #name
 {
-	background-color: gray;
+	display: none;
 }
 
 .structureContainer
@@ -23,6 +23,12 @@
 	//height: 350px;
 	//overflow-y: scroll;
 	//overflow-x: hidden;
+}
+
+@font-face {
+  font-family: 'lovemonster';
+  src: url('../../assets/lovemonster.ttf') format('ttf'),
+  url('../../assets/lovemonster.ttf') format('truetype'); /* Safari, Android, iOS */
 }
 
 .leftColumn
@@ -64,8 +70,8 @@
 {
 	position: absolute;
 	left: 85px;
-	top: 37px;
-	font-size: 30px;
+	top: 25px;
+	font-size: 45px;
 }
 
 #description
@@ -77,8 +83,8 @@
 {
 	position: absolute;
 	right: 30px;
-	top: 37px;
-	font-size: 30px;
+	top: 25px;
+	font-size: 45px;
 }
 
 #str_icon

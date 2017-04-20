@@ -143,11 +143,13 @@ body {
 
 .panel-title {
   font-family: "Semringah";
-  background: -webkit-linear-gradient(#91522c, #7a3827);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  font-size: 25px;
+  font-weight: bolder;
   text-decoration: none;
+  color: #f8f5e3;
+  text-stroke: 0.5px #8c6637;
+  -webkit-text-stroke: 0.5px #8c6637;
+  text-shadow: 0 0 16px #deb170;
 }
 
 .panel > .panel-heading {
