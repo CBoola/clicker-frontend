@@ -14,6 +14,36 @@
 	display: none;
 }
 
+.structureMain > #description
+{
+	display: none;
+}
+
+.structureMain:hover > #description
+{
+	display: inline;
+}
+
+.structureMain > #price
+{
+	display: none;
+}
+
+.structureMain:hover > #price
+{
+	display: inline;
+}
+
+.structureMain > #production
+{
+	display: none;
+}
+
+.structureMain:hover > #production
+{
+	display: inline;
+}
+
 .structureContainer
 {
 	position: relative;
@@ -76,7 +106,11 @@
 
 #description
 {
-	color: yellow;
+	position: absolute;
+	left: 85px;
+	top: 25px;
+	font-size: 20px;
+	font-weight: bold;
 }
 
 #numOfStructures
@@ -85,6 +119,23 @@
 	right: 30px;
 	top: 25px;
 	font-size: 45px;
+}
+
+#price
+{
+	position: absolute;
+	left: 85px;
+	top: 70px;
+	font-size: 20px;	
+}
+
+#production
+{
+	position: absolute;
+	left: 85px;
+	top: 45px;
+	font-size: 20px;
+	font-style: italic;
 }
 
 #str_icon

@@ -4,28 +4,14 @@
 		<div class="rightColumn"></div>
 		<img id="str_icon" src="{{ str.icon }}" />
 		<div id="name">{{ str.name }}</div>
-
+		<div id="description">{{ str.description}}</div>
+		<div id="production">+{{str.production_rate}} produkcja cebul/s</div>
+		<div id="price">Cena: {{ this.priceForLevel(i) }} cebul</div>
+		
 		<div id="numOfStructures">
 			{{ this.gs.numOfStructure(str.system_id) }}
 		</div>
-	  <!--
-	  <table>
-		<tr>
-			<td>
-				jjjjj
-			</td>
-			<td>
-				
-				<div id="description">{{ str.description}}</div>
-				<div>Cena: {{ this.priceForLevel(i) }} cebul</div>
-				<div>+{{str.production_rate}} produkcja cebul/s</div>
-			</td>
-			<td>
-				
-			</td>
-		</tr>
-	  </table>
-	  -->
+
 	  <div class="woodenRow"></div>
 	</div>
 </div>
