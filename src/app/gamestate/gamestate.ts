@@ -122,8 +122,11 @@ export class GameState {
         });
 
         // upgrades
-
-
+		const res_upgrades = res.upgrades;
+		res_structures.forEach(str => {
+          this.boughtUpgrades.push( parseInt(str) );
+        });
+		
         this.updateAll();
         this.stateReaded = true;
       });
@@ -180,6 +183,7 @@ export class GameState {
     state.current_state.cash = Math.round(this.onions);
 
     state.structures = [];
+	state.upgrades = [];
 
     for (const index in this.numberOfStructures) {
       const value = this.numberOfStructures[index];
@@ -194,6 +198,11 @@ export class GameState {
       }
     }
 
+	for(const upg of this.boughtUpgrades)
+	{
+		state.upgrades.push(upg+"");
+	}
+	
     const stateJson = JSON.stringify(state);
     // console.log(stateJson);
 

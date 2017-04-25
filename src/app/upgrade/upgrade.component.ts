@@ -41,4 +41,12 @@ export class UpgradeComponent implements OnInit {
 	return this.isBoughtById(upgradeId);
   }
   
+  displayBought(upgradeId: number)
+  {
+	if( this.isBoughtById(upgradeId) )
+		return "style=\"display: inline\"";
+	else
+		return "style=\"display: none\"";
+  }
+  
 }

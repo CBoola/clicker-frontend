@@ -14,35 +14,16 @@
 	display: none;
 }
 
-.structureMain > #description
+.structureMain > .hiddenContent
 {
 	display: none;
 }
 
-.structureMain:hover > #description
+.structureMain:hover > .hiddenContent
 {
 	display: inline;
 }
 
-.structureMain > #price
-{
-	display: none;
-}
-
-.structureMain:hover > #price
-{
-	display: inline;
-}
-
-.structureMain > #production
-{
-	display: none;
-}
-
-.structureMain:hover > #production
-{
-	display: inline;
-}
 
 .structureContainer
 {
