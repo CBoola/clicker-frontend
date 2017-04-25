@@ -9,6 +9,7 @@
         <div id="description">{{ upgrade.description}}</div>
         <div>Cena: {{ upgrade.base_prize }} cebul</div>
         <div>Mnożnik: {{upgrade.multiplier}}</div>
+        <div>Kupione: {{this.isBoughtById(upgrade.system_id)}}</div>
       </td>
       <td>
 

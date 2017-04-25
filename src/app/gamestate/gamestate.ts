@@ -41,6 +41,7 @@ export class GameState {
   upgrades: Array<Upgrade> = [];
   structures: Array<Structure> = [];
   numberOfStructures = [];
+  boughtUpgrades = [];
 
   player_id = -1;
   onions = 0;
@@ -138,6 +139,22 @@ export class GameState {
     this.onionPerSecond = onionPerSec;
   }
 
+  mutiplerValue(){
+	let mult = 1;
+	for(const upg of this.upgrades)
+	{
+		if( !upg.hasOwnProperty("system_id") )
+			continue;
+		const upgradeId = upg.system_id;
+		if( this.boughtUpgrades.includes(upgradeId) )
+		{
+			mult *= upg.multiplier;
+		}
+		
+	}
+	this.onionMultipler = mult;
+  }
+  
   numOfStructure(structureId: number) {
     const num = this.numberOfStructures[structureId];
     if (num === undefined) {
@@ -146,9 +163,10 @@ export class GameState {
     }
     return num;
   }
-
+  
   updateAll() {
     this.onionsPerSecond();
+	this.mutiplerValue();
   }
 
 
