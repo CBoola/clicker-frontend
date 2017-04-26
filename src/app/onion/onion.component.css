@@ -1,6 +1,15 @@
 .center {
   width: 100%;
   height: 100%;
+  text-align: center;
+}
+
+#mainOnionContainer
+{
+	width: 600px;
+	margin: auto;
+	height: 100%;
+	position: relative;
 }
 
 #mainOnion {
@@ -10,8 +19,8 @@
   height: 600px;
   left: 5px;
   top: 5px;
-  margin-left: 15px;
-  margin-top: -20px;
+  margin-left: 0px;
+  margin-top: -40px;
 }
 
 #radialStripes1 {
