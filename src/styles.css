@@ -237,6 +237,22 @@ body {
   -moz-animation: parabola 1.25s 1 normal;
 }
 
+#struktury_title
+{
+	background-image: url("assets/struktury.svg");
+	background-size: 100% 100%;
+	height: 31px;
+	width: 100%;
+}
+
+#ulepszenia_title
+{
+	background-image: url("assets/ulepszenia.svg");
+	background-size: 100% 100%;
+	height: 31px;
+	width: 100%;
+}
+
 @keyframes parabola {
   0% {
     transform: translate(-10px, 3px);

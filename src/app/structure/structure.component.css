@@ -80,7 +80,7 @@
 #name
 {
 	position: absolute;
-	left: 85px;
+	left: 105px;
 	top: 25px;
 	font-size: 45px;
 }
@@ -88,7 +88,7 @@
 #description
 {
 	position: absolute;
-	left: 85px;
+	left: 105px;
 	top: 25px;
 	font-size: 20px;
 	font-weight: bold;
@@ -105,7 +105,7 @@
 #price
 {
 	position: absolute;
-	left: 85px;
+	left: 105px;
 	top: 70px;
 	font-size: 20px;	
 }
@@ -113,7 +113,7 @@
 #production
 {
 	position: absolute;
-	left: 85px;
+	left: 105px;
 	top: 45px;
 	font-size: 20px;
 	font-style: italic;
@@ -123,7 +123,7 @@
 {
 	position: absolute;
 	top: 30px;
-	left: 20px;
+	left: 30px;
 	width: 55px;
 	height: 55px;
 }
