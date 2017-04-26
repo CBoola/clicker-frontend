@@ -8,6 +8,7 @@ body {
   background: linear-gradient(#c3f1fe, #f1feff); /* Standard syntax */
   height: 2500px;
   overflow-x: hidden;
+  min-width: 1000px;
 }
 
 .noselect {
@@ -102,11 +103,20 @@ body {
 }
 
 #onionContainer {
+  margin: auto;
   padding: 20px;
   width: 600px;
   height: 570px;
 }
-
+/*
+#uppContainer {
+  margin: auto;
+  padding: 20px;
+  width: 600px;
+  height: 1400px;
+  position: relative;
+}
+*/
 #loginContainer {
   width: 100%;
   text-align: right;
@@ -217,10 +227,6 @@ body {
   border: none;
   box-shadow: none;
   border-color: none;
-}
-
-.col-sm-2 {
-  margin-top: 50px;
 }
 
 #ads img {
