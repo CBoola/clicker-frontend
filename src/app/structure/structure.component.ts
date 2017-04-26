@@ -23,7 +23,7 @@ export class StructureComponent implements OnInit {
   }
 
   priceForLevel2(structureIndex: number, boughtLevels: number) {
-    return Math.round(this.gs.structures[structureIndex].base_prize * Math.pow(1.15, boughtLevels));
+    return Math.round(this.gs.structures[structureIndex].base_prize * Math.pow(1.15, boughtLevels))*this.gs.japcokMultipler;
   }
 
   priceForLevel(structureIndex: number) {

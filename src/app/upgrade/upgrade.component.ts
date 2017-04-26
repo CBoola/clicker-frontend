@@ -15,12 +15,12 @@ export class UpgradeComponent implements OnInit {
   }
 
   clicked(index) {
-	const upgradeId = this.gs.structures[index].system_id;
+	const upgradeId:number = parseInt(this.gs.structures[index].system_id+"");
 	if( this.gs.boughtUpgrades.includes(upgradeId)  )
 	{
 		return;
 	}
-	const prize = this.gs.structures[index].base_prize;
+	const prize = this.boughtPrize( this.gs.structures[index].base_prize );
 	if( this.gs.onions >= prize )
 	{
 		this.gs.boughtUpgrades.push(upgradeId);
@@ -30,9 +30,14 @@ export class UpgradeComponent implements OnInit {
 	
   }
   
+  boughtPrize(basePrize: number)
+  {
+	return basePrize*this.gs.japcokMultipler;
+  }
+  
   isBoughtById(upgradeId: number)
   {
-	return this.gs.boughtUpgrades.includes(upgradeId);
+	return this.gs.boughtUpgrades.includes(parseInt(upgradeId+""));
   }
   
   isBoughtByIndex(index: number)
@@ -41,12 +46,5 @@ export class UpgradeComponent implements OnInit {
 	return this.isBoughtById(upgradeId);
   }
   
-  displayBought(upgradeId: number)
-  {
-	if( this.isBoughtById(upgradeId) )
-		return "style=\"display: inline\"";
-	else
-		return "style=\"display: none\"";
-  }
   
 }

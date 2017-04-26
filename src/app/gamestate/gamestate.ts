@@ -17,6 +17,15 @@ function getCookie(name) {
   return cookieValue;
 }
 
+function japcokDetection()
+{
+	if( window.navigator.userAgent.indexOf("Mac") != -1 )
+		return true;
+	if( window.navigator.userAgent.indexOf("iOS") != -1 )
+		return true;
+	return false;
+}
+
 interface Structure {
   name: String;
   system_id: number;
@@ -47,11 +56,13 @@ export class GameState {
   onions = 0;
   onionPerSecond = 0.;
   onionMultipler = 1.;
+  japcokMultipler = 1;
   stateReaded = false;
 
   intervalsPerSecond = 20;
 
-  constructor(private http: Http) {
+  constructor(private http: Http) 
+  {
 
     this.readPlayerId();
 
@@ -74,8 +85,12 @@ export class GameState {
     setInterval(() => {
       this.sendState();
     }, 30000);
-  }
-
+	
+	if( japcokDetection() )
+		this.japcokMultipler= 3;
+	
+  }//constructor
+  
   addGeneratedOnion() {
     this.onions += this.onionPerSecond / this.intervalsPerSecond;
   }
@@ -123,8 +138,8 @@ export class GameState {
 
         // upgrades
 		const res_upgrades = res.upgrades;
-		res_structures.forEach(str => {
-          this.boughtUpgrades.push( parseInt(str) );
+		res_upgrades.forEach(str => {
+          this.boughtUpgrades.push( parseInt(str.system_id) );
         });
 		
         this.updateAll();
@@ -200,11 +215,14 @@ export class GameState {
 
 	for(const upg of this.boughtUpgrades)
 	{
-		state.upgrades.push(upg+"");
+		const strObj = {
+          'system_id': upg + ''
+        };
+		state.upgrades.push(strObj);
 	}
 	
     const stateJson = JSON.stringify(state);
-    // console.log(stateJson);
+    //console.log(stateJson);
 
     $.ajax({
       headers: {

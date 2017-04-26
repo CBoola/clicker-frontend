@@ -6,7 +6,7 @@
 		<div id="name">{{ upgrade.name }}</div>
 		<div id="description" class="hiddenContent">{{ upgrade.description}}</div>
 		<div id="multiplier" class="hiddenContent">Mnożnik: {{upgrade.multiplier}}</div>
-		<div id="price" class="hiddenContent">Cena: {{ upgrade.base_prize }} cebul</div>
+		<div id="price" class="hiddenContent">Cena: {{ this.boughtPrize(upgrade.base_prize) }} cebul</div>
 		<div id="bought" [hidden]="!this.isBoughtById(upgrade.system_id)"></div>
 	  <div class="woodenRow"></div>
 	</div>
