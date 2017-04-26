@@ -139,8 +139,7 @@
   font-family: "Semringah", sans-serif;
   position: absolute;
   bottom: 30px;
-  right: 0;
-  left: 0;
+  left: 200px;
   margin: 0 auto;
   z-index: 10;
 }

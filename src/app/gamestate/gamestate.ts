@@ -164,7 +164,7 @@ export class GameState {
 		if( !upg.hasOwnProperty("system_id") )
 			continue;
 		const upgradeId = upg.system_id;
-		if( this.boughtUpgrades.includes(upgradeId) )
+		if( this.boughtUpgrades.includes( parseInt(upgradeId+"")  ) )
 		{
 			mult *= upg.multiplier;
 		}
