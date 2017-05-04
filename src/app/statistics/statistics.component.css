@@ -129,3 +129,51 @@
 	background-size: contain;
 	z-index: 15;	
 }
+
+@font-face 
+{
+  font-family: 'lovemonster';
+  src: url('../../assets/lovemonster.ttf') format('ttf'),
+  url('../../assets/lovemonster.ttf') format('truetype'); /* Safari, Android, iOS */
+}
+
+.textDiv
+{
+	color: #9a6d38;
+	font-family: lovemonster;
+	font-size: 40px;
+	font-weight: normal;
+}
+
+.labelDiv
+{
+	font-weight: bold;
+}
+
+#numberOfCliksLabel
+{
+	position: absolute;
+	top: 30px;
+	left: 30px;
+}
+
+#numberOfCliksValue
+{
+	position: absolute;
+	top: 30px;
+	right: 30px;
+}
+
+#numberOfTookOnionsLabel
+{
+	position: absolute;
+	top: 90px;
+	left: 30px;
+}
+
+#numberOfTookOnionsValue
+{
+	position: absolute;
+	top: 90px;
+	right: 30px;
+}
