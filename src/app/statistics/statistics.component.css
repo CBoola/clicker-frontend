@@ -2,7 +2,16 @@
 {
 	width: 600px;
 	height: 600px;
-	background-color: yellow;
+}
+
+#statisticsContent
+{
+	position: absolute;
+	width: 580px;
+	height: 570px;
+	left: 10px;
+	top: 20px;
+	background-color: #fdf5e0;
 }
 
 #topFrame
@@ -30,28 +39,93 @@
 .horizontalFrame
 {
 	position: absolute;
-	width: 100%;
+	width: 585px;
 	background-image: url("../../assets/nav_background.svg");
 	background-size: contain;
 	z-index: 10;
+	margin-top: -2px;
+	margin-bottom: -2px;
+	margin-left: 7px;
+	margin-right: 14px;
 }
 
 .verticalFrame
 {
 	position: absolute;
-	width: 20px;
-	height: 100%;
+	width: 15px;
+	height: 570px;
 	background-image: url("../../assets/nav_background_vertical.svg");
 	background-size: contain;
+	margin-left: -2px;
+	margin-right: -2px;
 	z-index: 5;
+	margin-top: 25px;
 }
 
-#leftTopCorner
+#leftTop1Corner
 {
+	left: 0px;
+	top: 0px;
+	margin-left: -5px;
+	margin-top: -3px;
+	width: 22px;
+	height: 22px;
+}
 
+#leftTop2Corner
+{
+	left: 0px;
+	top: 20px;
+	margin-left: -5px;
+	margin-top: -2px;
+	width: 22px;
+	height: 22px;
+}
+
+#rightTop1Corner
+{
+	right: 0px;
+	top: 0px;
+	margin-right: -5px;
+	margin-top: -3px;
+	width: 22px;
+	height: 22px;
+}
+
+#rightTop2Corner
+{
+	right: 0px;
+	top: 20px;
+	margin-right: -5px;
+	margin-top: -2px;
+	width: 22px;
+	height: 22px;
+}
+
+#leftBottomCorner
+{
+	left: 0px;
+	bottom: 0px;
+	margin-left: -6px;
+	margin-bottom: -2px;
+	width: 22px;
+	height: 22px;
+}
+
+#rightBottomCorner
+{
+	right: 0px;
+	bottom: 0px;
+	margin-right: -6px;
+	margin-bottom: -2px;
+	width: 22px;
+	height: 22px;
 }
 
 .corner
 {
-
+	position: absolute;
+	background-image: url("../../assets/trunk.svg");
+	background-size: contain;
+	z-index: 15;	
 }
