@@ -1,0 +1,57 @@
+#statisticsMain
+{
+	width: 600px;
+	height: 600px;
+	background-color: yellow;
+}
+
+#topFrame
+{
+	top: 0px;
+	height: 40px;
+}
+
+#bottomFrame
+{
+	bottom: 0px;
+	height: 20px;
+}
+
+#leftFrame
+{
+	left: 0px;
+}
+
+#rightFrame
+{
+	right: 0px;
+}
+
+.horizontalFrame
+{
+	position: absolute;
+	width: 100%;
+	background-image: url("../../assets/nav_background.svg");
+	background-size: contain;
+	z-index: 10;
+}
+
+.verticalFrame
+{
+	position: absolute;
+	width: 20px;
+	height: 100%;
+	background-image: url("../../assets/nav_background_vertical.svg");
+	background-size: contain;
+	z-index: 5;
+}
+
+#leftTopCorner
+{
+
+}
+
+.corner
+{
+
+}
