@@ -5,8 +5,9 @@
 		<img id="str_icon" src="{{ str.icon }}" />
 		<div id="name">{{ str.name }}</div>
 		<div id="description" class="hiddenContent">{{ str.description}}</div>
-		<div id="production" class="hiddenContent">+{{str.production_rate}} produkcja cebul/s</div>
-		<div id="price" class="hiddenContent">Cena: {{ this.priceForLevel(i) }} cebul</div>
+		<div id="production">+{{str.production_rate}} cebul/s</div>
+		<div id="priceIcon" class="hiddenContent"></div>
+		<div id="price" class="hiddenContent">{{ this.priceForLevel(i) }}</div>
 		
 		<div id="numOfStructures">
 			{{ this.gs.numOfStructure(str.system_id) }}
