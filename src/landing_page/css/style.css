@@ -31,6 +31,30 @@ body {
 	width: 800px;
 	height: 115px;
 	z-index: 1000;
+	/* 
+	
+	.transition-duration(200ms, 0);
+	.transition-property(opacity, visibility);
+	.transition-delay(0, 200ms);
+    &.hidden {
+        visibility: hidden;
+        .opacity(0);
+
+		.transition-duration(0, 200ms);
+		.transition-property(visibility, opacity);
+		.transition-delay(0);
+	} */
+}
+
+.hidden{
+    visibility: hidden;
+	opacity: 0;
+	transition: visibility 1s, opacity 0.5s linear;
+}
+
+@-prefix-keyframes slide {
+  from {height: 0;}
+  to {height: 300px;}
 }
 
 #closeButton
@@ -43,6 +67,7 @@ body {
 	background-image: url('../assets/ok.svg');
 	background-size: 100% 100%;
 	z-index: 9999999;
+	cursor: pointer;
 }
 
 #closeButton:hover

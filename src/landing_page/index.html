@@ -9,6 +9,8 @@
  
 <body>
 
+<img style="display: none" src="assets/ok_hover.svg" />
+<img style="display: none" src="assets/zagraj_hover.svg" />
 <div id="grassContainer"></div>
 <div id="alertContainer">
 	<div id="topFrame" class="horizontalFrame"></div>
@@ -21,7 +23,7 @@
 	<div id="rightBottomCorner" class="corner"></div>
 	<div id="alertContent">
 		Strona do prawidłowego działania używa wirtualnej cebuli. Możesz określić warunki przechowywania lub dostępu do onions w ustawieniach twojej przeglądarki.
-		<div id="closeButton" onclick='document.getElementById("alertContainer").style.display = "none"'></div>
+		<div id="closeButton" onclick='document.getElementById("alertContainer").className = "hidden"'></div>
 	</div>
 </div>
 	
