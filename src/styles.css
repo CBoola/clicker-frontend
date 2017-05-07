@@ -124,7 +124,7 @@ body {
 }
 
 .plusLabel {
-  width: 50px;
+  width: 200px;
   height: 35px;
   position: absolute;
   z-index: 1000;
@@ -248,14 +248,20 @@ body {
 
 #struktury_title
 {
-	height: 31px;
+	height: 33px;
 	width: 100%;
+	background: no-repeat center;
+	background-image: url("assets/struktury.svg");
+	background-size: contain;
 }
 
 #ulepszenia_title
 {
-	height: 31px;
+	height: 33px;
 	width: 100%;
+	background: no-repeat center;
+	background-image: url("assets/ulepszenia.svg");
+	background-size: contain;
 }
 
 @keyframes parabola {
