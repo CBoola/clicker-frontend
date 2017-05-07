@@ -14,7 +14,7 @@
 
 #mainOnion {
   background: no-repeat center;
-  background-size: 100% 100%;
+  background-size: contain;
   width: 600px;
   height: 600px;
   left: 5px;
