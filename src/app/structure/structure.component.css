@@ -115,7 +115,7 @@
 	position: absolute;
 	width: 11px;
 	height: 18px;
-	left: 110px;
+	left: 107px;
 	top: 57px;
 	background-image: url("../../assets/onion_overlay.svg");
 	background-size: contain;
@@ -125,7 +125,7 @@
 #production
 {
 	position: absolute;
-	right: 20px;
+	right: 30px;
 	top: 60px;
 	font-size: 20px;
 }
