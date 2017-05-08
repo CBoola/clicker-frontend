@@ -18,6 +18,7 @@ export class StructureComponent implements OnInit {
     if (price <= this.gs.onions) {
       this.gs.onions -= price;
       this.gs.numberOfStructures[structureId]++;
+	  this.gs.statisticsValue.spent_cash += price;
     }
     this.gs.onionsPerSecond();
   }

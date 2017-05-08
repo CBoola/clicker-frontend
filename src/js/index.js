@@ -80,3 +80,11 @@ function getCookie(name) {
   }
   return cookieValue;
 }
+
+$( "#statisticsBtn" ).click(function() {
+	var displayVal = $("#statisticsContainer").css("display");
+	if(displayVal == "none")
+		$("#statisticsContainer").css("display", "inline");
+	else
+		$("#statisticsContainer").css("display", "none");
+});

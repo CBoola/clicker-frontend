@@ -19,6 +19,7 @@ export class OnionComponent implements OnInit {
     this.gs.onions += this.gs.onionMultipler;
 	this.gs.statisticsValue.number_of_clicks++;
 	this.gs.statisticsValue.collected_cash += this.gs.onionMultipler;
+	this.gs.statisticsValue.cach_from_clicks += this.gs.onionMultipler;
 
     const posX = event.pageX + 20;
     const posY = event.pageY - 20;

@@ -37,6 +37,7 @@ body {
 	top: 150px;
 	margin-left: -300px;
 	z-index: 1005;
+	display: none;
 }
 
 .navbar-default .navbar-brand {

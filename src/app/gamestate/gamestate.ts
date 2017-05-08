@@ -102,7 +102,9 @@ export class GameState {
   }//constructor
   
   addGeneratedOnion() {
-    this.onions += this.onionPerSecond / this.intervalsPerSecond;
+    var productionStep = this.onionPerSecond / this.intervalsPerSecond
+	this.onions += productionStep;
+	this.statisticsValue.collected_cash += productionStep;
   }
 
   printOnions(value: number) {
@@ -275,8 +277,14 @@ export class GameState {
 		state.upgrades.push(strObj);
 	}
 	
+	state.statistics = {};
+	state.statistics.collected_cash = parseInt(this.statisticsValue.collected_cash+"");
+	state.statistics.cach_from_clicks = this.statisticsValue.cach_from_clicks;
+	state.statistics.spent_cash = this.statisticsValue.spent_cash;
+	state.statistics.number_of_clicks = this.statisticsValue.number_of_clicks;
+	
     const stateJson = JSON.stringify(state);
-    //console.log(stateJson);
+    console.log(stateJson);
 
     $.ajax({
       headers: {

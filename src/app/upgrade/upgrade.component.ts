@@ -26,6 +26,7 @@ export class UpgradeComponent implements OnInit {
 		this.gs.boughtUpgrades.push(upgradeId);
 		this.gs.onions -= prize;
 		this.gs.mutiplerValue();
+		this.gs.statisticsValue.spent_cash += prize;
 	}
 	
   }
