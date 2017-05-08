@@ -173,15 +173,16 @@ body {
   background-image: url("assets/trunk.svg"), url("assets/trunk.svg"),
   url("assets/nav_background.svg"), url("assets/nav_background.svg"), url("assets/nav_background.svg"), url("assets/nav_background.svg"),
   url("assets/trunk.svg"), url("assets/trunk.svg"),
-  url("assets/nav_background.svg"), url("assets/nav_background.svg");
+  url("assets/nav_background.svg"), url("assets/nav_background.svg"),
+  url("assets/nav_background.svg");
   background-position: 0% 0%, 0% 100%,
-  2% 0%, 22% 0%, 42% 0%, 62% 0%,
+  2% 0%, 19% 0%, 35% 0%, 51% 0%,
   100% 0%, 100% 100%,
-  82% 0%, 98% 0%;
+  67% 0%, 82% 0%, 98% 0%;
   background-size: 20px, 20px,
   80px 40px, 80px 40px, 80px 40px, 80px 40px,
   20px, 20px,
-  80px 40px, 80px 40px;
+  80px 40px, 80px 40px, 80px 40px;
   background-repeat: no-repeat;
   background-color: transparent;
   border: none;
@@ -197,17 +198,19 @@ body {
   url("assets/nav_background.svg"), url("assets/nav_background.svg"), url("assets/nav_background.svg"),
   url("assets/nav_background.svg"), url("assets/nav_background.svg"), url("assets/nav_background.svg"),
   url("assets/nav_background.svg"), url("assets/nav_background.svg"), url("assets/nav_background.svg"),
+  url("assets/nav_background.svg"), url("assets/nav_background.svg"), url("assets/nav_background.svg"),
   url("assets/nav_background.svg"), url("assets/nav_background.svg"), url("assets/nav_background.svg");
-  background-position: 3% 100%, 100% 100%,
-  0% 100%, 10% 100%, 20% 100%,
-  30% 100%, 40% 100%, 50% 100%,
-  60% 100%, 70% 100%, 80% 100%,
-  90% 100%, 100% 100%, 102% 100%;
+  background-position: 2.3% 100%, 100% 100%,
+  0% 100%, 8% 100%, 16% 100%,
+  24% 100%, 32% 100%, 40% 100%,
+  48% 100%, 52% 100%, 60% 100%,
+  68% 100%, 76% 100%, 84% 100%,
+  92% 100%, 100% 100%, 102% 100%;
   background-size: 20px, 20px, 80px 19px,
   80px 19px, 80px 19px, 80px 19px,
   80px 19px, 80px 19px, 80px 19px,
   80px 19px, 80px 19px, 80px 19px,
-  80px 19px, 80px 19px;
+  80px 19px, 80px 19px, 80px 19px, 80px 19px, 80px 19px;
   background-repeat: no-repeat;
   width: 568px;
   z-index: 20;
