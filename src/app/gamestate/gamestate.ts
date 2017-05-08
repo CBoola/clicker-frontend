@@ -44,6 +44,15 @@ interface Upgrade {
   multiplier: number;
 }
 
+class Statistics
+{
+	cach_from_clicks: number = 0;
+    number_of_clicks: number = 0;
+    spent_cash: number =  0;
+    collected_cash: number = 0;
+	created_time: String = "";
+}
+
 @Injectable()
 export class GameState {
 
@@ -51,7 +60,8 @@ export class GameState {
   structures: Array<Structure> = [];
   numberOfStructures = [];
   boughtUpgrades = [];
-
+  statisticsValue: Statistics = new Statistics();
+  
   player_id = -1;
   onions = 0;
   onionPerSecond = 0.;
@@ -142,6 +152,14 @@ export class GameState {
           this.boughtUpgrades.push( parseInt(str.system_id) );
         });
 		
+		//statistics
+		const res_statistics = res.statistics;
+		this.statisticsValue.number_of_clicks = res_statistics.number_of_clicks;
+		this.statisticsValue.cach_from_clicks = res_statistics.cach_from_clicks;
+		this.statisticsValue.spent_cash = res_statistics.spent_cash;
+		this.statisticsValue.collected_cash = res_statistics.collected_cash;
+		this.statisticsValue.created_time = res.created_time;
+		
         this.updateAll();
         this.stateReaded = true;
       });
@@ -180,6 +198,42 @@ export class GameState {
       return 0;
     }
     return num;
+  }
+  
+  numOfAllStructures()
+  {
+	var number = 0;
+	for(let num of this.numberOfStructures )
+	{
+		if( num > 0)
+			number += num;
+	}
+	return number;
+  }
+  
+  numOfAllUpgrades()
+  {
+	return this.boughtUpgrades.length;
+  }
+  
+  getStartDate()
+  {
+	var startDate =new Date(Date.parse(this.statisticsValue.created_time+""));
+
+	var stringTime = "";
+	stringTime += ( startDate.getHours() < 10 ) ? "0" : "";
+	stringTime += startDate.getHours()+":";
+	stringTime += ( startDate.getMinutes() < 10 ) ? "0" : "";
+	stringTime += startDate.getMinutes();
+	
+	var stringDate = "";
+	stringDate += ( startDate.getDate() < 10 ) ? "0" : "";
+	stringDate += startDate.getDate()+".";
+	stringDate += ( startDate.getMonth() < 10 ) ? "0" : "";
+	stringDate += startDate.getMonth()+".";
+	stringDate += startDate.getFullYear();
+	
+	return stringDate+" "+stringTime;
   }
   
   updateAll() {

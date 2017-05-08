@@ -177,3 +177,73 @@
 	top: 90px;
 	right: 30px;
 }
+
+#numberOfTookOnionsByClickLabel
+{
+	position: absolute;
+	top: 150px;
+	left: 30px;
+}
+
+#numberOfTookOnionsByClickValue
+{
+	position: absolute;
+	top: 150px;
+	right: 30px;
+}
+
+#numberOfSpendOnionsLabel
+{
+	position: absolute;
+	top: 210px;
+	left: 30px;
+}
+
+#numberOfSpendOnionsValue
+{
+	position: absolute;
+	top: 210px;
+	right: 30px;
+}
+
+#numberOfStructuresLabel
+{
+	position: absolute;
+	top: 270px;
+	left: 30px;
+}
+
+#numberOfStructuresValue
+{
+	position: absolute;
+	top: 270px;
+	right: 30px;
+}
+
+#numberOfUpgradesLabel
+{
+	position: absolute;
+	top: 330px;
+	left: 30px;
+}
+
+#numberOfUpgradesValue
+{
+	position: absolute;
+	top: 330px;
+	right: 30px;
+}
+
+#numberOfDateLabel
+{
+	position: absolute;
+	top: 390px;
+	left: 30px;
+}
+
+#numberOfDateValue
+{
+	position: absolute;
+	top: 390px;
+	right: 30px;
+}
