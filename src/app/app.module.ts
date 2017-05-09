@@ -10,6 +10,7 @@ import {GameState} from "./gamestate/gamestate";
 import {OnionComponent} from "./onion/onion.component";
 import {UpgradeComponent} from "./upgrade/upgrade.component";
 import { StatisticsComponent } from './statistics/statistics.component';
+import { AchievementsComponent } from './achievements/achievements.component';
 
 export function xsrfFactory() {
   return new CookieXSRFStrategy('_csrf', 'XSRF-TOKEN');
@@ -20,7 +21,8 @@ export function xsrfFactory() {
     StructureComponent,
     OnionComponent,
     UpgradeComponent,
-    StatisticsComponent
+    StatisticsComponent,
+    AchievementsComponent
   ],
   imports: [
     BrowserModule,
