@@ -7,12 +7,12 @@ body {
   background: linear-gradient(#c3f1fe, #f1feff); /* Standard syntax */
   overflow-x: hidden;
   background-attachment: fixed;
-  //min-height: 770px;
+  min-height: 800px;
   vertical-align: middle;
 }
 
 #grassContainer {
-  background: url("../assets/grass.svg") repeat-x left bottom;
+  background: url("../assets/grass.png") repeat-x left bottom;
   width: 100%;
   height: 170px;
   position: fixed;
@@ -155,7 +155,7 @@ body {
 	position: absolute;
 	width: 800px;
 	height: 15px;
-	background-image: url("../../assets/nav_background.svg");
+	background-image: url("../assets/horizontal.png");
 	background-size: contain;
 	z-index: 10;
 	margin-top: -2px;
@@ -167,7 +167,7 @@ body {
 	position: absolute;
 	width: 15px;
 	height: 115px;
-	background-image: url("../../assets/nav_background_vertical.svg");
+	background-image: url("../assets/vertical.png");
 	background-size: contain;
 	margin-left: -2px;
 	margin-right: -2px;
@@ -179,7 +179,7 @@ body {
 	width: 25px;
 	height: 25px;
 	position: absolute;
-	background-image: url("../../assets/trunk.svg");
+	background-image: url("../assets/trunk.svg");
 	background-size: contain;
 	z-index: 15;	
 }
@@ -223,11 +223,13 @@ body {
 	background: no-repeat center;
 	background-image: url('../assets/zagraj.svg');
 	background-size: contain;
+	border-style: none;
 }
 
-#loginButton:hover
+#loginButton:hover, #loginButton:active 
 {
 	background-image: url('../assets/zagraj_hover.svg');
+	border-style: none;
 }
 
 #mainOnion {
