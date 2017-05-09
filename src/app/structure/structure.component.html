@@ -1,18 +1,20 @@
-<div class="structureContainer">
-	<div class="structureMain" *ngFor="let str of this.gs.structures; let i = index;" (click)="clicked(i)">
-		<div class="leftColumn"></div>
-		<div class="rightColumn"></div>
-		<img id="str_icon" src="{{ str.icon }}" />
-		<div id="name">{{ str.name }}</div>
-		<div id="description" class="hiddenContent">{{ str.description}}</div>
-		<div id="production">+{{str.production_rate}} cebul/s</div>
-		<div id="priceIcon" class="hiddenContent"></div>
-		<div id="price" class="hiddenContent">{{ this.priceForLevel(i) }}</div>
-		
-		<div id="numOfStructures">
-			{{ this.gs.numOfStructure(str.system_id) }}
-		</div>
+<div class="center">
+	<div class="structureContainer">
+			<div class="structureMain" *ngFor="let str of this.gs.structures; let i = index;" (click)="clicked(i)">
+				<div class="leftColumn"></div>
+				<div class="rightColumn"></div>
+				<img id="str_icon" src="{{ str.icon }}" />
+				<div id="name">{{ str.name }}</div>
+				<div id="description" class="hiddenContent">{{ str.description}}</div>
+				<div id="production">+{{str.production_rate}} cebul/s</div>
+				<div id="priceIcon" class="hiddenContent"></div>
+				<div id="price" class="hiddenContent">{{ this.priceForLevel(i) }}</div>
+				
+				<div id="numOfStructures">
+					{{ this.gs.numOfStructure(str.system_id) }}
+				</div>
 
-	  <div class="woodenRow"></div>
+				<div class="woodenRow"></div>
+			</div>
 	</div>
 </div>

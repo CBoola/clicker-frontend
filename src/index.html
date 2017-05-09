@@ -19,6 +19,7 @@
 <div id="statisticsContainer"><app-statistics></app-statistics></div>
 
 <center>
+<div class="container">
   <!-- miejsce na reklame -->
   <div>
     <div id="ads" class="carousel" data-ride="carousel" data-pause="false" style="height: 75px">
@@ -41,7 +42,6 @@
 
   <!--pasek nawigacyjny -->
   <div class="navbar navbar-default navbar-static-top">
-    <div class="container">
       <div class="navbar-header">
         <a href="#" class="navbar-brand"> Cebula Kliker </a>
 
@@ -67,20 +67,18 @@
           <li><a href="#">Wyloguj</a></li>
         </ul>
       </div>
-    </div>
   </div>
 
   <!-- sekcja na cebule i ulepszenia -->
-  <div class="container">
+
     <!-- cebula -->
     <div class="row">
 
-      <div class="col-md-7" id="onionContainer">
+      <div class="col-lg-4" id="onionContainer">
         <app-onion></app-onion>
-
       </div>
       <!-- ulepszenia -->
-      <div class="col-md-5" id="uppContainer">
+      <div class="col-lg-4" id="uppContainer">
         <div class="panel-group">
           <div class="panel panel-default">
             <div class="panel-heading">
@@ -92,6 +90,7 @@
               <div class="panel-body"  style="border-style: none">
 					<app-structure></app-structure>
               </div>
+                <div class="panel-footer"></div>
             </div>
           </div>
         </div>
@@ -103,30 +102,17 @@
               </a>
             </div>
             <div id="collapse2" class="panel-collapse collapse in">
-              <div class="panel-body">
+              <div class="panel-body"  style="border-style: none">
                 <app-upgrade></app-upgrade>
               </div>
+              <div class="panel-footer"></div>
             </div>
           </div>
         </div>
       </div>
       
     </div>
-  </div>
-  <!-- sekcja na licznik -->
-  <div class="row">
-
-  </div>
-  <!-- ulepszenia i osiagniecia -->
-  <div class="row">
-
-    <!-- sekcja na osiagniecia -->
-    <div class="col-sm-6">
-      <!--<div>
-                  achievementy
-              </div>-->
-    </div>
-  </div>
+</div>
 </center>
 </body>
 </html>
