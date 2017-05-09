@@ -17,8 +17,7 @@ body {
   -moz-user-select: none; /* Firefox */
   -ms-user-select: none; /* Internet Explorer/Edge */
   user-select: none;
-  /* Non-prefixed version, currently
-                                   supported by Chrome and Opera */
+  /* Non-prefixed version, currently supported by Chrome and Opera */
 }
 
 #grassContainer {
@@ -30,8 +29,7 @@ body {
   z-index: 1010;
 }
 
-#statisticsContainer
-{
+#statisticsContainer {
 	position: absolute;
 	left: 50%;
 	top: 150px;
@@ -173,18 +171,19 @@ body {
   margin-left: 12px;
   font-family: "Semringah";
   background-image: url("assets/trunk.svg"), url("assets/trunk.svg"),
-  url("assets/horizontal.png"), url("assets/horizontal.png"), url("assets/horizontal.png"), url("assets/horizontal.png"),
-  url("assets/trunk.svg"), url("assets/trunk.svg"),
-  url("assets/horizontal.png"), url("assets/horizontal.png"),
-  url("assets/horizontal.png");
-  background-position: 0% 0%, 0% 100%,
-  2% 0%, 19% 0%, 35% 0%, 51% 0%,
-  100% 0%, 100% 100%,
-  67% 0%, 82% 0%, 98% 0%;
+                    url("assets/horizontal.png"), url("assets/horizontal.png"), url("assets/horizontal.png"), url("assets/horizontal.png"),
+                    url("assets/trunk.svg"), url("assets/trunk.svg"),
+                    url("assets/horizontal.png"), url("assets/horizontal.png"),
+                    url("assets/horizontal.png");
+  background-position: 0% 0%, 0% 100%, 
+                       2% 0%, 18% 0%, 34% 0%, 50% 0%, 
+                       100% 0%, 100% 100%, 
+                       66% 0%, 82% 0%, 
+                       98% 0%;
   background-size: 20px, 20px,
-  80px 40px, 80px 40px, 80px 40px, 80px 40px,
-  20px, 20px,
-  80px 40px, 80px 40px, 80px 40px;
+                   80px 40px, 80px 40px, 80px 40px, 80px 40px,
+                   20px, 20px,
+                   80px 40px, 80px 40px, 80px 40px;
   background-repeat: no-repeat;
   background-color: transparent;
   border: none;
@@ -204,23 +203,18 @@ body {
 .panel-default .panel-footer {
   position: relative;
   background-color: transparent;
-  background-image: url("assets/trunk.svg"), url("assets/trunk.svg"),
-  url("assets/horizontal.png"), url("assets/horizontal.png"), url("assets/horizontal.png"),
-  url("assets/horizontal.png"), url("assets/horizontal.png"), url("assets/horizontal.png"),
-  url("assets/horizontal.png"), url("assets/horizontal.png"), url("assets/horizontal.png"),
-  url("assets/horizontal.png"), url("assets/horizontal.png"), url("assets/horizontal.png"),
-  url("assets/horizontal.png"), url("assets/horizontal.png"), url("assets/horizontal.png");
+  background-image: url("assets/trunk.svg"),url("assets/trunk.svg"),
+                    url("assets/horizontal.png"),url("assets/horizontal.png"),url("assets/horizontal.png"),
+                    url("assets/horizontal.png"),url("assets/horizontal.png"),url("assets/horizontal.png"),
+                    url("assets/horizontal.png");
   background-position: 2.3% 100%, 100% 100%,
-  0% 100%, 8% 100%, 16% 100%,
-  24% 100%, 32% 100%, 40% 100%,
-  48% 100%, 52% 100%, 60% 100%,
-  68% 100%, 76% 100%, 84% 100%,
-  92% 100%, 100% 100%, 102% 100%;
-  background-size: 20px, 20px, 80px 19px,
-  80px 19px, 80px 19px, 80px 19px,
-  80px 19px, 80px 19px, 80px 19px,
-  80px 19px, 80px 19px, 80px 19px,
-  80px 19px, 80px 19px, 80px 19px, 80px 19px, 80px 19px;
+                       5% 100%, 21% 100%, 37% 100%,
+                       53% 100%, 69% 100%, 85% 100%,
+                       98% 100%;
+  background-size: 20px, 20px, 
+                   80px 19px, 80px 19px, 80px 19px, 
+                   80px 19px, 80px 19px, 80px 19px,
+                   80px 19px;
   background-repeat: no-repeat;
   z-index: 30;
 }
@@ -253,8 +247,7 @@ body {
   -moz-animation: parabola 1.25s 1 normal;
 }
 
-#struktury_title
-{
+#struktury_title{
 	height: 33px;
 	width: 100%;
 	background: no-repeat center;
@@ -262,8 +255,7 @@ body {
 	background-size: contain;
 }
 
-#ulepszenia_title
-{
+#ulepszenia_title{
 	height: 33px;
 	width: 100%;
 	background: no-repeat center;
