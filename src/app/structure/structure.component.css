@@ -48,7 +48,7 @@
 {
 	width: 15px;
 	height: 100%;
-	background-image: url("../../assets/nav_background_vertical.svg");
+	background-image: url("../../assets/vertical.png");
 	background-size: contain;
 	position: absolute;
 	top: 0px;
@@ -60,7 +60,7 @@
 {
 	width: 15px;
 	height: 100%;
-	background-image: url("../../assets/nav_background_vertical.svg");
+	background-image: url("../../assets/vertical.png");
 	background-size: contain;
 	position: absolute;
 	top: 0px;
@@ -71,7 +71,7 @@
 .woodenRow
 {
 	position: absolute;
-	background-image: url("../../assets/nav_background.svg");
+	background-image: url("../../assets/horizontal.png");
 	background-size: contain;
 	width: 100%;
 	height: 15px;
