@@ -31,6 +31,15 @@ export class StructureComponent implements OnInit {
     const structureId = this.gs.structures[structureIndex].system_id;
     return this.priceForLevel2(structureIndex, this.gs.numOfStructure(structureId));
   }
+  
+  showStructure(index: number)
+  {
+	if(index == 0)
+		return true;
+	var num = this.gs.numOfStructure(index);
+	
+	return (num > 0);
+  }
 
   ngOnInit() {
   }
