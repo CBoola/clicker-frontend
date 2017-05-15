@@ -14,13 +14,13 @@
 	<div id="statisticsContent">
 		<div id="containerLabel"></div>
 		<div id="numberOfCliksLabel" class="labelDiv textDiv">Kliknięcia w cebule:</div>
-		<div id="numberOfCliksValue" class="textDiv">{{this.gs.statisticsValue.number_of_clicks}}</div>
+		<div id="numberOfCliksValue" class="textDiv">{{this.gs.formatedOnionValue(this.gs.statisticsValue.number_of_clicks) }}</div>
 		<div id="numberOfTookOnionsLabel" class="textDiv">Łącznie zebrane cebule:</div>
 		<div id="numberOfTookOnionsValue" class="textDiv">{{ this.gs.printOnions(this.gs.statisticsValue.collected_cash)}}</div>
 		<div id="numberOfTookOnionsByClickLabel" class="textDiv">Cebule zebrane kliknięciem:</div>
-		<div id="numberOfTookOnionsByClickValue" class="textDiv">{{this.gs.statisticsValue.cach_from_clicks}}</div>
+		<div id="numberOfTookOnionsByClickValue" class="textDiv">{{this.gs.formatedOnionValue(this.gs.statisticsValue.cach_from_clicks)}}</div>
 		<div id="numberOfSpendOnionsLabel" class="textDiv">Łącznie wydane cebule:</div>
-		<div id="numberOfSpendOnionsValue" class="textDiv">{{this.gs.statisticsValue.spent_cash}}</div>
+		<div id="numberOfSpendOnionsValue" class="textDiv">{{this.gs.formatedOnionValue(this.gs.statisticsValue.spent_cash)}}</div>
 		<div id="numberOfStructuresLabel" class="textDiv">Kupione struktury:</div>
 		<div id="numberOfStructuresValue" class="textDiv">{{this.gs.numOfAllStructures()}}</div>
 		<div id="numberOfUpgradesLabel" class="textDiv">Kupione ulepszenia:</div>

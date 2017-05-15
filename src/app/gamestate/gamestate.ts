@@ -108,7 +108,7 @@ export class GameState {
   }
 
   printOnions(value: number) {
-    return Math.round(value);
+    return this.formatedOnionValue(Math.round(value));
   }
 
 	readPlayerId()
@@ -307,4 +307,18 @@ export class GameState {
       }
     });
   }
+  
+  formatedOnionValue(input: number)
+  {
+	var suffixes = ['k', 'M', 'G', 'T', 'P', 'E'];
+	var decimals = 2;
+	if(input < 1000) 
+	{
+        return input+"";
+	}
+	var exp = Math.floor(Math.log(input) / Math.log(1000));
+	return (input / Math.pow(1000, exp)).toFixed(decimals) + suffixes[exp - 1];
+  }
+    
+  
 }
