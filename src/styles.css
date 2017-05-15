@@ -38,6 +38,15 @@ body {
 	display: none;
 }
 
+#achievementsContainer {
+	position: absolute;
+	left: 50%;
+	top: 150px;
+	margin-left: -300px;
+	z-index: 1005;
+	//display: none;
+}
+
 .navbar-default .navbar-brand {
   background: -webkit-linear-gradient(#91522c, #7a3827);
   background-clip: text;

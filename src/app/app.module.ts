@@ -33,7 +33,7 @@ export function xsrfFactory() {
     provide: XSRFStrategy,
     useFactory: xsrfFactory
   }],
-  bootstrap: [StructureComponent, OnionComponent, UpgradeComponent, StatisticsComponent]
+  bootstrap: [StructureComponent, OnionComponent, UpgradeComponent, StatisticsComponent, AchievementsComponent]
 })
 
 export class AppModule {
