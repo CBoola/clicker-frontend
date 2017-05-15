@@ -47,5 +47,11 @@ export class UpgradeComponent implements OnInit {
 	return this.isBoughtById(upgradeId);
   }
   
+  showUpgrade(index: number)
+  {
+	if(index == 0)
+		return true;
+	return this.isBoughtByIndex(index-1);
+  }
   
 }
