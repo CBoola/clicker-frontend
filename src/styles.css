@@ -15,6 +15,9 @@ body {
   /* Non-prefixed version, currently supported by Chrome and Opera */
 }
 
+.noIbar {
+  cursor: default;
+}
 
 #bodypaint{
   background: #c3f1fe;    /* For browsers that do not support gradients */

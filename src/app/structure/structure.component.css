@@ -3,6 +3,10 @@
   text-align: center;
 }
 
+.noIbar {
+	cursor:default;
+}
+
 .structureMain
 {
 	position: relative;

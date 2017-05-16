@@ -4,6 +4,10 @@
   text-align: center;
 }
 
+.noIbar {
+  cursor: default;
+}
+
 #mainOnionContainer
 {
 	width: 600px;
