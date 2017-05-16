@@ -7,6 +7,7 @@ import {CookieXSRFStrategy, HttpModule, XSRFStrategy} from "@angular/http";
 // import { AppComponent } from './app.component';
 import {StructureComponent} from "./structure/structure.component";
 import {GameState} from "./gamestate/gamestate";
+import {GamesoundsService} from "./gamesounds/gamesounds";
 import {OnionComponent} from "./onion/onion.component";
 import {UpgradeComponent} from "./upgrade/upgrade.component";
 import { StatisticsComponent } from './statistics/statistics.component';
@@ -29,7 +30,7 @@ export function xsrfFactory() {
     FormsModule,
     HttpModule
   ],
-  providers: [GameState, {
+  providers: [GameState, GamesoundsService,  {
     provide: XSRFStrategy,
     useFactory: xsrfFactory
   }],

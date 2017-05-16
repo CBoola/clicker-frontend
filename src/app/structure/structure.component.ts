@@ -1,5 +1,6 @@
 import {Component, OnInit} from "@angular/core";
 import {GameState} from "../gamestate/gamestate";
+import {GamesoundsService} from "../gamesounds/gamesounds";
 
 @Component({
   selector: 'app-structure',
@@ -8,7 +9,7 @@ import {GameState} from "../gamestate/gamestate";
 })
 export class StructureComponent implements OnInit {
 
-  constructor(public gs: GameState) {
+  constructor(public gs: GameState, public snd: GamesoundsService) {
   }
 
   clicked(index) {
@@ -19,6 +20,8 @@ export class StructureComponent implements OnInit {
       this.gs.onions -= price;
       this.gs.numberOfStructures[structureId]++;
 	  this.gs.statisticsValue.spent_cash += price;
+	  
+	  this.snd.playStructureSound(index);
     }
     this.gs.onionsPerSecond();
   }
