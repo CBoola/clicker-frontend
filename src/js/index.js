@@ -1,4 +1,5 @@
 $(document).ready(function () {
+  document.addEventListener("touchstart", function() {},false);
 
   // zgodnie z metodologią REST do obsługi danych gracza
   // bedzie potrzebnego jego ID

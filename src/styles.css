@@ -134,6 +134,13 @@ body {
 #mainOnion {
   position: absolute;
   z-index: 5;
+  transition: -webkit-transform 0.1s ease;
+  transition: transform 0.1s ease;
+}
+
+#mainOnion:active {
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 #onionContainer {
@@ -260,9 +267,8 @@ body {
 .panel > .panel-heading > a:focus,
 .panel > .panel-heading > a:hover {
   text-decoration: none;
-  border: none;
   box-shadow: none;
-  border-color: none;
+  border: none;
 }
 
 #ads img {
