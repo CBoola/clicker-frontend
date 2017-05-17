@@ -89,10 +89,16 @@ $( "#statisticsBtn" ).click(function() {
 		$("#statisticsContainer").css("display", "none");
 });
 
-$( "#soundsBtn" ).click(function() {
-	var sndVal = $("#soundsBtn").html();
-	if(sndVal == "Dźwięki: Wł")
-		$("#soundsBtn").html("Dźwięki: Wył");
+$( "#sndBtnA" ).click(function() {
+	var displayVal = $("#sndOn").css("display");
+	if(displayVal != "none")
+	{
+		$("#sndOff").css("display", "inline");
+		$("#sndOn").css("display", "none");
+	}
 	else
-		$("#soundsBtn").html("Dźwięki: Wł");
+	{
+		$("#sndOn").css("display", "inline");
+		$("#sndOff").css("display", "none");
+	}
 });

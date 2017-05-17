@@ -42,8 +42,8 @@ export class GamesoundsService {
   
   canPlay():boolean
   {
-	var sndVal = $("#soundsBtn").html();
-	return (sndVal == "Dźwięki: Wł");
+	var displayVal = $("#sndOn").css("display");
+	return (displayVal != "none");
   }
   
   playStructureSound(index: number)
