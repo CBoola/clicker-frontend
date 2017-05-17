@@ -152,8 +152,10 @@
   font-family: "Semringah", sans-serif;
   position: absolute;
   bottom: 10px;
-  left: 170px;
-  margin: 0 auto;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
   z-index: 10;
 }
 
@@ -167,6 +169,7 @@
   bottom: -20px;
   right: 0;
   left: 0;
+  margin: auto;
   z-index: 10;
 }
 

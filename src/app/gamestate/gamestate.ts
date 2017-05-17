@@ -310,7 +310,7 @@ export class GameState {
   
   formatedOnionValue(input: number)
   {
-	var suffixes = ['k', 'M', 'G', 'T', 'P', 'E', 'Z', 'Y'];
+	var suffixes = ['k', 'M', 'G', 'T', 'P', 'E', 'Z', 'Y', 'kY', 'MY', 'GY', 'TY', 'PY', 'EY', 'ZY', 'YY', 'kYY', 'MYY'];
 	var decimals = 2;
 	if(input < 1000) 
 	{

@@ -88,3 +88,11 @@ $( "#statisticsBtn" ).click(function() {
 	else
 		$("#statisticsContainer").css("display", "none");
 });
+
+$( "#soundsBtn" ).click(function() {
+	var sndVal = $("#soundsBtn").html();
+	if(sndVal == "Dźwięki: Wł")
+		$("#soundsBtn").html("Dźwięki: Wył");
+	else
+		$("#soundsBtn").html("Dźwięki: Wł");
+});

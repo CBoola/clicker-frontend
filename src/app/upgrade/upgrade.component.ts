@@ -1,5 +1,6 @@
 import {Component, OnInit} from "@angular/core";
 import {GameState} from "../gamestate/gamestate";
+import {GamesoundsService} from "../gamesounds/gamesounds";
 
 @Component({
   selector: 'app-upgrade',
@@ -8,7 +9,7 @@ import {GameState} from "../gamestate/gamestate";
 })
 export class UpgradeComponent implements OnInit {
 
-  constructor(public gs: GameState) {
+  constructor(public gs: GameState, public snd: GamesoundsService) {
   }
 
   ngOnInit() {
@@ -27,6 +28,8 @@ export class UpgradeComponent implements OnInit {
 		this.gs.onions -= prize;
 		this.gs.mutiplerValue();
 		this.gs.statisticsValue.spent_cash += prize;
+		
+		this.snd.playUpgradeSound(index);
 	}
 	
   }
