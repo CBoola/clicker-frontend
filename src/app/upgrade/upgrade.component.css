@@ -1,3 +1,8 @@
+.inline
+{
+	display: inline-block;
+}
+
 .upgradeMain {
   position: relative;
   background-color: #fdf5e0;
@@ -15,12 +20,13 @@
   font-size: 45px;
 }
 
-#description {
-  position: absolute;
-  left: 105px;
-  top: 25px;
-  font-size: 20px;
-  font-weight: bold;
+#description{
+
+	position: absolute;
+	left: 105px;
+	top: 30px;
+	font-size: 23px;
+	//font-weight: bold;
 }
 
 #upg_icon {
@@ -33,17 +39,39 @@
 
 #price {
   position: absolute;
-  left: 105px;
-  top: 70px;
-  font-size: 20px;
+  left: 125px;
+  top: 52px;
+  font-size: 23px;
 }
 
-#multiplier {
-  position: absolute;
-  left: 105px;
-  top: 45px;
-  font-size: 20px;
-  font-style: italic;
+#priceIcon
+{
+	position: absolute;
+	width: 11px;
+	height: 18px;
+	left: 107px;
+	top: 57px;
+	background-image: url("../../assets/onion_overlay.svg");
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+#multiplier{
+
+	position: absolute;
+	right: 30px;
+	top: 25px;
+	font-size: 45px;
+	}
+
+#multiplierCursor
+{
+	background-image: url("../../assets/kursor.svg");
+	background-size: contain;
+	background-repeat: no-repeat;
+	width: 22px;
+	height: 25px;
+	margin-right: 5px;
 }
 
 #bought {

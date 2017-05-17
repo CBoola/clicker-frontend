@@ -19,8 +19,17 @@ body {
   cursor: default;
 }
 
-#bodypaint {
-  background: #c3f1fe; /* For browsers that do not support gradients */
+ .soundsBtn {
+	height: 20px;
+	width: 20px;
+ }
+
+ #sndOff {
+	display: none;
+ }
+
+#bodypaint{
+  background: #c3f1fe;    /* For browsers that do not support gradients */
   background: -webkit-linear-gradient(#c3f1fe, #f1feff);
   background: -o-linear-gradient(#c3f1fe, #f1feff);
   background: -moz-linear-gradient(#c3f1fe, #f1feff);
@@ -55,7 +64,7 @@ body {
   top: 150px;
   margin-left: -300px;
   z-index: 1005;
-/ / display: none;
+  display: none;
 }
 
 .navbar-default .navbar-brand {

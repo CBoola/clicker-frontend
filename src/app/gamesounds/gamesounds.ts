@@ -37,7 +37,7 @@ export class GamesoundsService {
   }
 
   canPlay(): boolean {
-    return ($('#soundsBtn').html() === 'Dźwięki: Wł');
+    return $('#sndOn').css('display') !== 'none';
   }
 
   playStructureSound(index: number) {
@@ -59,5 +59,4 @@ export class GamesoundsService {
     const snd = new Audio(this.prefix + this.upgradeSounds[index % this.upgradeSounds.length]);
     snd.play();
   }
-
 }

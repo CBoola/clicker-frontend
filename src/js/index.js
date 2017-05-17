@@ -1,6 +1,4 @@
 $(document).ready(function () {
-  document.addEventListener("touchstart", function () {
-  }, false);
 
   // zgodnie z metodologią REST do obsługi danych gracza
   // bedzie potrzebnego jego ID
@@ -91,10 +89,14 @@ $("#statisticsBtn").click(function () {
     displayVal.css("display", "none");
 });
 
-$("#soundsBtn").click(function () {
-  var sndVal = $("#soundsBtn");
-  if (sndVal.html() === "Dźwięki: Wł")
-    sndVal.html("Dźwięki: Wył");
-  else
-    sndVal.html("Dźwięki: Wł");
+$( "#sndBtnA" ).click(function() {
+  const soundOn = $('#sndOn');
+  const soundOff = $('#sndOff');
+  if(soundOn.css('display') !== "none") {
+		soundOff.css("display", "inline");
+		soundOn.css("display", "none");
+  } else {
+      soundOn.css("display", "inline");
+      soundOff.css("display", "none");
+  }
 });
