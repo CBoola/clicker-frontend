@@ -16,231 +16,210 @@ body {
   width: 100%;
   height: 170px;
   position: fixed;
-  bottom: 0px;
-  left: 0px;
+  bottom: 0;
+  left: 0;
   z-index: 1010;
 }
 
-#alertContainer
-{
-	left: 50%;
-	top: 80px;
-	margin-left: -400px;
-	position: absolute;
-	background-color: #fdf5e0;
-	width: 800px;
-	height: 115px;
-	z-index: 1000;
-	/* 
-	
-	.transition-duration(200ms, 0);
-	.transition-property(opacity, visibility);
-	.transition-delay(0, 200ms);
+#alertContainer {
+  left: 50%;
+  top: 80px;
+  margin-left: -400px;
+  position: absolute;
+  background-color: #fdf5e0;
+  width: 800px;
+  height: 115px;
+  z-index: 1000;
+  /*
+
+    .transition-duration(200ms, 0);
+    .transition-property(opacity, visibility);
+    .transition-delay(0, 200ms);
     &.hidden {
         visibility: hidden;
         .opacity(0);
 
-		.transition-duration(0, 200ms);
-		.transition-property(visibility, opacity);
-		.transition-delay(0);
-	} */
+        .transition-duration(0, 200ms);
+        .transition-property(visibility, opacity);
+        .transition-delay(0);
+    } */
 }
 
-.hidden{
-    visibility: hidden;
-	opacity: 0;
-	transition: visibility 1s, opacity 0.5s linear;
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 1s, opacity 0.5s linear;
 }
 
-@-prefix-keyframes slide {
-  from {height: 0;}
-  to {height: 300px;}
+@keyframes slide {
+  from {
+    height: 0;
+  }
+  to {
+    height: 300px;
+  }
 }
 
-#closeButton
-{
-	height: 25px;
-	width: 40px;
-	position: absolute;
-	bottom: 28px;
-	right: 90px;
-	background: no-repeat center;
-	background-image: url('../assets/ok.svg');
-	background-size: contain;
-	z-index: 9999999;
-	cursor: pointer;
+#closeButton {
+  height: 25px;
+  width: 40px;
+  position: absolute;
+  bottom: 28px;
+  right: 90px;
+  background: url('../assets/ok.svg') no-repeat center;
+  background-size: contain;
+  z-index: 9999999;
+  cursor: pointer;
 }
 
-#closeButton:hover
-{
-	background-image: url('../assets/ok_hover.svg');
+#closeButton:hover {
+  background-image: url('../assets/ok_hover.svg');
 }
 
-@font-face 
-{
+@font-face {
   font-family: 'lovemonster';
   src: url('../assets/lovemonster.ttf') format('ttf'),
   url('../assets/lovemonster.ttf') format('truetype'); /* Safari, Android, iOS */
 }
 
-#alertContent
-{
-	padding: 30px;
-	font-family: lovemonster;
-	font-size: 30px;
+#alertContent {
+  padding: 30px;
+  font-family: lovemonster, sans-serif;
+  font-size: 30px;
 }
 
-#topFrame
-{
-	top: 0px;
+#topFrame {
+  top: 0;
 }
 
-#bottomFrame
-{
-	bottom: 0px;
+#bottomFrame {
+  bottom: 0;
 }
 
-#leftFrame
-{
-	left: 0px;
+#leftFrame {
+  left: 0;
 }
 
-#rightFrame
-{
-	right: 0px;
+#rightFrame {
+  right: 0;
 }
 
-#leftTopCorner
-{
-	left: 0px;
-	top: 0px;
-	margin-left: -6px;
-	margin-top: -4px;
-	width: 22px;
-	height: 22px;
+#leftTopCorner {
+  left: 0;
+  top: 0;
+  margin-left: -6px;
+  margin-top: -4px;
+  width: 22px;
+  height: 22px;
 }
 
-#rightTopCorner
-{
-	right: 0px;
-	top: 0px;
-	margin-right: -6px;
-	margin-top: -4px;
-	width: 22px;
-	height: 22px;
+#rightTopCorner {
+  right: 0;
+  top: 0;
+  margin-right: -6px;
+  margin-top: -4px;
+  width: 22px;
+  height: 22px;
 }
 
-#leftBottomCorner
-{
-	left: 0px;
-	bottom: 0px;
-	margin-left: -6px;
-	margin-bottom: -4px;
-	width: 22px;
-	height: 22px;
+#leftBottomCorner {
+  left: 0;
+  bottom: 0;
+  margin-left: -6px;
+  margin-bottom: -4px;
+  width: 22px;
+  height: 22px;
 }
 
-#rightBottomCorner
-{
-	right: 0px;
-	bottom: 0px;
-	margin-right: -6px;
-	margin-bottom: -4px;
-	width: 22px;
-	height: 22px;
+#rightBottomCorner {
+  right: 0;
+  bottom: 0;
+  margin-right: -6px;
+  margin-bottom: -4px;
+  width: 22px;
+  height: 22px;
 }
 
-.horizontalFrame
-{
-	position: absolute;
-	width: 800px;
-	height: 15px;
-	background-image: url("../assets/horizontal.png");
-	background-size: contain;
-	z-index: 10;
-	margin-top: -2px;
-	margin-bottom: -2px;
+.horizontalFrame {
+  position: absolute;
+  width: 800px;
+  height: 15px;
+  background-image: url("../assets/horizontal.png");
+  background-size: contain;
+  z-index: 10;
+  margin-top: -2px;
+  margin-bottom: -2px;
 }
 
-.verticalFrame
-{
-	position: absolute;
-	width: 15px;
-	height: 115px;
-	background-image: url("../assets/vertical.png");
-	background-size: contain;
-	margin-left: -2px;
-	margin-right: -2px;
-	z-index: 5;
+.verticalFrame {
+  position: absolute;
+  width: 15px;
+  height: 115px;
+  background-image: url("../assets/vertical.png");
+  background-size: contain;
+  margin-left: -2px;
+  margin-right: -2px;
+  z-index: 5;
 }
 
-.corner
-{
-	width: 25px;
-	height: 25px;
-	position: absolute;
-	background-image: url("../assets/trunk.svg");
-	background-size: contain;
-	z-index: 15;	
+.corner {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  background-image: url("../assets/trunk.svg");
+  background-size: contain;
+  z-index: 15;
 }
 
-#mainOnionContainer
-{
-	width: 600px;
-	height: 600px;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	margin-left: -300px;
-	margin-top: -385px;
+#mainOnionContainer {
+  width: 600px;
+  height: 600px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -300px;
+  margin-top: -385px;
 }
 
-#gameName
-{
-	position: absolute;
-	left: 175px;
-	bottom: 20px;
-	height: 140px;
-	width: 250px;
-	background: no-repeat center;
-	background-image: url('../assets/logo.svg');
-	background-size: contain;
-	z-index: 20;
+#gameName {
+  position: absolute;
+  left: 175px;
+  bottom: 20px;
+  height: 140px;
+  width: 250px;
+  background: url('../assets/logo.svg') no-repeat center;
+  background-size: contain;
+  z-index: 20;
 }
 
-#loginButtonContainer
-{
-	position: absolute;
-	bottom: -5px;
-	left: 225px;
-	z-index: 100;
+#loginButtonContainer {
+  position: absolute;
+  bottom: -5px;
+  left: 225px;
+  z-index: 100;
 }
 
-#loginButton
-{
-	height: 40px;
-	width: 150px;
-	background: no-repeat center;
-	background-image: url('../assets/zagraj.svg');
-	background-size: contain;
-	border-style: none;
+#loginButton {
+  height: 40px;
+  width: 150px;
+  background: url('../assets/zagraj.svg') no-repeat center;
+  background-size: contain;
+  border-style: none;
 }
 
-#loginButton:hover, #loginButton:active 
-{
-	background-image: url('../assets/zagraj_hover.svg');
-	border-style: none;
+#loginButton:hover, #loginButton:active {
+  background-image: url('../assets/zagraj_hover.svg');
+  border-style: none;
 }
 
 #mainOnion {
-  background: no-repeat center;
   background-size: contain;
-  background-image: url('../assets/onion_glow.svg');
+  background: url('../assets/onion_glow.svg') no-repeat center;
   width: 100%;
   height: 100%;
   left: 5px;
   top: 5px;
-  margin-left: 0px;
+  margin-left: 0;
   margin-top: -40px;
   position: absolute;
   z-index: 10;
@@ -251,9 +230,8 @@ body {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: no-repeat center;
   background-size: 100% 100%;
-  background-image: url('../assets/radial_stripes.svg');
+  background: url('../assets/radial_stripes.svg') no-repeat center;
   z-index: 1;
 
   -webkit-animation-name: spin1;
@@ -280,9 +258,8 @@ body {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: no-repeat center;
   background-size: 100% 100%;
-  background-image: url('../assets/radial_stripes.svg');
+  background: url('../assets/radial_stripes.svg') no-repeat center;
   z-index: 2;
   opacity: 0.5;
 

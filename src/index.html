@@ -14,107 +14,113 @@
           crossorigin="anonymous"></script>
 </head>
 <body>
-    <div id="bodypaint"> </div>
-    <div id="grassContainer"></div> 
-    <div id="statisticsContainer"><app-statistics></app-statistics></div>
-  <!--  <div id="achievementsContainer"><app-achievements></app-achievements></div> -->
+<div id="bodypaint"></div>
+<div id="grassContainer"></div>
+<div id="statisticsContainer">
+  <app-statistics></app-statistics>
+</div>
+<!--  <div id="achievementsContainer"><app-achievements></app-achievements></div> -->
 
-    <center>
-    <div class="container">
-      <!-- miejsce na reklame -->
-      <div>
-        <div id="ads" class="carousel" data-ride="carousel" data-pause="false" style="height: 75px">
-          <div class="carousel-inner">
-            <div class="item active">
-              <img src="http://www.natureexports.co.in/images/red-onion-banner.jpg"/>
-            </div>
-            <div class="item">
-              <img src="https://assets2.onionstatic.com/onion/static/images/onion_fb_placeholder.png"/>
-            </div>
-
-            <!-- szablon reklamy
-            <div class="item">
-              <img src="path"/>
-            </div>
-            -->
+<center>
+  <div class="container">
+    <!-- miejsce na reklame -->
+    <div>
+      <div id="ads" class="carousel" data-ride="carousel" data-pause="false" style="height: 75px">
+        <div class="carousel-inner">
+          <div class="item active">
+            <img src="http://www.natureexports.co.in/images/red-onion-banner.jpg"/>
           </div>
+          <div class="item">
+            <img src="https://assets2.onionstatic.com/onion/static/images/onion_fb_placeholder.png"/>
+          </div>
+
+          <!-- szablon reklamy
+          <div class="item">
+            <img src="path"/>
+          </div>
+          -->
         </div>
       </div>
-
-      <!--pasek nawigacyjny -->
-      <div class="navbar navbar-default navbar-static-top">
-          <div class="navbar-header">
-            <a href="#" class="navbar-brand"> Cebula Kliker </a>
-
-            <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-          </div>
-
-          <div class="collapse navbar-collapse navHeaderCollapse">
-            <ul class="nav navbar-nav navbar-left">
-              <li class="navbar-text">
-                <div id="is_logged" class="noIbar">Status:</div>
-              </li>
-              <li class="navbar-text">
-                <div id="whoiam" class="noIbar">Zalogowany jako:</div>
-              </li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-				<li><a href="#" id="soundsBtn">Dźwięki: Wł</a></li>
-				<li><a href="#" id="statisticsBtn">Statystyki</a></li>
-				<li><a href="/">Home</a></li>
-				<li><a href="/api/logout">Wyloguj</a></li>
-            </ul>
-          </div>
-      </div>
-
-      <!-- sekcja na cebule i ulepszenia -->
-
-        <!-- cebula -->
-        <div class="row">
-
-          <div class="col-lg-4" id="onionContainer">
-            <app-onion></app-onion>
-          </div>
-          <!-- ulepszenia -->
-          <div class="col-lg-4" id="uppContainer">
-            <div class="panel-group">
-              <div class="panel panel-default">
-                <div class="panel-heading">
-                  <a data-toggle="collapse" data-parent="#accordion" href="#collapse1"> 
-                    <h4 class="panel-title"><div id="struktury_title"  class="noselect" ></div></h4>
-                  </a>
-                </div>
-                <div id="collapse1" class="panel-collapse collapse in">
-                  <div class="panel-body"  style="border-style: none">
-              <app-structure></app-structure>
-                  </div>
-                    <div class="panel-footer"></div>
-                </div>
-              </div>
-            </div>
-            <div class="panel-group">
-              <div class="panel panel-default">
-                <div class="panel-heading">
-                  <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
-                    <h4 class="panel-title"><div id="ulepszenia_title" class="noselect" ></div></h4>
-                  </a>
-                </div>
-                <div id="collapse2" class="panel-collapse collapse in">
-                  <div class="panel-body"  style="border-style: none">
-                    <app-upgrade></app-upgrade>
-                  </div>
-                  <div class="panel-footer"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-        </div>
     </div>
-    </center>
+
+    <!--pasek nawigacyjny -->
+    <div class="navbar navbar-default navbar-static-top">
+      <div class="navbar-header">
+        <a href="#" class="navbar-brand"> Cebula Kliker </a>
+
+        <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse navHeaderCollapse">
+        <ul class="nav navbar-nav navbar-left">
+          <li class="navbar-text">
+            <div id="is_logged" class="noIbar">Status:</div>
+          </li>
+          <li class="navbar-text">
+            <div id="whoiam" class="noIbar">Zalogowany jako:</div>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#" id="soundsBtn">Dźwięki: Wł</a></li>
+          <li><a href="#" id="statisticsBtn">Statystyki</a></li>
+          <li><a href="/">Home</a></li>
+          <li><a href="/api/logout">Wyloguj</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- sekcja na cebule i ulepszenia -->
+
+    <!-- cebula -->
+    <div class="row">
+
+      <div class="col-lg-4" id="onionContainer">
+        <app-onion></app-onion>
+      </div>
+      <!-- ulepszenia -->
+      <div class="col-lg-4" id="uppContainer">
+        <div class="panel-group">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+                <h4 class="panel-title">
+                  <div id="struktury_title" class="noselect"></div>
+                </h4>
+              </a>
+            </div>
+            <div id="collapse1" class="panel-collapse collapse in">
+              <div class="panel-body" style="border-style: none">
+                <app-structure></app-structure>
+              </div>
+              <div class="panel-footer"></div>
+            </div>
+          </div>
+        </div>
+        <div class="panel-group">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+                <h4 class="panel-title">
+                  <div id="ulepszenia_title" class="noselect"></div>
+                </h4>
+              </a>
+            </div>
+            <div id="collapse2" class="panel-collapse collapse in">
+              <div class="panel-body" style="border-style: none">
+                <app-upgrade></app-upgrade>
+              </div>
+              <div class="panel-footer"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</center>
 </body>
 </html>

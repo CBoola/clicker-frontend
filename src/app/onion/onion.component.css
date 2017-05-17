@@ -8,12 +8,11 @@
   cursor: default;
 }
 
-#mainOnionContainer
-{
-	width: 600px;
-	margin: auto;
-	height: 100%;
-	position: relative;
+#mainOnionContainer {
+  width: 600px;
+  margin: auto;
+  height: 100%;
+  position: relative;
 }
 
 #mainOnion {
