@@ -3,23 +3,42 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class GamesoundsService {
 
-  stryctureSounds:string[] = [
-	"../../assets/cash_register0.mp3",
-	"../../assets/cash_register1.mp3",
-	"../../assets/cash_register2.mp3",
-	"../../assets/cash_register3_short.mp3",
-	"../../assets/cash_coin.mp3",
-	"../../assets/coin_flipper.mp3",
-	"../../assets/get_coin.mp3"
+  prefix:String = "/game/assets/";
+  //prefix:String = "/assets/";
+
+  structureSounds:string[] = [
+	"cash_register0.mp3",
+	"cash_register1.mp3",
+	"cash_register2.mp3",
+	"cash_register3_short.mp3",
+	"cash_coin.mp3",
+	"coin_flipper.mp3",
+	"get_coin.mp3"
   ];
   
   upgradeSounds:string[] = [
-	"../../assets/kradniesz_cebule.mp3"
+	"kradniesz_cebule.mp3"
   ];
   
-  halleluya:string = "../../assets/halleluya.mp3";
+  halleluya:string = "halleluya.mp3";
     
-  constructor() { }
+  constructor() 
+  { 
+	this.loadAllSounds();
+  }
+  
+  loadAllSounds()
+  {
+	new Audio(this.prefix + this.halleluya);
+	for( let str of this.structureSounds )
+	{
+		new Audio(this.prefix + str);
+	}
+	for( let str of this.upgradeSounds )
+	{
+		new Audio(this.prefix + str);
+	}
+  }
   
   canPlay():boolean
   {
@@ -34,12 +53,12 @@ export class GamesoundsService {
 		
 	if( index == 10 )
 	{
-		var snd = new Audio(this.halleluya);
+		var snd = new Audio(this.prefix + this.halleluya);
 		snd.play();
 	}
 	else
 	{
-		var snd = new Audio(this.stryctureSounds[index % this.stryctureSounds.length]);
+		var snd = new Audio(this.prefix + this.structureSounds[index % this.structureSounds.length]);
 		snd.play();
 	}
   }
@@ -49,7 +68,7 @@ export class GamesoundsService {
 	if( !this.canPlay() )
 		return;
 	
-	var snd = new Audio(this.upgradeSounds[index % this.upgradeSounds.length]);
+	var snd = new Audio(this.prefix + this.upgradeSounds[index % this.upgradeSounds.length]);
 	snd.play();
   }
   
