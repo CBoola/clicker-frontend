@@ -1,5 +1,6 @@
 <div class="center">
-  <div class="structureContainer noselect noIbar">
+  <div class="structureContainer noselect noIbar" id="style">
+    <div class="force-overflow"></div>
     <div class="structureMain" *ngFor="let str of this.gs.structures; let i = index;" (click)="clicked(i)"
          [hidden]="!this.showStructure(i)">
       <div class="leftColumn"></div>

@@ -1,4 +1,5 @@
-<div class="upgradeContainer noselect noIbar">
+<div class="upgradeContainer noselect noIbar" id="style">
+  <div class="force-overflow"></div>
 	<div class="upgradeMain" *ngFor="let upgrade of this.gs.upgrades; let i = index;" (click)="clicked(i)" [hidden]="!this.showUpgrade(i)">
 		<div class="leftColumn"></div>
 		<div class="rightColumn"></div>

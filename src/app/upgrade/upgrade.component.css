@@ -3,7 +3,6 @@
 	display: inline-block;
 }
 
-
 .noIbar {
 	cursor:default;
 }
@@ -16,7 +15,6 @@
   color: #9a6d38;
   padding-top: 15px;
   font-family: lovemonster, sans-serif;
-
 }
 
 #name {
@@ -50,8 +48,7 @@
   font-size: 23px;
 }
 
-#priceIcon
-{
+#priceIcon {
 	position: absolute;
 	width: 11px;
 	height: 18px;
@@ -62,13 +59,12 @@
 	background-repeat: no-repeat;
 }
 
-#multiplier{
-
-	position: absolute;
+#multiplier {
+  position: absolute;
 	right: 30px;
 	top: 25px;
 	font-size: 45px;
-	}
+}
 
 #multiplierCursor
 {
@@ -95,9 +91,27 @@
   margin-bottom: -34px;
   margin-top: -15px;
   top: -17px;
-  height: 350px;
+  height: 285px;
+  width: 549px;
   overflow-y: scroll;
   overflow-x: hidden;
+}
+
+#style::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #fdf5e0;
+}
+
+#style::-webkit-scrollbar
+{
+	width: 15px;
+}
+
+#style::-webkit-scrollbar-thumb
+{
+  background-image: url("../../assets/vertical.png");
+  background-size: contain;
 }
 
 @font-face {
