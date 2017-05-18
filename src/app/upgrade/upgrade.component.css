@@ -3,21 +3,11 @@
 	display: inline-block;
 }
 
-<<<<<<< HEAD
+
 .noIbar {
 	cursor:default;
 }
 
-.upgradeMain
-{
-	position: relative;
-	background-color: #fdf5e0;
-	height: 95px;
-	width: 550px;
-	color: #9a6d38;
-	padding-top: 15px;
-	font-family: lovemonster;
-=======
 .upgradeMain {
   position: relative;
   background-color: #fdf5e0;
@@ -26,7 +16,7 @@
   color: #9a6d38;
   padding-top: 15px;
   font-family: lovemonster, sans-serif;
->>>>>>> CBoola/obsluga_cebuli
+
 }
 
 #name {

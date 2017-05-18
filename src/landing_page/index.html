@@ -1,52 +1,55 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <title>Cebula Kliker</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <title>Cebula Kliker</title>
 
 </head>
- 
+
 <body onLoad="init()">
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script type="text/javascript">
 
-function init()
-{
-	$("body").on('keydown', function(e){ if (e.keyCode == 9)  e.preventDefault() });
-}
-
+  function init() {
+    $("body").on('keydown', function (e) {
+      if (e.keyCode === 9) e.preventDefault()
+    });
+  }
 
 
 </script>
 
-<img style="display: none" src="assets/ok_hover.svg" />
-<img style="display: none" src="assets/zagraj_hover.svg" />
+<img style="display: none" src="assets/ok_hover.svg"/>
+<img style="display: none" src="assets/zagraj_hover.svg"/>
 <div id="grassContainer"></div>
 <div id="alertContainer">
-	<div id="topFrame" class="horizontalFrame"></div>
-	<div id="bottomFrame" class="horizontalFrame"></div>
-	<div id="leftFrame" class="verticalFrame"></div>
-	<div id="rightFrame" class="verticalFrame"></div>
-	<div id="leftTopCorner" class="corner"></div>
-	<div id="rightTopCorner" class="corner"></div>
-	<div id="leftBottomCorner" class="corner"></div>
-	<div id="rightBottomCorner" class="corner"></div>
-	<div id="alertContent">
-		Strona do prawidłowego działania używa wirtualnej cebuli. Możesz określić warunki przechowywania lub dostępu do onions w ustawieniach twojej przeglądarki.
-		<div id="closeButton" onclick='document.getElementById("alertContainer").className = "hidden"'></div>
-	</div>
+  <div id="topFrame" class="horizontalFrame"></div>
+  <div id="bottomFrame" class="horizontalFrame"></div>
+  <div id="leftFrame" class="verticalFrame"></div>
+  <div id="rightFrame" class="verticalFrame"></div>
+  <div id="leftTopCorner" class="corner"></div>
+  <div id="rightTopCorner" class="corner"></div>
+  <div id="leftBottomCorner" class="corner"></div>
+  <div id="rightBottomCorner" class="corner"></div>
+  <div id="alertContent">
+    Strona do prawidłowego działania używa wirtualnej cebuli. Możesz określić warunki przechowywania lub dostępu do
+    onions w ustawieniach twojej przeglądarki.
+    <div id="closeButton" onclick='document.getElementById("alertContainer").className = "hidden"'></div>
+  </div>
 </div>
-	
-<div id="mainOnionContainer" >
-	<div id="mainOnion"></div>
-	<div id="radialStripes1"></div>
-	<div id="radialStripes2"></div>
-	<div id="gameName"></div>
-	<div id="loginButtonContainer">
-		<a href="api/oauth/login/facebook"><div id="loginButton"> </div></a>
-	</div>
+
+<div id="mainOnionContainer">
+  <div id="mainOnion"></div>
+  <div id="radialStripes1"></div>
+  <div id="radialStripes2"></div>
+  <div id="gameName"></div>
+  <div id="loginButtonContainer">
+    <a href="api/oauth/login/facebook">
+      <div id="loginButton"></div>
+    </a>
+  </div>
 </div>
 </body>
 </html>
