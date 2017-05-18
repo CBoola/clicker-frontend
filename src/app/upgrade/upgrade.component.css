@@ -3,6 +3,7 @@
 	display: inline-block;
 }
 
+<<<<<<< HEAD
 .noIbar {
 	cursor:default;
 }
@@ -16,18 +17,27 @@
 	color: #9a6d38;
 	padding-top: 15px;
 	font-family: lovemonster;
+=======
+.upgradeMain {
+  position: relative;
+  background-color: #fdf5e0;
+  height: 95px;
+  width: 550px;
+  color: #9a6d38;
+  padding-top: 15px;
+  font-family: lovemonster, sans-serif;
+>>>>>>> CBoola/obsluga_cebuli
 }
 
-#name
-{
-	position: absolute;
-	left: 105px;
-	top: 25px;
-	font-size: 45px;
+#name {
+  position: absolute;
+  left: 105px;
+  top: 25px;
+  font-size: 45px;
 }
 
-#description
-{
+#description{
+
 	position: absolute;
 	left: 105px;
 	top: 30px;
@@ -35,21 +45,19 @@
 	//font-weight: bold;
 }
 
-#upg_icon
-{
-	position: absolute;
-	top: 30px;
-	left: 30px;
-	width: 55px;
-	height: 55px;
+#upg_icon {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  width: 55px;
+  height: 55px;
 }
 
-#price
-{
-	position: absolute;
-	left: 125px;
-	top: 52px;
-	font-size: 23px;	
+#price {
+  position: absolute;
+  left: 125px;
+  top: 52px;
+  font-size: 23px;
 }
 
 #priceIcon
@@ -64,13 +72,13 @@
 	background-repeat: no-repeat;
 }
 
-#multiplier
-{
+#multiplier{
+
 	position: absolute;
 	right: 30px;
 	top: 25px;
 	font-size: 45px;
-}
+	}
 
 #multiplierCursor
 {
@@ -82,26 +90,24 @@
 	margin-right: 5px;
 }
 
-#bought
-{
-	position: absolute;
-	background-image: url("../../assets/onion_glow.svg");
-	background-size: contain;
-	left: 460px;
-	top: 5px;
-	width: 100px;
-	height: 100px;
+#bought {
+  position: absolute;
+  background-image: url("../../assets/onion_glow.svg");
+  background-size: contain;
+  left: 460px;
+  top: 5px;
+  width: 100px;
+  height: 100px;
 }
 
-.upgradeContainer
-{
-	position: relative;
-	margin-bottom: -34px;
-	margin-top: -15px;
-	top: -17px;
-	//height: 350px;
-	//overflow-y: scroll;
-	//overflow-x: hidden;
+.upgradeContainer {
+  position: relative;
+  margin-bottom: -34px;
+  margin-top: -15px;
+  top: -17px;
+  height: 350px;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 @font-face {
@@ -110,52 +116,46 @@
   url('../../assets/lovemonster.ttf') format('truetype'); /* Safari, Android, iOS */
 }
 
-.leftColumn
-{
-	width: 15px;
-	height: 100%;
-	background-image: url("../../assets/vertical.png");
-	background-size: contain;
-	position: absolute;
-	top: 0px;
-	left: 0px;
-	z-index: 9;
+.leftColumn {
+  width: 15px;
+  height: 100%;
+  background-image: url("../../assets/vertical.png");
+  background-size: contain;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9;
 }
 
-.rightColumn
-{
-	width: 15px;
-	height: 100%;
-	background-image: url("../../assets/vertical.png");
-	background-size: contain;
-	position: absolute;
-	top: 0px;
-	right: 0px;
-	z-index: 9;
+.rightColumn {
+  width: 15px;
+  height: 100%;
+  background-image: url("../../assets/vertical.png");
+  background-size: contain;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 9;
 }
 
-.woodenRow
-{
-	position: absolute;
-	background-image: url("../../assets/horizontal.png");
-	background-size: contain;
-	width: 100%;
-	height: 15px;
-	top: 0px;
-	z-index: 8;
+.woodenRow {
+  position: absolute;
+  background-image: url("../../assets/horizontal.png");
+  background-size: contain;
+  width: 100%;
+  height: 15px;
+  top: 0;
+  z-index: 8;
 }
 
-.upgradeMain:hover > #name
-{
-	display: none;
+.upgradeMain:hover > #name {
+  display: none;
 }
 
-.upgradeMain > .hiddenContent
-{
-	display: none;
+.upgradeMain > .hiddenContent {
+  display: none;
 }
 
-.upgradeMain:hover > .hiddenContent
-{
-	display: inline;
+.upgradeMain:hover > .hiddenContent {
+  display: inline;
 }

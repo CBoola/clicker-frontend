@@ -1,17 +1,17 @@
-import {BrowserModule} from "@angular/platform-browser";
-import {NgModule} from "@angular/core";
-import {FormsModule} from "@angular/forms";
-import {CookieXSRFStrategy, HttpModule, XSRFStrategy} from "@angular/http";
-//ng new  nazwa
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {FormsModule} from '@angular/forms';
+import {CookieXSRFStrategy, HttpModule, XSRFStrategy} from '@angular/http';
+// ng new  nazwa
 // ng build --base-href /game/ --prod --aot
 // import { AppComponent } from './app.component';
-import {StructureComponent} from "./structure/structure.component";
-import {GameState} from "./gamestate/gamestate";
-import {GamesoundsService} from "./gamesounds/gamesounds";
-import {OnionComponent} from "./onion/onion.component";
-import {UpgradeComponent} from "./upgrade/upgrade.component";
-import { StatisticsComponent } from './statistics/statistics.component';
-import { AchievementsComponent } from './achievements/achievements.component';
+import {StructureComponent} from './structure/structure.component';
+import {GameState} from './gamestate/gamestate';
+import {GamesoundsService} from './gamesounds/gamesounds';
+import {OnionComponent} from './onion/onion.component';
+import {UpgradeComponent} from './upgrade/upgrade.component';
+import {StatisticsComponent} from './statistics/statistics.component';
+import {AchievementsComponent} from './achievements/achievements.component';
 
 export function xsrfFactory() {
   return new CookieXSRFStrategy('_csrf', 'XSRF-TOKEN');
@@ -30,7 +30,7 @@ export function xsrfFactory() {
     FormsModule,
     HttpModule
   ],
-  providers: [GameState, GamesoundsService,  {
+  providers: [GameState, GamesoundsService, {
     provide: XSRFStrategy,
     useFactory: xsrfFactory
   }],

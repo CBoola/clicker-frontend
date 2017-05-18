@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import {GameState} from "../gamestate/gamestate";
+import {Component, OnInit} from '@angular/core';
+import {GameState} from '../gamestate/gamestate';
 
 @Component({
   selector: 'app-statistics',
@@ -8,7 +8,8 @@ import {GameState} from "../gamestate/gamestate";
 })
 export class StatisticsComponent implements OnInit {
 
-  constructor(public gs: GameState) { }
+  constructor(public gs: GameState) {
+  }
 
   ngOnInit() {
   }

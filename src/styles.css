@@ -19,14 +19,12 @@ body {
   cursor: default;
 }
 
- .soundsBtn
- {
+ .soundsBtn {
 	height: 20px;
 	width: 20px;
  }
- 
- #sndOff
- {
+
+ #sndOff {
 	display: none;
  }
 
@@ -52,21 +50,21 @@ body {
 }
 
 #statisticsContainer {
-	position: absolute;
-	left: 50%;
-	top: 150px;
-	margin-left: -300px;
-	z-index: 1005;
-	display: none;
+  position: absolute;
+  left: 50%;
+  top: 150px;
+  margin-left: -300px;
+  z-index: 1005;
+  display: none;
 }
 
 #achievementsContainer {
-	position: absolute;
-	left: 50%;
-	top: 150px;
-	margin-left: -300px;
-	z-index: 1005;
-	//display: none;
+  position: absolute;
+  left: 50%;
+  top: 150px;
+  margin-left: -300px;
+  z-index: 1005;
+  display: none;
 }
 
 .navbar-default .navbar-brand {
@@ -136,6 +134,13 @@ body {
 #mainOnion {
   position: absolute;
   z-index: 5;
+  transition: -webkit-transform 0.1s ease;
+  transition: transform 0.1s ease;
+}
+
+#mainOnion:active {
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 #onionContainer {
@@ -202,19 +207,19 @@ body {
   margin-left: 12px;
   font-family: "Semringah";
   background-image: url("assets/trunk.svg"), url("assets/trunk.svg"),
-                    url("assets/horizontal.png"), url("assets/horizontal.png"), url("assets/horizontal.png"), url("assets/horizontal.png"),
-                    url("assets/trunk.svg"), url("assets/trunk.svg"),
-                    url("assets/horizontal.png"), url("assets/horizontal.png"),
-                    url("assets/horizontal.png");
-  background-position: 0% 0%, 0% 100%, 
-                       2% 0%, 18% 0%, 34% 0%, 50% 0%, 
-                       100% 0%, 100% 100%, 
-                       66% 0%, 82% 0%, 
-                       98% 0%;
+  url("assets/horizontal.png"), url("assets/horizontal.png"), url("assets/horizontal.png"), url("assets/horizontal.png"),
+  url("assets/trunk.svg"), url("assets/trunk.svg"),
+  url("assets/horizontal.png"), url("assets/horizontal.png"),
+  url("assets/horizontal.png");
+  background-position: 0% 0%, 0% 100%,
+  2% 0%, 18% 0%, 34% 0%, 50% 0%,
+  100% 0%, 100% 100%,
+  66% 0%, 82% 0%,
+  98% 0%;
   background-size: 20px, 20px,
-                   80px 40px, 80px 40px, 80px 40px, 80px 40px,
-                   20px, 20px,
-                   80px 40px, 80px 40px, 80px 40px;
+  80px 40px, 80px 40px, 80px 40px, 80px 40px,
+  20px, 20px,
+  80px 40px, 80px 40px, 80px 40px;
   background-repeat: no-repeat;
   background-color: transparent;
   border: none;
@@ -234,18 +239,18 @@ body {
 .panel-default .panel-footer {
   position: relative;
   background-color: transparent;
-  background-image: url("assets/trunk.svg"),url("assets/trunk.svg"),
-                    url("assets/horizontal.png"),url("assets/horizontal.png"),url("assets/horizontal.png"),
-                    url("assets/horizontal.png"),url("assets/horizontal.png"),url("assets/horizontal.png"),
-                    url("assets/horizontal.png");
+  background-image: url("assets/trunk.svg"), url("assets/trunk.svg"),
+  url("assets/horizontal.png"), url("assets/horizontal.png"), url("assets/horizontal.png"),
+  url("assets/horizontal.png"), url("assets/horizontal.png"), url("assets/horizontal.png"),
+  url("assets/horizontal.png");
   background-position: 2.3% 100%, 100% 100%,
-                       5% 100%, 21% 100%, 37% 100%,
-                       53% 100%, 69% 100%, 85% 100%,
-                       98% 100%;
-  background-size: 20px, 20px, 
-                   80px 19px, 80px 19px, 80px 19px, 
-                   80px 19px, 80px 19px, 80px 19px,
-                   80px 19px;
+  5% 100%, 21% 100%, 37% 100%,
+  53% 100%, 69% 100%, 85% 100%,
+  98% 100%;
+  background-size: 20px, 20px,
+  80px 19px, 80px 19px, 80px 19px,
+  80px 19px, 80px 19px, 80px 19px,
+  80px 19px;
   background-repeat: no-repeat;
   z-index: 30;
 }
@@ -262,9 +267,8 @@ body {
 .panel > .panel-heading > a:focus,
 .panel > .panel-heading > a:hover {
   text-decoration: none;
-  border: none;
   box-shadow: none;
-  border-color: none;
+  border: none;
 }
 
 #ads img {
@@ -278,20 +282,20 @@ body {
   -moz-animation: parabola 1.25s 1 normal;
 }
 
-#struktury_title{
-	height: 33px;
-	width: 100%;
-	background: no-repeat center;
-	background-image: url("assets/struktury.svg");
-	background-size: contain;
+#struktury_title {
+  height: 33px;
+  width: 100%;
+  background: no-repeat center;
+  background-image: url("assets/struktury.svg");
+  background-size: contain;
 }
 
-#ulepszenia_title{
-	height: 33px;
-	width: 100%;
-	background: no-repeat center;
-	background-image: url("assets/ulepszenia.svg");
-	background-size: contain;
+#ulepszenia_title {
+  height: 33px;
+  width: 100%;
+  background: no-repeat center;
+  background-image: url("assets/ulepszenia.svg");
+  background-size: contain;
 }
 
 @keyframes parabola {

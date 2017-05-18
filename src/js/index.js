@@ -1,4 +1,5 @@
 $(document).ready(function () {
+  document.addEventListener("touchstart", function() {},false);
 
   // zgodnie z metodologią REST do obsługi danych gracza
   // bedzie potrzebnego jego ID
@@ -50,20 +51,20 @@ $(document).ready(function () {
 
 var steps = 25;
 /*function plusLabelsInterval() {
-  $("body > .plusLabel").each(function () {
-    var step = parseInt($(this).attr("step"));
-    if (step >= steps) {
-      $(this).remove();
-      return;
-    }
+ $("body > .plusLabel").each(function () {
+ var step = parseInt($(this).attr("step"));
+ if (step >= steps) {
+ $(this).remove();
+ return;
+ }
 
-    var newX = parseInt($(this).attr("startX")) + step * 1.5;
-    var newY = parseInt($(this).attr("startY")) + ( 0.5 * (step - 2) * (step - 2) - 15 );
+ var newX = parseInt($(this).attr("startX")) + step * 1.5;
+ var newY = parseInt($(this).attr("startY")) + ( 0.5 * (step - 2) * (step - 2) - 15 );
 
-    step++;
-    $(this).attr("step", step).css("left", newX).css("top", newY).css("opacity", 1 - step * 0.02);
-  });
-}*/
+ step++;
+ $(this).attr("step", step).css("left", newX).css("top", newY).css("opacity", 1 - step * 0.02);
+ });
+ }*/
 
 function getCookie(name) {
   var cookieValue = null;
@@ -81,24 +82,22 @@ function getCookie(name) {
   return cookieValue;
 }
 
-$( "#statisticsBtn" ).click(function() {
-	var displayVal = $("#statisticsContainer").css("display");
-	if(displayVal == "none")
-		$("#statisticsContainer").css("display", "inline");
-	else
-		$("#statisticsContainer").css("display", "none");
+$("#statisticsBtn").click(function () {
+  const displayVal = $("#statisticsContainer");
+  if (displayVal.css("display") === "none")
+    displayVal.css("display", "inline");
+  else
+    displayVal.css("display", "none");
 });
 
 $( "#sndBtnA" ).click(function() {
-	var displayVal = $("#sndOn").css("display");
-	if(displayVal != "none")
-	{
-		$("#sndOff").css("display", "inline");
-		$("#sndOn").css("display", "none");
-	}
-	else
-	{
-		$("#sndOn").css("display", "inline");
-		$("#sndOff").css("display", "none");
-	}
+  const soundOn = $('#sndOn');
+  const soundOff = $('#sndOff');
+  if(soundOn.css('display') !== "none") {
+		soundOff.css("display", "inline");
+		soundOn.css("display", "none");
+  } else {
+      soundOn.css("display", "inline");
+      soundOff.css("display", "none");
+  }
 });
