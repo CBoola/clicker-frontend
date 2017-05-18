@@ -20,13 +20,27 @@ body {
 }
 
  .soundsBtn {
-	height: 20px;
-	width: 20px;
+	position: absolute;
+	left: 0px;
+	top: 14px;
+	//width: 20px;
  }
 
+ #sndOn
+ {
+	height: 22px;
+	top: 13px;
+ }
+ 
  #sndOff {
 	display: none;
+	height: 20px;
  }
+ 
+#sndBtnA
+{
+	width: 30px;
+}
 
 #bodypaint{
   background: #c3f1fe;    /* For browsers that do not support gradients */
