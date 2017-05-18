@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 body {
   color: #91522c;
-  height: 2500px;
+  min-height: 1000px;
   overflow-x: hidden;
 }
 
