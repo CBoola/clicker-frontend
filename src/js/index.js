@@ -104,13 +104,20 @@ $( "#sndBtnA" ).click(function() {
 
 mouseOverStatistics = false;
 mouseOverStatisticsBtn = false;
+mouseOverAchievements = false;
+mouseOverAchievementsBtn = false;
 
 $("body").click(function () 
 {
 	if( !mouseOverStatistics && !($("#statisticsContainer").css("display") === "none") && !mouseOverStatisticsBtn )
 	{
 		$("#statisticsContainer").css("display", "none");
-	}		
+	}
+
+	if( !mouseOverAchievements && !($("#achievementsContainer").css("display") === "none") && !mouseOverAchievementsBtn )
+	{
+		$("#achievementsContainer").css("display", "none");
+	}	
 });
 
 $("#statisticsContainer").on( "mouseover", function () 
@@ -131,4 +138,33 @@ $("#statisticsBtn").on( "mouseover", function ()
 $("#statisticsBtn").on( "mouseout", function () 
 {
 	mouseOverStatisticsBtn = false;
+});
+
+$("#achievementsBtn").click(function () {
+  const displayVal = $("#achievementsContainer");
+  if (displayVal.css("display") === "none")
+    displayVal.css("display", "inline");
+  else
+    displayVal.css("display", "none");
+});
+
+
+$("#achievementsContainer").on( "mouseover", function () 
+{
+	mouseOverAchievements = true;
+});
+
+$("#achievementsContainer").on( "mouseout", function () 
+{
+	mouseOverAchievements = false;
+});
+
+$("#achievementsBtn").on( "mouseover", function () 
+{
+	mouseOverAchievementsBtn = true;
+});
+
+$("#achievementsBtn").on( "mouseout", function () 
+{
+	mouseOverAchievementsBtn = false;
 });
