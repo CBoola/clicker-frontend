@@ -101,3 +101,34 @@ $( "#sndBtnA" ).click(function() {
       soundOff.css("display", "none");
   }
 });
+
+mouseOverStatistics = false;
+mouseOverStatisticsBtn = false;
+
+$("body").click(function () 
+{
+	if( !mouseOverStatistics && !($("#statisticsContainer").css("display") === "none") && !mouseOverStatisticsBtn )
+	{
+		$("#statisticsContainer").css("display", "none");
+	}		
+});
+
+$("#statisticsContainer").on( "mouseover", function () 
+{
+	mouseOverStatistics = true;
+});
+
+$("#statisticsContainer").on( "mouseout", function () 
+{
+	mouseOverStatistics = false;
+});
+
+$("#statisticsBtn").on( "mouseover", function () 
+{
+	mouseOverStatisticsBtn = true;
+});
+
+$("#statisticsBtn").on( "mouseout", function () 
+{
+	mouseOverStatisticsBtn = false;
+});
