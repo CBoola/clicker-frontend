@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {GameState} from '../gamestate/gamestate';
 
 @Component({
   selector: 'app-achievements',
@@ -7,9 +8,16 @@ import {Component, OnInit} from '@angular/core';
 })
 export class AchievementsComponent implements OnInit {
 
-  constructor() {
+  constructor(public gs: GameState ) {
   }
 
+  //@HostListener('mouseover', ['$event'])
+  onMouseover(event: MouseEvent) 
+  { 
+	console.log("najechganie");
+  }
+  
+  
   ngOnInit() {
   }
 

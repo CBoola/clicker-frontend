@@ -70,6 +70,7 @@ export class GameState {
 
   upgrades: Array<Upgrade> = [];
   structures: Array<Structure> = [];
+  achievements: Array<Achievement> = [];
   numberOfStructures = [];
   boughtUpgrades = [];
   statisticsValue: Statistics = new Statistics();
@@ -104,6 +105,12 @@ export class GameState {
         this.updateAll();
       });
 
+	this.http.get('http://51.255.167.114/api/achievement/?format=json')
+      .subscribe(data => {
+        this.achievements = data.json();
+        this.updateAll();
+      });  
+	  
     setInterval(() => {
       this.addGeneratedOnion();
     }, 1000 / this.intervalsPerSecond);

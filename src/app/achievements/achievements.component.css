@@ -10,6 +10,9 @@
   left: 10px;
   top: 20px;
   background-color: #fdf5e0;
+  padding-top: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 #topFrame {
@@ -116,4 +119,27 @@
   font-family: 'lovemonster';
   src: url('../../assets/lovemonster.ttf') format('ttf'),
   url('../../assets/lovemonster.ttf') format('truetype'); /* Safari, Android, iOS */
+}
+
+.achievement
+{
+	width: 50px;
+	height: 50px;
+	display: inline-block;
+	background-color: ede5d0;
+	border-color: #9a6d38;
+	border-style: solid;
+	border-radius: 10px;
+	margin: 10px;
+}
+
+.achievementIcon
+{
+	width: 44px;
+	height: 44px;
+}
+
+#infoBox
+{
+	position: absolute;
 }
