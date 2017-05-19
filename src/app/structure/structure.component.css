@@ -34,7 +34,7 @@
   margin-bottom: -35px;
   margin-top: -15px;
   top: -17px;
-  height: 285px;
+  max-height: 285px;
   width: 549px;
   overflow-x: hidden;
 }

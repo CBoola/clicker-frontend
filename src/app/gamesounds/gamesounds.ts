@@ -1,4 +1,5 @@
 import {Injectable} from '@angular/core';
+import {GameState} from '../gamestate/gamestate';
 
 @Injectable()
 export class GamesoundsService {
@@ -6,36 +7,29 @@ export class GamesoundsService {
   prefix: String = '/game/assets/';
   // prefix: String = '/assets/';
 
-  structureSounds: string[] = [
-    'cash_register0.mp3',
-    'cash_register1.mp3',
-    'cash_register2.mp3',
-    'cash_register3_short.mp3',
-    'cash_coin.mp3',
-    'coin_flipper.mp3',
-    'get_coin.mp3'
-  ];
-
-  upgradeSounds: string[] = [
+  achievementsSounds: string[] = [
     'kradniesz_cebule.mp3'
   ];
 
-  hallelujah = 'hallelujah.mp3';
-
-  constructor() {
-    this.loadAllSounds();
+  constructor(public gs: GameState) {
+	this.gs.structuresUpdated.subscribe( res => { this.loadStructuresSounds() });
+	this.gs.upgradesUpdated.subscribe( res => { this.loadUpgradesSounds() });
   }
 
-  loadAllSounds() {
-    new Audio(this.prefix + this.hallelujah);
-    for (const str of this.structureSounds) {
-      new Audio(this.prefix + str);
-    }
-    for (const str of this.upgradeSounds) {
-      new Audio(this.prefix + str);
+  loadStructuresSounds() {   
+    for (var structure of this.gs.structures) {
+		if(structure.sound+"" != "null")
+			new Audio(structure.sound+"");
     }
   }
 
+  loadUpgradesSounds() {   
+    for (var upgrade of this.gs.upgrades) {
+		if(upgrade.sound+"" != "null")
+			new Audio(upgrade.sound+"");
+    }
+  }
+  
   canPlay(): boolean {
     return $('#sndOn').css('display') !== 'none';
   }
@@ -43,20 +37,24 @@ export class GamesoundsService {
   playStructureSound(index: number) {
     if (!this.canPlay()) {
       return;
-    } else if (index === 10) {
-      const snd = new Audio(this.prefix + this.hallelujah);
-      snd.play();
-    } else {
-      const snd = new Audio(this.prefix + this.structureSounds[index % this.structureSounds.length]);
-      snd.play();
-    }
+    } 
+	  const patch = this.gs.structures[index].sound+"";
+	  if(patch != "null")
+	  {
+		const snd = new Audio(this.gs.structures[index].sound+"");
+		snd.play();
+	  }
   }
 
   playUpgradeSound(index: number) {
     if (!this.canPlay()) {
       return;
-    }
-    const snd = new Audio(this.prefix + this.upgradeSounds[index % this.upgradeSounds.length]);
-    snd.play();
+    } 
+	  const patch = this.gs.upgrades[index].sound+"";
+	  if(patch != "null")
+	  {
+		const snd = new Audio(this.gs.upgrades[index].sound+"");
+		snd.play();
+	  }
   }
 }

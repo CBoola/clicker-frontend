@@ -1,4 +1,4 @@
-import {Injectable} from '@angular/core';
+import {Injectable, EventEmitter} from '@angular/core';
 import {Http} from '@angular/http';
 import 'jquery';
 
@@ -31,6 +31,7 @@ interface Structure {
   name: String;
   system_id: number;
   icon: String;
+  sound: String;
   description: String;
   base_prize: number;
   production_rate: number;
@@ -40,9 +41,20 @@ interface Upgrade {
   name: String;
   system_id: number;
   icon: String;
+  sound: String;
   description: String;
   base_prize: number;
   multiplier: number;
+}
+
+interface Achievement {
+	system_id: String;
+	type: String;
+	related_system_id: String;
+	name: String;
+	description: String;
+	icon: String;
+	treshold: Number;
 }
 
 class Statistics {
@@ -61,6 +73,9 @@ export class GameState {
   numberOfStructures = [];
   boughtUpgrades = [];
   statisticsValue: Statistics = new Statistics();
+  
+  structuresUpdated:EventEmitter<number> = new EventEmitter<number>();
+  upgradesUpdated:EventEmitter<number> = new EventEmitter<number>();
 
   player_id = -1;
   onions = 0;
@@ -78,12 +93,14 @@ export class GameState {
     this.http.get('http://51.255.167.114/api/structure/?format=json')
       .subscribe(data => {
         this.structures = data.json();
+		this.structuresUpdated.emit(0);
         this.updateAll();
       });
 
     this.http.get('http://51.255.167.114/api/upgrade/?format=json')
       .subscribe(data => {
         this.upgrades = data.json();
+		this.upgradesUpdated.emit(0);
         this.updateAll();
       });
 
