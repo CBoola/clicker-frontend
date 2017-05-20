@@ -126,7 +126,7 @@
 	width: 50px;
 	height: 50px;
 	display: inline-block;
-	background-color: ede5d0;
+	background-color: #ede5d0;
 	border-color: #9a6d38;
 	border-style: solid;
 	border-radius: 10px;
@@ -141,5 +141,33 @@
 
 #infoBox
 {
+	display: none;
 	position: absolute;
+	//width: 100px;
+	//height: 40px;
+	background-color: #fdf5e0;
+	top: 130px;
+	left: 130px;
+	border-color: #7a3827;
+	border-style: solid;
+	border-width: 1px;
+	padding: 8px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+	z-index: 1000;
+}
+
+#infoTitle
+{
+	//color: #9a6d38;
+	color: #7a3827;
+	font-weight: bold;
+	margin-bottom: -5px;
+}
+
+#infoDescription
+{
+	//color: #7a3827;
+	color: #9a6d38;
 }

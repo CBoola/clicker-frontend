@@ -12,12 +12,14 @@
 	<div id="rightBottomCorner" class="corner"></div>
 
 	<div id="achievementsContent">
-		<div class="achievement" *ngFor="let ach of this.gs.achievements; let i = index;" (mouseover)="onMouseover($event)">
+		<div class="achievement" *ngFor="let ach of this.gs.achievements; let i = index;" (mouseover)="onMouseover($event, i)" (mouseout)="onMouseout($event)" (mousemove)="onMousemove($event)">
 			<img class="achievementIcon" src="{{ach.icon}}" />
 		</div>
 	</div>
 	
 	<div id="infoBox">
-		AAAAAAA
+		<div id="infoTitle">Achievement</div>
+		<div id="infoDescription">Description</div>
+		<div id="infoDate">YYYY.MM.DD HH:MM</div>
 	</div>
 </div>

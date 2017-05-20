@@ -54,7 +54,7 @@ interface Achievement {
 	name: String;
 	description: String;
 	icon: String;
-	treshold: Number;
+	threshold: Number;
 }
 
 class Statistics {
@@ -73,10 +73,12 @@ export class GameState {
   achievements: Array<Achievement> = [];
   numberOfStructures = [];
   boughtUpgrades = [];
+  achievedAchievements = [];
   statisticsValue: Statistics = new Statistics();
   
   structuresUpdated:EventEmitter<number> = new EventEmitter<number>();
   upgradesUpdated:EventEmitter<number> = new EventEmitter<number>();
+  structureBought:EventEmitter<number> = new EventEmitter<number>();
 
   player_id = -1;
   onions = 0;
@@ -211,6 +213,17 @@ export class GameState {
       return 0;
     }
     return num;
+  }
+  
+  dateOfAchievement(achievementId: number)
+  {
+	const val = this.achievedAchievements[achievementId];
+	if (val === undefined)
+	{
+		this.achievedAchievements[achievementId]= "";
+		return "";
+	}
+	return val;
   }
 
   numOfAllStructures() {
