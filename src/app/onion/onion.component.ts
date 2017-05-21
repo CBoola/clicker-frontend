@@ -24,7 +24,7 @@ export class OnionComponent implements OnInit {
     const posY = event.pageY - 20;
 
     this.body.append($('<div style="top:' + posY + 'px;left:' + posX + 'px" class="plusLabel noselect jumpOut">' +
-      '<img class="plusClick" src="assets/plus.svg" />' + this.gs.onionMultiplier + '</div>')
+      '<img class="plusClick" src="assets/plus.svg" />' + this.gs.formatedOnionValue(this.gs.onionMultiplier) + '</div>')
       .one('translateend webkitAnimationEnd oAnimationEnd MSAnimationEnd', function () {
         $(this).remove();
       }));

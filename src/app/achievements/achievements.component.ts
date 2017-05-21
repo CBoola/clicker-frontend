@@ -11,7 +11,11 @@ export class AchievementsComponent implements OnInit {
   constructor(public gs: GameState ) {
   
 	this.gs.structureBought.subscribe( val => { this.boughtStructure(val)});
+	this.gs.upgradeBought.subscribe( val => { this.boughtUpgrade(val)});
   
+	setInterval(() => {
+      this.onionsState();
+    }, 1000);
   }
 
   isAchieved(index: number)
@@ -24,14 +28,19 @@ export class AchievementsComponent implements OnInit {
   achievementDate(index: number)
   {
 	var achId= parseInt(this.gs.achievements[index].system_id+"");
-	return this.gs.dateOfAchievement(achId);
+	
+	return this.gs.getFormattedDate( this.gs.dateOfAchievement(achId) );
   }
   
   onMouseover(event: MouseEvent, index: number) 
   { 
+	var isAch =this.isAchieved(index);
+	
 	$("#infoBox").css("display", "inline");
-	$("#infoTitle").html(this.gs.achievements[index].name+"");
-	$("#infoDescription").html(this.gs.achievements[index].description+"");
+	$("#infoTitle").html( (isAch)? this.gs.achievements[index].name+"" : "?????????" );
+	$("#infoDescription").html( (isAch)? this.gs.achievements[index].description+"" : "?????");
+	
+	$("#infoDate").html( (isAch)? this.achievementDate(index) : "");
   }
   
   onMouseout(event: MouseEvent) 
@@ -70,12 +79,82 @@ export class AchievementsComponent implements OnInit {
 				}
 			}
 		}
+		else if(ach.type == "SPENT_CASH")
+		{
+			if( this.gs.statisticsValue.spent_cash >= ach.threshold)
+			{					
+				this.gainAchievement(achId);
+			}
+		}
+	}
+  }
+  
+  boughtUpgrade(upgradeId: number)
+  {
+	
+	for(var ach of this.gs.achievements)
+	{
+		var achId = parseInt(ach.system_id+"");
+		if( this.gs.dateOfAchievement( achId) != ""  ) //gained achievement
+			continue;
+		
+		if(ach.type == "SPENT_CASH")
+		{
+			if( this.gs.statisticsValue.spent_cash >= ach.threshold)
+			{					
+				this.gainAchievement(achId);
+			}
+		}
+	}
+  }
+  
+  onionsState()
+  {
+	for(var ach of this.gs.achievements)
+	{
+		var achId = parseInt(ach.system_id+"");
+		if( this.gs.dateOfAchievement( achId) != ""  ) //gained achievement
+			continue;
+		
+		if(ach.type == "MAXIMUM_CASH")
+		{
+			if( this.gs.onions >= ach.threshold)
+			{					
+				this.gainAchievement(achId);
+			}
+		}
 	}
   }
   
   gainAchievement(achId: number)
   {
-	console.log(achId);
+	//console.log(achId);
+	var dateStr = (new Date()).toISOString();
+	this.gs.achievedAchievements[achId] = dateStr;
+	
+	this.showAchievedInfo(achId);
+  }
+  
+  showAchievedInfo(achId: number)
+  {
+	var achiev = null;
+	for( var ach of this.gs.achievements)
+	{
+		if( parseInt(ach.system_id+"") == achId )
+		{
+			achiev = ach;
+			break;
+		}
+	}
+	
+	$("#newAchName").html(achiev.name);
+	$("#newAchIcon").attr("src", achiev.icon);
+	
+	$("#newAchievement").css("display", "inline");
+	
+	setTimeout(() => {
+      $("#newAchievement").css("display", "none");
+    }, 3000);
   }
   
   

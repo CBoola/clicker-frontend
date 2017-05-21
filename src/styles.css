@@ -26,6 +26,12 @@ body {
 	//width: 20px;
  }
 
+ @font-face {
+  font-family: 'lovemonster';
+  src: url('./assets/lovemonster.ttf') format('ttf'),
+  url('./assets/lovemonster.ttf') format('truetype'); /* Safari, Android, iOS */
+}
+ 
  #sndOn
  {
 	height: 22px;
@@ -79,6 +85,40 @@ body {
   margin-left: -300px;
   z-index: 1005;
   display: none;
+}
+
+#newAchievement {
+  position: absolute;
+  left: 50%;
+  top: 120px;
+  transform: translateX(-50%);
+  min-width: 300px;
+  height: 130px;
+  background-color: #fdf5e0;
+  z-index: 1005;
+  border-color: #7a3827;
+  border-style: solid;
+  border-radius: 20px;
+  text-align: center;
+  padding: 10px;
+  display: none;
+  font-family: lovemonster;
+  font-size: 20px;
+}
+
+#newAchIcon
+{
+	display: inline-block;
+	margin-right: 20px;
+	width: 80px;
+	height: 80px;
+}
+
+#newAchName
+{
+	display: inline-block;
+	font-size: 40px;
+	font-weight: bold;
 }
 
 .navbar-default .navbar-brand {

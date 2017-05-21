@@ -130,7 +130,8 @@
   left: 107px;
   top: 57px;
   background-size: contain;
-  background: url("../../assets/onion_overlay.svg") no-repeat;
+  background-image: url("../../assets/onion_overlay.svg");
+  background-repeat: no-repeat;
 }
 
 #production {

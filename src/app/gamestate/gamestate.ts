@@ -79,6 +79,7 @@ export class GameState {
   structuresUpdated:EventEmitter<number> = new EventEmitter<number>();
   upgradesUpdated:EventEmitter<number> = new EventEmitter<number>();
   structureBought:EventEmitter<number> = new EventEmitter<number>();
+  upgradeBought:EventEmitter<number> = new EventEmitter<number>();
 
   player_id = -1;
   onions = 0;
@@ -182,6 +183,8 @@ export class GameState {
         this.statisticsValue.collected_cash = res_statistics.collected_cash;
         this.statisticsValue.created_time = res.created_time;
 
+		//achievements
+		
         this.updateAll();
         this.stateRead = true;
       });
@@ -241,9 +244,14 @@ export class GameState {
   }
 
   getStartDate() {
-    const startDate = new Date(Date.parse(this.statisticsValue.created_time + ''));
+	return this.getFormattedDate(this.statisticsValue.created_time);
+  }
 
-    let stringTime = '';
+  getFormattedDate(dateIsoStr)
+  {
+	const startDate = new Date(Date.parse(dateIsoStr + ''));
+	
+	let stringTime = '';
     stringTime += ( startDate.getHours() < 10 ) ? '0' : '';
     stringTime += startDate.getHours() + ':';
     stringTime += ( startDate.getMinutes() < 10 ) ? '0' : '';
@@ -258,7 +266,7 @@ export class GameState {
 
     return stringDate + ' ' + stringTime;
   }
-
+  
   updateAll() {
     this.onionsPerSecond();
     this.mutiplierValue();
@@ -303,6 +311,22 @@ export class GameState {
     state.statistics.spent_cash = this.statisticsValue.spent_cash;
     state.statistics.number_of_clicks = this.statisticsValue.number_of_clicks;
 
+	state.achievements = [];
+	for (const index in this.achievedAchievements)
+	{
+		const value = this.achievedAchievements[index];
+		if( value != "" && value !== undefined )
+		{
+			const achObj = {
+				'system_id': index + '',
+				'time': value
+				
+			  };
+			//state.achievements.push(achObj);
+		}
+	}
+	
+	
     const stateJson = JSON.stringify(state);
     console.log(stateJson);
 
