@@ -167,12 +167,12 @@ export class GameState {
 
         // structures
         res.structures.forEach(str => {
-          this.numberOfStructures[parseInt(str.system_id, 10)] = str.amount;
+          this.numberOfStructures[parseInt(str.system_id)] = str.amount;
         });
 
         // upgrades
         res.upgrades.forEach(str => {
-          this.boughtUpgrades.push(parseInt(str.system_id, 10));
+          this.boughtUpgrades.push(parseInt(str.system_id));
         });
 
         // statistics
@@ -184,6 +184,9 @@ export class GameState {
         this.statisticsValue.created_time = res.created_time;
 
 		//achievements
+		res.achievements.forEach(ach => {
+          this.achievedAchievements[parseInt(ach.system_id)] = ach.time;
+        });
 		
         this.updateAll();
         this.stateRead = true;
@@ -201,7 +204,7 @@ export class GameState {
   mutiplierValue() {
     let multi = 1;
     for (const upgrade of this.upgrades) {
-      if (upgrade.system_id && this.boughtUpgrades.includes(parseInt(upgrade.system_id + '', 10))) {
+      if (upgrade.system_id && this.boughtUpgrades.includes(parseInt(upgrade.system_id + ''))) {
         multi *= upgrade.multiplier;
       }
     }
@@ -322,7 +325,7 @@ export class GameState {
 				'time': value
 				
 			  };
-			//state.achievements.push(achObj);
+			state.achievements.push(achObj);
 		}
 	}
 	

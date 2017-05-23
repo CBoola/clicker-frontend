@@ -12,6 +12,8 @@
 	<div id="rightBottomCorner" class="corner"></div>
 
 	<div id="achievementsContent">
+	<div id="containerLabel"></div>
+	
 		<div class="achievement" *ngFor="let ach of this.gs.achievements; let i = index;" (mouseover)="onMouseover($event, i)" (mouseout)="onMouseout($event)" (mousemove)="onMousemove($event)">
 			<img class="achievementIcon" src="{{ach.icon}}" [ngClass]="{'notAchieved': !this.isAchieved(i)}" />
 		</div>
