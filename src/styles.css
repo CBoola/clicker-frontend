@@ -88,6 +88,7 @@ body {
 }
 
 #newAchievement {
+  color: #9a6d38;
   position: absolute;
   left: 50%;
   top: 120px;
@@ -96,14 +97,11 @@ body {
   height: 140px;
   background-color: #fdf5e0;
   z-index: 1005;
-  border-color: #7a3827;
-  border-style: solid;
-  border-radius: 20px;
   text-align: center;
   padding: 10px;
   display: none;
-  font-family: lovemonster;
-  font-size: 20px;
+  font-family: lovemonster, sans-serif;
+  font-size: 25px;
 }
 
 #topFrame {
@@ -160,7 +158,7 @@ body {
 
 .horizontalFrame {
   position: absolute;
-  width: 800px;
+  width: 392px;
   height: 15px;
   background-image: url("assets/horizontal.png");
   background-size: contain;
@@ -188,6 +186,7 @@ body {
   background-size: contain;
   z-index: 15;
 }
+
 #newAchIcon
 {
 	display: inline-block;
@@ -199,8 +198,8 @@ body {
 #newAchName
 {
 	display: inline-block;
-	font-size: 40px;
-	font-weight: bold;
+	font-family: lovemonster, sans-serif;
+  font-size: 40px;
 }
 
 .navbar-default .navbar-brand {
