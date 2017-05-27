@@ -34,13 +34,14 @@ body {
  
  #sndOn
  {
-	height: 22px;
-	top: 13px;
+	height: 18px;
+	top: 16px;
  }
  
  #sndOff {
+	top: 17px;
 	display: none;
-	height: 20px;
+	height: 16px;
  }
  
 #sndBtnA
@@ -158,7 +159,7 @@ body {
 
 .horizontalFrame {
   position: absolute;
-  width: 392px;
+  width: 98%;
   height: 15px;
   background-image: url("assets/horizontal.png");
   background-size: contain;
@@ -191,15 +192,30 @@ body {
 {
 	display: inline-block;
 	margin-right: 20px;
+	margin-top: -50px;
+	margin-left: 20px;
 	width: 80px;
 	height: 80px;
 }
 
 #newAchName
 {
+	margin-top: 15px;
+	margin-right: 20px;
 	display: inline-block;
 	font-family: lovemonster, sans-serif;
-  font-size: 40px;
+}
+
+#newAchInfo
+{
+	
+	font-size: 40px;
+}
+
+#newAchTitle
+{
+	margin-top: -10px;
+	font-size: 30px;
 }
 
 .navbar-default .navbar-brand {

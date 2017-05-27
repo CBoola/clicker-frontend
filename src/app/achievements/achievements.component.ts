@@ -147,7 +147,7 @@ export class AchievementsComponent implements OnInit {
 		}
 	}
 	
-	$("#newAchName").html(achiev.name);
+	$("#newAchTitle").html(achiev.name);
 	$("#newAchIcon").attr("src", achiev.icon);
 	
 	$("#newAchievement").css("display", "inline");
