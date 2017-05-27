@@ -14,6 +14,14 @@
 	
 	<div id="achievementsContent">
 		
+		<div id="achievementsGroup">
+			<div *ngFor="let str of this.gs.structures" class="achGroupLabel">
+				{{this.structureNameFilter(str.name)}}
+			</div>
+			<div class="achGroupLabel">zbieractwo</div>
+			<div class="achGroupLabel">wydawanie</div>
+		</div>
+		
 		<div id="achievementsBricks">
 			<div class="achievement" *ngFor="let ach of this.gs.achievements; let i = index;" (mouseover)="onMouseover($event, i)" (mouseout)="onMouseout($event)" (mousemove)="onMousemove($event)">
 				<img class="achievementIcon" src="{{ach.icon}}" [ngClass]="{'notAchieved': !this.isAchieved(i)}" />

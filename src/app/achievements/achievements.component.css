@@ -19,10 +19,28 @@
 #achievementsBricks
 {
 	position: absolute;
-	left: 40%;
-	width: 60%;
+	left: 45%;
+	width: 55%;
 	margin-bottom: 20px;
 	margin-top: 10px;
+}
+
+#achievementsGroup
+{
+	position: absolute;
+	left: 0px;
+	width: 40%;
+	margin-bottom: 20px;
+	margin-top: 10px;
+}
+
+.achGroupLabel
+{
+	margin-left: 50px;
+	font-family: lovemonster;
+	font-size: 50px;
+	color: #9a6d38;
+	margin-bottom: -1px;
 }
 
 #topFrame {
@@ -136,12 +154,8 @@
 	width: 50px;
 	height: 50px;
 	display: inline-block;
-	background-color: #ede5d0;
-	border-color: #9a6d38;
-	border-style: solid;
-	border-radius: 10px;
 	margin: 10px;
-	margin-left: 20px;
+	margin-left: 15px;
 }
 
 .achievementIcon
@@ -187,9 +201,9 @@
 
 .notAchieved
 {
-	opacity: 0.7;
-	-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-    filter: grayscale(100%);
+	opacity: 0.5;
+	//-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    //filter: grayscale(100%);
 }
 
 #containerLabel {
@@ -201,4 +215,23 @@
   background: url("../../assets/osiagniecia.svg") no-repeat center;
   background-size: contain;
   z-index: 100;
+}
+
+#style::-webkit-scrollbar-track
+{
+	background-image: url("../../assets/vertical.png");
+  background-size: contain;
+}
+
+#style::-webkit-scrollbar
+{
+	width: 15px;
+}
+
+#style::-webkit-scrollbar-thumb
+{
+  background-color: rgba(253, 245, 224, 0.5);
+  border-radius: 8px;
+  border: 3px solid transparent;
+  background-clip: content-box;
 }

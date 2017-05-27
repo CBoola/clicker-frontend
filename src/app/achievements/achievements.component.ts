@@ -35,6 +35,8 @@ export class AchievementsComponent implements OnInit {
   onMouseover(event: MouseEvent, index: number) 
   { 
 	var isAch =this.isAchieved(index);
+	if(!isAch)
+		return;
 	
 	$("#infoBox").css("display", "inline");
 	$("#infoTitle").html( (isAch)? this.gs.achievements[index].name+"" : "?????????" );
@@ -106,6 +108,13 @@ export class AchievementsComponent implements OnInit {
 			}
 		}
 	}
+  }
+  
+  structureNameFilter(name: string)
+  {
+	if( name.length <= 12)
+		return name;
+	return name.substr(0, 10)+".";
   }
   
   onionsState()
