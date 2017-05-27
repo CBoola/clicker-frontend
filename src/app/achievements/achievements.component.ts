@@ -40,9 +40,9 @@ export class AchievementsComponent implements OnInit {
 	
 	$("#infoBox").css("display", "inline");
 	$("#infoTitle").html( (isAch)? this.gs.achievements[index].name+"" : "?????????" );
-	$("#infoDescription").html( (isAch)? this.gs.achievements[index].description+"" : "?????");
+	//$("#infoDescription").html( (isAch)? this.gs.achievements[index].description+"" : "?????");
 	
-	$("#infoDate").html( (isAch)? this.achievementDate(index) : "");
+	$("#infoDate").html( (isAch)? "Zdobyto: "+this.achievementDate(index) : "");
   }
   
   onMouseout(event: MouseEvent) 
@@ -53,10 +53,13 @@ export class AchievementsComponent implements OnInit {
   onMousemove(event: MouseEvent) 
   { 
 	var ofs= $('#achievementsMain').offset();
-	var posX = event.clientX - ofs.left +5;
-	var posY = event.clientY - ofs.top -75;
-	
 	var infoBox= $("#infoBox");
+	var width= parseInt(infoBox.css("width"))/2;
+	
+	var posX = event.pageX - ofs.left -width;
+	var posY = event.pageY - ofs.top -90;
+	
+	
 	infoBox.css("left", posX);
 	infoBox.css("top", posY);
   }

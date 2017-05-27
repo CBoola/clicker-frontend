@@ -15,11 +15,11 @@
 	<div class="achievementsContent" id="style">
 		
 		<div id="achievementsGroup">
-			<div *ngFor="let str of this.gs.structures" class="achGroupLabel">
+			<div *ngFor="let str of this.gs.structures" class="achGroupLabel noselect noIbar">
 				{{this.structureNameFilter(str.name)}}
 			</div>
-			<div class="achGroupLabel">zbieractwo</div>
-			<div class="achGroupLabel">wydawanie</div>
+			<div class="achGroupLabel noselect noIbar">zbieractwo</div>
+			<div class="achGroupLabel noselect noIbar">wydawanie</div>
 		</div>
 		
 		<div id="achievementsBricks">
@@ -30,8 +30,19 @@
 	</div>
 	
 	<div id="infoBox">
-		<div id="infoTitle">Achievement</div>
-		<div id="infoDescription">Description</div>
-		<div id="infoDate">YYYY.MM.DD HH:MM</div>
+		<div id="topFrameInfo" class="horizontalFrameInfo"></div>
+		<div id="bottomFrameInfo" class="horizontalFrameInfo"></div>
+		<div id="leftFrameInfo" class="verticalFrameInfo"></div>
+		<div id="rightFrameInfo" class="verticalFrameInfo"></div>
+		
+		<div id="leftTopCornerInfo" class="cornerInfo"></div>
+		<div id="rightTopCornerInfo" class="cornerInfo"></div>
+		<div id="leftBottomCornerInfo" class="cornerInfo"></div>
+		<div id="rightBottomCornerInfo" class="cornerInfo"></div>
+	
+		<div id="infoContainer">
+			<div id="infoTitle">Achievement</div>
+			<div id="infoDate">Zdobyto: YYYY.MM.DD HH:MM</div>
+		</div>
 	</div>
 </div>

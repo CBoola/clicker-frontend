@@ -455,19 +455,23 @@ body {
 }
 
 #achievementsBtn{
-  background-image: url("assets/osiagniecia_menu.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  margin-top: 15px;
-  width: 300%;
+  
+  //margin-top: 15px;
+  //width: 300%;
+  //border-style: solid;
 }
-#statisticsBtn{
-  margin-left: 17px;
-  width: 150%;
+
+#achievementsBtnImg
+{
+	background-image: url("assets/osiagniecia_menu.svg");
+	background-size: contain;
+	background-repeat: no-repeat;
+	width: 100px;
+	height: 25px;
+	margin-top: -1px;
 }
-#logoutBtn{
-  width: 150%;
-}
+
+
 
 @keyframes parabola {
   0% {
