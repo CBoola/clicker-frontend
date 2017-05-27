@@ -4,7 +4,7 @@
   background-color: #fdf5e0;
 }
 
-#achievementsContent {
+.achievementsContent {
   position: absolute;
   left: 0px;
   height: 580px;

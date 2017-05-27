@@ -237,6 +237,7 @@ body {
 .navbar-default {
   background-color: unset;
   border-color: #c5f3ff;
+  font-family: "Semringah";
 }
 
 .navbar-default .navbar-nav > li > a {
@@ -447,6 +448,25 @@ body {
   background: no-repeat center;
   background-image: url("assets/ulepszenia.svg");
   background-size: contain;
+}
+
+#whoiam {
+  font-size: 140%;
+}
+
+#achievementsBtn{
+  background-image: url("assets/osiagniecia_menu.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-top: 15px;
+  width: 300%;
+}
+#statisticsBtn{
+  margin-left: 17px;
+  width: 150%;
+}
+#logoutBtn{
+  width: 150%;
 }
 
 @keyframes parabola {

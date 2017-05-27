@@ -65,7 +65,8 @@
     <!--pasek nawigacyjny -->
     <div class="navbar navbar-default navbar-static-top">
       <div class="navbar-header">
-        <a href="#" class="navbar-brand"> Cebula Kliker </a>
+        <a href="/" class="navbar-brand"> Cebula Kliker </a>
+        <div id="whoiam" class="noIbar">Zalogowano:</div>
 
         <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
           <span class="icon-bar"></span>
@@ -73,22 +74,12 @@
           <span class="icon-bar"></span>
         </button>
       </div>
-
           <div class="collapse navbar-collapse navHeaderCollapse">
-            <ul class="nav navbar-nav navbar-left">
-              <li class="navbar-text">
-                <div id="is_logged" class="noIbar">Status:</div>
-              </li>
-              <li class="navbar-text">
-                <div id="whoiam" class="noIbar">Zalogowany jako:</div>
-              </li>
-            </ul>
             <ul class="nav navbar-nav navbar-right">
-				<li><a id="sndBtnA" href="#"><img id="sndOn" class="soundsBtn" src="assets/sound_on.svg"/><img id="sndOff" class="soundsBtn" src="assets/sound_off.svg"/></a></li>
-				<li><a href="#" id="achievementsBtn">Osiagniecia</a></li>
-				<li><a href="#" id="statisticsBtn">Statystyki</a></li>
-				<li><a href="/">Home</a></li>
-				<li><a href="/api/logout">Wyloguj</a></li>
+              <li><a id="sndBtnA" href="#"><img id="sndOn" class="soundsBtn" src="assets/sound_on.svg"/><img id="sndOff" class="soundsBtn" src="assets/sound_off.svg"/></a></li>
+              <li><a href="#" id="achievementsBtn"></a></li>
+              <li><a href="#" id="statisticsBtn">Statystyki</a></li>
+	      			<li><a href="/api/logout" id="logoutBtn">Wyloguj</a></li>
             </ul>
           </div>
       </div>
