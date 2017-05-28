@@ -16,6 +16,8 @@
 }
 
 #mainOnion {
+  -webkit-clip-path: polygon(28% 12%, 68% 12%, 75% 100%, 25% 100%);
+  clip-path: polygon(28% 12%, 68% 12%, 75% 100%, 25% 100%);
   background: no-repeat center;
   background-size: contain;
   width: 600px;
@@ -24,6 +26,7 @@
   top: 5px;
   margin-left: 0px;
   margin-top: -40px;
+  background-image: url('../../assets/onion_glow.svg');
 }
 
 #radialStripes1 {
