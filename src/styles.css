@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 body {
   color: #91522c;
-  min-height: 1100px;
+  min-height: 1200px;
   overflow-x: hidden;
 }
 
@@ -28,13 +28,8 @@ body {
 
  .aContainer
  {
-	margin-top: 30px;
-	margin-bottom: 20px;
- }
- 
- .carousel
- {
-	height: 100px;
+	margin-top: 40px;
+	margin-bottom: 30px;
  }
  
  .carouselImg
@@ -222,7 +217,7 @@ body {
 	display: inline-block;
 	margin-right: 20px;
 	margin-top: -50px;
-	margin-left: 20px;
+	margin-left: 30px;
 	width: 80px;
 	height: 80px;
 }
@@ -230,7 +225,7 @@ body {
 #newAchName
 {
 	margin-top: 15px;
-	margin-right: 20px;
+	margin-right: 30px;
 	display: inline-block;
 	font-family: lovemonster, sans-serif;
 }
@@ -254,6 +249,7 @@ body {
   -webkit-text-fill-color: transparent;
   font-family: "Semringah";
   font-size: 250%;
+  margin-bottom: -10px;
 }
 
 .navbar-default .navbar-brand:hover,
@@ -273,6 +269,7 @@ body {
   color: #7a3827;
   font-family: "Semringah";
   font-size: 150%;
+  margin-top: 10px;
 }
 
 .navbar-default .navbar-nav > li > a:hover,
@@ -450,10 +447,6 @@ body {
   text-decoration: none;
   box-shadow: none;
   border: none;
-}
-
-#ads img {
-  height: 100%;
 }
 
 .jumpOut {

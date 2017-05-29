@@ -37,7 +37,7 @@ $(document).ready(function () {
       dataType: "json",
       url: "/api/player/" + player_id
     }).done(function (data) {
-      $("#whoiam").html("Zalogowany:"+data["name"]);
+      $("#whoiam").html("Zalogowany: "+data["name"]);
     });
   }
 
