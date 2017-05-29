@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {GameState} from '../gamestate/gamestate';
+import {GamesoundsService} from '../gamesounds/gamesounds';
 
 @Component({
   selector: 'app-achievements',
@@ -8,7 +9,7 @@ import {GameState} from '../gamestate/gamestate';
 })
 export class AchievementsComponent implements OnInit {
 
-  constructor(public gs: GameState ) {
+  constructor(public gs: GameState, public snd: GamesoundsService ) {
   
 	this.gs.structureBought.subscribe( val => { this.boughtStructure(val)});
 	this.gs.upgradeBought.subscribe( val => { this.boughtUpgrade(val)});
@@ -167,6 +168,8 @@ export class AchievementsComponent implements OnInit {
 	setTimeout(() => {
       $("#newAchievement").css("display", "none");
     }, 3000);
+	
+	this.snd.playAchievementSound();
   }
   
   

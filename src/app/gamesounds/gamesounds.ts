@@ -5,15 +5,14 @@ import {GameState} from '../gamestate/gamestate';
 export class GamesoundsService {
 
   prefix: String = '/game/assets/';
-  // prefix: String = '/assets/';
+   //prefix: String = '/assets/';
 
-  achievementsSounds: string[] = [
-    'kradniesz_cebule.mp3'
-  ];
+  achievementsSounds: string = 'wygranko.mp3';
 
   constructor(public gs: GameState) {
 	this.gs.structuresUpdated.subscribe( res => { this.loadStructuresSounds() });
 	this.gs.upgradesUpdated.subscribe( res => { this.loadUpgradesSounds() });
+	new Audio(this.prefix+this.achievementsSounds+"");
   }
 
   loadStructuresSounds() {   
@@ -56,5 +55,14 @@ export class GamesoundsService {
 		const snd = new Audio(this.gs.upgrades[index].sound+"");
 		snd.play();
 	  }
+  }
+  
+  playAchievementSound()
+  {
+	if (!this.canPlay()) {
+      return;
+    }
+		const snd = new Audio(this.prefix+this.achievementsSounds+"");
+		snd.play();
   }
 }

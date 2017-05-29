@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 body {
   color: #91522c;
-  min-height: 1000px;
+  min-height: 1100px;
   overflow-x: hidden;
 }
 
@@ -26,6 +26,34 @@ body {
 	//width: 20px;
  }
 
+ .advertContainer
+ {
+	margin-top: 30px;
+	margin-bottom: 20px;
+ }
+ 
+ .carousel
+ {
+	height: 100px;
+ }
+ 
+ .carouselImg
+ {
+	border-radius: 10px;
+ }
+ 
+ .headerSeparator
+ {
+	width: 200px;
+	height: 1px;
+ }
+ 
+ .rightSeparator
+ {
+	height: 1px;
+	width: 30px;
+ }
+ 
  @font-face {
   font-family: 'lovemonster';
   src: url('./assets/lovemonster.ttf') format('ttf'),
@@ -452,7 +480,13 @@ body {
 }
 
 #whoiam {
-  font-size: 140%;
+  font-size: 30px;
+  font-family: lovemonster;
+  background: -webkit-linear-gradient(#91522c, #7a3827);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
 }
 
 #achievementsBtnImg

@@ -43,14 +43,17 @@
 <center>
   <div class="container">
     <!-- miejsce na reklame -->
-    <div>
-      <div id="ads" class="carousel" data-ride="carousel" data-pause="false" style="height: 75px">
+    <div class="advertContainer noselect">
+      <div id="ads" class="carousel" data-ride="carousel" data-pause="false">
         <div class="carousel-inner">
           <div class="item active">
-            <img src="http://www.natureexports.co.in/images/red-onion-banner.jpg"/>
+            <img class="carouselImg" src="../assets/ad2.png"/>
           </div>
           <div class="item">
-            <img src="https://assets2.onionstatic.com/onion/static/images/onion_fb_placeholder.png"/>
+            <img class="carouselImg" src="../assets/ad3.png"/>
+          </div>
+		  <div class="item">
+            <img class="carouselImg" src="../assets/ad4.png"/>
           </div>
 
           <!-- szablon reklamy
@@ -64,7 +67,8 @@
 
     <!--pasek nawigacyjny -->
     <div class="navbar navbar-default navbar-static-top">
-      <div class="navbar-header">
+      <div class="navbar-header headerSeparator"></div>
+	  <div class="navbar-header noselect noIbar">
         <a href="/" class="navbar-brand"> Cebula Kliker </a>
         <div id="whoiam" class="noIbar">Zalogowano:</div>
 
@@ -76,10 +80,11 @@
       </div>
           <div class="collapse navbar-collapse navHeaderCollapse">
             <ul class="nav navbar-nav navbar-right">
-				<li><a id="sndBtnA" href="#"><img id="sndOn" class="soundsBtn" src="assets/sound_on.svg"/><img id="sndOff" class="soundsBtn" src="assets/sound_off.svg"/></a></li>
+				<li><a class="noselect" id="sndBtnA" href="#"><img id="sndOn" class="soundsBtn" src="assets/sound_on.svg"/><img id="sndOff" class="soundsBtn" src="assets/sound_off.svg"/></a></li>
 				<li><a href="#" id="achievementsBtn"><div id="achievementsBtnImg"></div></a></li>
 				<li><a href="#" id="statisticsBtn"><div id="statisticsBtnImg"></div></a></li>
 				<li><a href="/api/logout" id="logoutBtn"><div id="logoutBtnImg"></div></a></li>
+				<li><div class="rightSeparator"></div></li>
             </ul>
           </div>
       </div>
@@ -111,6 +116,7 @@
             </div>
           </div>
         </div>
+		<br/>
         <div class="panel-group">
           <div class="panel panel-default">
             <div class="panel-heading">
