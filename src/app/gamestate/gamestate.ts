@@ -1,4 +1,4 @@
-import {Injectable, EventEmitter} from '@angular/core';
+import {EventEmitter, Injectable} from '@angular/core';
 import {Http} from '@angular/http';
 import 'jquery';
 
@@ -48,13 +48,13 @@ interface Upgrade {
 }
 
 interface Achievement {
-	system_id: String;
-	type: String;
-	related_system_id: String;
-	name: String;
-	description: String;
-	icon: String;
-	threshold: Number;
+  system_id: String;
+  type: String;
+  related_system_id: String;
+  name: String;
+  description: String;
+  icon: String;
+  threshold: Number;
 }
 
 class Statistics {
@@ -75,11 +75,11 @@ export class GameState {
   boughtUpgrades = [];
   achievedAchievements = [];
   statisticsValue: Statistics = new Statistics();
-  
-  structuresUpdated:EventEmitter<number> = new EventEmitter<number>();
-  upgradesUpdated:EventEmitter<number> = new EventEmitter<number>();
-  structureBought:EventEmitter<number> = new EventEmitter<number>();
-  upgradeBought:EventEmitter<number> = new EventEmitter<number>();
+
+  structuresUpdated: EventEmitter<number> = new EventEmitter<number>();
+  upgradesUpdated: EventEmitter<number> = new EventEmitter<number>();
+  structureBought: EventEmitter<number> = new EventEmitter<number>();
+  upgradeBought: EventEmitter<number> = new EventEmitter<number>();
 
   player_id = -1;
   onions = 0;
@@ -97,23 +97,23 @@ export class GameState {
     this.http.get('http://51.255.167.114/api/structure/?format=json')
       .subscribe(data => {
         this.structures = data.json();
-		this.structuresUpdated.emit(0);
+        this.structuresUpdated.emit(0);
         this.updateAll();
       });
 
     this.http.get('http://51.255.167.114/api/upgrade/?format=json')
       .subscribe(data => {
         this.upgrades = data.json();
-		this.upgradesUpdated.emit(0);
+        this.upgradesUpdated.emit(0);
         this.updateAll();
       });
 
-	this.http.get('http://51.255.167.114/api/achievement/?format=json')
+    this.http.get('http://51.255.167.114/api/achievement/?format=json')
       .subscribe(data => {
         this.achievements = data.json();
         this.updateAll();
-      });  
-	  
+      });
+
     setInterval(() => {
       this.addGeneratedOnion();
     }, 1000 / this.intervalsPerSecond);
@@ -144,11 +144,11 @@ export class GameState {
         const res = data.json();
         if (res.hasOwnProperty('player_id')) {
           this.player_id = res.player_id;
-          this.readState();
+          // this.readState();
         } else {
           // return;
           this.player_id = 3;
-          this.readState();
+          // this.readState();
         }
 
       });
@@ -167,12 +167,12 @@ export class GameState {
 
         // structures
         res.structures.forEach(str => {
-          this.numberOfStructures[parseInt(str.system_id)] = str.amount;
+          this.numberOfStructures[parseInt(str.system_id, 10)] = str.amount;
         });
 
         // upgrades
         res.upgrades.forEach(str => {
-          this.boughtUpgrades.push(parseInt(str.system_id));
+          this.boughtUpgrades.push(parseInt(str.system_id, 10));
         });
 
         // statistics
@@ -183,11 +183,11 @@ export class GameState {
         this.statisticsValue.collected_cash = res_statistics.collected_cash;
         this.statisticsValue.created_time = res.created_time;
 
-		//achievements
-		res.achievements.forEach(ach => {
-          this.achievedAchievements[parseInt(ach.system_id)] = ach.time;
+        // achievements
+        res.achievements.forEach(ach => {
+          this.achievedAchievements[parseInt(ach.system_id, 10)] = ach.time;
         });
-		
+
         this.updateAll();
         this.stateRead = true;
       });
@@ -204,12 +204,11 @@ export class GameState {
   mutiplierValue() {
     let multi = 1;
     for (const upgrade of this.upgrades) {
-      if (upgrade.system_id && this.boughtUpgrades.includes(parseInt(upgrade.system_id + ''))) {
+      if (upgrade.system_id && this.boughtUpgrades.includes(parseInt(upgrade.system_id + '', 10))) {
         multi *= upgrade.multiplier;
       }
     }
     this.onionMultiplier = multi;
-    this.onionMultiplier
   }
 
   numOfStructure(structureId: number) {
@@ -220,16 +219,14 @@ export class GameState {
     }
     return num;
   }
-  
-  dateOfAchievement(achievementId: number)
-  {
-	const val = this.achievedAchievements[achievementId];
-	if (val === undefined)
-	{
-		this.achievedAchievements[achievementId]= "";
-		return "";
-	}
-	return val;
+
+  dateOfAchievement(achievementId: number) {
+    const val = this.achievedAchievements[achievementId];
+    if (val === undefined) {
+      this.achievedAchievements[achievementId] = '';
+      return '';
+    }
+    return val;
   }
 
   numOfAllStructures() {
@@ -247,14 +244,13 @@ export class GameState {
   }
 
   getStartDate() {
-	return this.getFormattedDate(this.statisticsValue.created_time);
+    return this.getFormattedDate(this.statisticsValue.created_time);
   }
 
-  getFormattedDate(dateIsoStr)
-  {
-	const startDate = new Date(Date.parse(dateIsoStr + ''));
-	
-	let stringTime = '';
+  getFormattedDate(dateIsoStr) {
+    const startDate = new Date(Date.parse(dateIsoStr + ''));
+
+    let stringTime = '';
     stringTime += ( startDate.getHours() < 10 ) ? '0' : '';
     stringTime += startDate.getHours() + ':';
     stringTime += ( startDate.getMinutes() < 10 ) ? '0' : '';
@@ -269,7 +265,7 @@ export class GameState {
 
     return stringDate + ' ' + stringTime;
   }
-  
+
   updateAll() {
     this.onionsPerSecond();
     this.mutiplierValue();
@@ -314,22 +310,20 @@ export class GameState {
     state.statistics.spent_cash = this.statisticsValue.spent_cash;
     state.statistics.number_of_clicks = this.statisticsValue.number_of_clicks;
 
-	state.achievements = [];
-	for (const index in this.achievedAchievements)
-	{
-		const value = this.achievedAchievements[index];
-		if( value != "" && value !== undefined )
-		{
-			const achObj = {
-				'system_id': index + '',
-				'time': value
-				
-			  };
-			state.achievements.push(achObj);
-		}
-	}
-	
-	
+    state.achievements = [];
+    for (const index in this.achievedAchievements) {
+      const value = this.achievedAchievements[index];
+      if (value !== '' && value !== undefined) {
+        const achObj = {
+          'system_id': index + '',
+          'time': value
+
+        };
+        state.achievements.push(achObj);
+      }
+    }
+
+
     const stateJson = JSON.stringify(state);
     console.log(stateJson);
 

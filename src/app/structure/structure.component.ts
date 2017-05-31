@@ -22,7 +22,7 @@ export class StructureComponent implements OnInit {
       this.gs.statisticsValue.spent_cash += price;
 
       this.snd.playStructureSound(index);
-	  this.gs.structureBought.emit(structureId);
+      this.gs.structureBought.emit(structureId);
     }
     this.gs.onionsPerSecond();
   }

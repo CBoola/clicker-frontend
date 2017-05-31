@@ -17,10 +17,10 @@
 <div id="bodypaint"></div>
 <div id="grassContainer"></div>
 <div id="statisticsContainer">
-	<app-statistics></app-statistics>
+  <app-statistics></app-statistics>
 </div>
 <div id="achievementsContainer">
-	<app-achievements></app-achievements>
+  <app-achievements></app-achievements>
 </div>
 <div id="newAchievement">
   <div id="topFrame" class="horizontalFrame"></div>
@@ -31,13 +31,13 @@
   <div id="rightTopCorner" class="corner"></div>
   <div id="leftBottomCorner" class="corner"></div>
   <div id="rightBottomCorner" class="corner"></div>
-	<div>
-		<img id="newAchIcon" />
-		<div id="newAchName">
-			<div id="newAchInfo">Zdobyto nowe osiągnięcie</div>
-			<div id="newAchTitle">???????????????????????????????????????????????</div>
-		</div>
-	</div>
+  <div>
+    <img id="newAchIcon"/>
+    <div id="newAchName">
+      <div id="newAchInfo">Zdobyto nowe osiągnięcie</div>
+      <div id="newAchTitle">???????????????????????????????????????????????</div>
+    </div>
+  </div>
 </div>
 
 <center>
@@ -52,7 +52,7 @@
           <div class="item">
             <img class="carouselImg" src="assets/ad3.png"/>
           </div>
-		  <div class="item">
+          <div class="item">
             <img class="carouselImg" src="assets/ad4.png"/>
           </div>
 
@@ -68,7 +68,7 @@
     <!--pasek nawigacyjny -->
     <div class="navbar navbar-default navbar-static-top">
       <div class="navbar-header headerSeparator"></div>
-	  <div class="navbar-header noselect noIbar">
+      <div class="navbar-header noselect noIbar">
         <a href="/" class="navbar-brand"> Cebula Kliker </a>
         <div id="whoiam" class="noIbar">Zalogowano:</div>
 
@@ -78,16 +78,28 @@
           <span class="icon-bar"></span>
         </button>
       </div>
-          <div class="collapse navbar-collapse navHeaderCollapse">
-            <ul class="nav navbar-nav navbar-right">
-				<li><a class="noselect" id="sndBtnA" href="#"><img id="sndOn" class="soundsBtn" src="assets/sound_on.svg"/><img id="sndOff" class="soundsBtn" src="assets/sound_off.svg"/></a></li>
-				<li><a href="#" id="achievementsBtn"><div id="achievementsBtnImg"></div></a></li>
-				<li><a href="#" id="statisticsBtn"><div id="statisticsBtnImg"></div></a></li>
-				<li><a href="/api/logout" id="logoutBtn"><div id="logoutBtnImg"></div></a></li>
-				<li><div class="rightSeparator"></div></li>
-            </ul>
-          </div>
+      <div class="collapse navbar-collapse navHeaderCollapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a class="noselect" id="sndBtnA" href="#"><img id="sndOn" class="soundsBtn"
+                                                             src="assets/sound_on.svg"/><img id="sndOff"
+                                                                                             class="soundsBtn"
+                                                                                             src="assets/sound_off.svg"/></a>
+          </li>
+          <li><a href="#" id="achievementsBtn">
+            <div id="achievementsBtnImg"></div>
+          </a></li>
+          <li><a href="#" id="statisticsBtn">
+            <div id="statisticsBtnImg"></div>
+          </a></li>
+          <li><a href="/api/logout" id="logoutBtn">
+            <div id="logoutBtnImg"></div>
+          </a></li>
+          <li>
+            <div class="rightSeparator"></div>
+          </li>
+        </ul>
       </div>
+    </div>
 
     <!-- sekcja na cebule i ulepszenia -->
 
@@ -116,7 +128,7 @@
             </div>
           </div>
         </div>
-		<br/>
+        <br/>
         <div class="panel-group">
           <div class="panel panel-default">
             <div class="panel-heading">
