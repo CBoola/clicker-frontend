@@ -102,6 +102,18 @@ $( "#sndBtnA" ).click(function() {
   }
 });
 
+$( "#musicBtnA" ).click(function() {
+  const musicOn = $('#musicOn');
+  const musicOff = $('#musicOff');
+  if(musicOn.css('display') !== "none") {
+		musicOff.css("display", "inline");
+		musicOn.css("display", "none");
+  } else {
+      musicOn.css("display", "inline");
+      musicOff.css("display", "none");
+  }
+});
+
 mouseOverStatistics = false;
 mouseOverStatisticsBtn = false;
 mouseOverAchievements = false;

@@ -25,6 +25,13 @@ body {
 	top: 14px;
 	//width: 20px;
  }
+ 
+ .musicBtn {
+	position: absolute;
+	left: 0px;
+	top: 14px;
+	//width: 20px;
+ }
 
 .row
 {
@@ -74,6 +81,24 @@ body {
  }
  
 #sndBtnA
+{
+	width: 30px;
+	height: 40px;
+}
+
+ #musicOn
+ {
+	height: 18px;
+	top: 18px;
+	display: none;
+ }
+ 
+ #musicOff {
+	top: 19px;
+	height: 16px;
+ }
+ 
+#musicBtnA
 {
 	width: 30px;
 	height: 40px;
@@ -220,10 +245,9 @@ body {
 
 #newAchIcon
 {
-	display: inline-block;
-	margin-right: 20px;
-	margin-top: -50px;
-	margin-left: 30px;
+	position: absolute;
+	top: 30px;
+	left: 40px;
 	width: 80px;
 	height: 80px;
 }
@@ -232,6 +256,7 @@ body {
 {
 	margin-top: 15px;
 	margin-right: 30px;
+	margin-left: 140px;
 	display: inline-block;
 	font-family: lovemonster, sans-serif;
 }

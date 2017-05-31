@@ -8,11 +8,32 @@ export class GamesoundsService {
    //prefix: String = '/assets/';
 
   achievementsSounds: string = 'wygranko.mp3';
+  
+  musicSounds: string = 'piosenka.mp3';
+  isMusicPlay = false;
+  sndAudio = null;
 
   constructor(public gs: GameState) {
 	this.gs.structuresUpdated.subscribe( res => { this.loadStructuresSounds() });
 	this.gs.upgradesUpdated.subscribe( res => { this.loadUpgradesSounds() });
 	new Audio(this.prefix+this.achievementsSounds+"");
+	
+	this.sndAudio = new Audio(this.prefix+this.musicSounds+"");
+	if (typeof this.sndAudio.loop == 'boolean')
+	{
+		this.sndAudio.loop = true;
+	}
+	else
+	{
+		this.sndAudio.addEventListener('ended', function() {
+			this.currentTime = 0;
+			this.play();
+		}, false);
+	}
+	
+	setInterval(() => {
+      this.playMusic();
+    }, 500);
   }
 
   loadStructuresSounds() {   
@@ -64,5 +85,22 @@ export class GamesoundsService {
     }
 		const snd = new Audio(this.prefix+this.achievementsSounds+"");
 		snd.play();
+  }
+  
+  playMusic()
+  {
+	var btnOn = $('#musicOn').css('display') !== 'none';
+	if(btnOn == this.isMusicPlay)
+		return;
+		
+	if(btnOn)
+	{
+		this.sndAudio.play();
+	}
+	else
+	{
+		this.sndAudio.pause();
+	}
+	this.isMusicPlay= btnOn;
   }
 }
