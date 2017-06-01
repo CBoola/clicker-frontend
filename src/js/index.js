@@ -29,7 +29,7 @@ $(document).ready(function () {
 
   function load_player_info() {
     if (player_id === null) {
-      $("#whoiam").html("N/A");
+	  location.href= "/";
       return;
     }
 
@@ -37,7 +37,12 @@ $(document).ready(function () {
       dataType: "json",
       url: "/api/player/" + player_id
     }).done(function (data) {
-      $("#whoiam").html("Zalogowany: "+data["name"]);
+	  var whoiam = $("#whoiam");
+      whoiam.html("Zalogowany: "+data["name"]);
+	  var width_w = parseInt(whoiam.css("width"))/4;
+	  var new_left= 50 - width_w;
+	  whoiam.css("margin-left", new_left+"px");
+      
     });
   }
 

@@ -331,7 +331,7 @@ export class GameState {
 	
 	
     const stateJson = JSON.stringify(state);
-    console.log(stateJson);
+    //console.log(stateJson);
 
     $.ajax({
       headers: {
