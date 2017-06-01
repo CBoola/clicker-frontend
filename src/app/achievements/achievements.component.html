@@ -1,0 +1,48 @@
+<div id="achievementsMain">
+	<div id="topFrame" class="horizontalFrame"></div>
+	<div id="bottomFrame" class="horizontalFrame"></div>
+	<div id="leftFrame" class="verticalFrame"></div>
+	<div id="rightFrame" class="verticalFrame"></div>
+
+	<div id="leftTop1Corner" class="corner"></div>
+	<div id="leftTop2Corner" class="corner"></div>
+	<div id="rightTop1Corner" class="corner"></div>
+	<div id="rightTop2Corner" class="corner"></div>
+	<div id="leftBottomCorner" class="corner"></div>
+	<div id="rightBottomCorner" class="corner"></div>
+	<div id="containerLabel"></div>
+	
+	<div class="achievementsContent" id="style">
+		
+		<div id="achievementsGroup">
+			<div *ngFor="let str of this.gs.structures" class="achGroupLabel noselect noIbar">
+				{{this.structureNameFilter(str.name)}}
+			</div>
+			<div class="achGroupLabel noselect noIbar">zbieractwo</div>
+			<div class="achGroupLabel noselect noIbar">wydawanie</div>
+		</div>
+		
+		<div id="achievementsBricks">
+			<div class="achievement" *ngFor="let ach of this.gs.achievements; let i = index;" (mouseover)="onMouseover($event, i)" (mouseout)="onMouseout($event)" (mousemove)="onMousemove($event)">
+				<img class="achievementIcon" src="{{ach.icon}}" [ngClass]="{'notAchieved': !this.isAchieved(i)}" />
+			</div>
+		</div>
+	</div>
+	
+	<div id="infoBox">
+		<div id="topFrameInfo" class="horizontalFrameInfo"></div>
+		<div id="bottomFrameInfo" class="horizontalFrameInfo"></div>
+		<div id="leftFrameInfo" class="verticalFrameInfo"></div>
+		<div id="rightFrameInfo" class="verticalFrameInfo"></div>
+		
+		<div id="leftTopCornerInfo" class="cornerInfo"></div>
+		<div id="rightTopCornerInfo" class="cornerInfo"></div>
+		<div id="leftBottomCornerInfo" class="cornerInfo"></div>
+		<div id="rightBottomCornerInfo" class="cornerInfo"></div>
+	
+		<div id="infoContainer">
+			<div id="infoTitle">Achievement</div>
+			<div id="infoDate">Zdobyto: YYYY.MM.DD HH:MM</div>
+		</div>
+	</div>
+</div>

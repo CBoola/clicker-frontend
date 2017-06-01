@@ -1,0 +1,330 @@
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently supported by Chrome and Opera */
+}
+
+.noIbar {
+  cursor: default;
+}
+
+#achievementsMain {
+  width: 600px;
+  height: 600px;
+  background-color: #fdf5e0;
+}
+
+.achievementsContent {
+  position: absolute;
+  left: 0px;
+  height: 580px;
+  overflow-y: scroll;
+  width: 601px;
+  top: 20px;
+  padding-top: 20px;
+  padding: 10px;
+  z-index: 9;
+}
+
+#achievementsBricks
+{
+	position: absolute;
+	left: 44%;
+	width: 55%;
+	margin-bottom: 40px;
+	margin-top: 30px;
+	padding-right: 22px
+}
+
+#achievementsGroup
+{
+	position: absolute;
+	left: 0px;
+	width: 40%;
+	margin-bottom: 40px;
+	margin-top: 30px;
+	padding-left: 4px;
+}
+
+.achGroupLabel
+{
+	margin-left: 47px;
+	font-family: lovemonster;
+	font-size: 45px;
+	color: #9a6d38;
+	margin-bottom: 6px;
+}
+
+#topFrame {
+  top: 0;
+  height: 40px;
+}
+
+#bottomFrame {
+  bottom: 0;
+  height: 20px;
+}
+
+#leftFrame {
+  left: 0;
+}
+
+#rightFrame {
+  right: 0;
+}
+
+.horizontalFrame {
+  position: absolute;
+  width: 585px;
+  background-image: url("../../assets/horizontal.png");
+  background-size: contain;
+  z-index: 10;
+  margin: -2px 14px -2px 7px;
+}
+
+.verticalFrame {
+  position: absolute;
+  width: 15px;
+  height: 570px;
+  background-image: url("../../assets/vertical.png");
+  background-size: contain;
+  margin-left: -2px;
+  margin-right: -2px;
+  z-index: 5;
+  margin-top: 25px;
+}
+
+#leftTop1Corner {
+  left: 0;
+  top: 0;
+  margin-left: -5px;
+  margin-top: -3px;
+  width: 22px;
+  height: 22px;
+}
+
+#leftTop2Corner {
+  left: 0;
+  top: 20px;
+  margin-left: -5px;
+  margin-top: -2px;
+  width: 22px;
+  height: 22px;
+}
+
+#rightTop1Corner {
+  right: 0;
+  top: 0;
+  margin-right: -5px;
+  margin-top: -3px;
+  width: 22px;
+  height: 22px;
+}
+
+#rightTop2Corner {
+  right: 0;
+  top: 20px;
+  margin-right: -5px;
+  margin-top: -2px;
+  width: 22px;
+  height: 22px;
+}
+
+#leftBottomCorner {
+  left: 0;
+  bottom: 0;
+  margin-left: -6px;
+  margin-bottom: -2px;
+  width: 22px;
+  height: 22px;
+}
+
+#rightBottomCorner {
+  right: 0;
+  bottom: 0;
+  margin-right: -6px;
+  margin-bottom: -2px;
+  width: 22px;
+  height: 22px;
+}
+
+.corner {
+  position: absolute;
+  background-image: url("../../assets/trunk.svg");
+  background-size: contain;
+  z-index: 15;
+}
+
+@font-face {
+  font-family: 'lovemonster';
+  src: url('../../assets/lovemonster.ttf') format('ttf'),
+  url('../../assets/lovemonster.ttf') format('truetype'); /* Safari, Android, iOS */
+}
+
+.achievement
+{
+	width: 50px;
+	height: 50px;
+	display: inline-block;
+	margin: 10px;
+	margin-left: 15px;
+}
+
+.achievementIcon
+{
+	width: 44px;
+	height: 44px;
+}
+
+#infoBox
+{
+	display: none;
+	position: absolute;
+	background-color: #fdf5e0;
+	top: 130px;
+	left: 130px;
+	z-index: 1000;
+	font-family: lovemonster;
+	font-size: 20px;
+}
+
+#infoTitle
+{
+	color: #9a6d38;
+	margin-bottom: -12px;
+	font-size: 30px;
+	max-height: 50px;
+	white-space: nowrap;
+}
+
+#infoDate
+{
+	//color: #7a3827;
+	color: #9a6d38;
+	font-size: 25px;
+	white-space: nowrap;
+}
+
+.notAchieved
+{
+	opacity: 0.65;
+	//-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    //filter: grayscale(100%);
+}
+
+#containerLabel {
+  position: absolute;
+  top: 4px;
+  left: 0;
+  width: 100%;
+  height: 31px;
+  background: url("../../assets/osiagniecia.svg") no-repeat center;
+  background-size: contain;
+  z-index: 100;
+}
+
+#style::-webkit-scrollbar-track
+{
+	background-image: url("../../assets/vertical.png");
+  background-size: contain;
+}
+
+#style::-webkit-scrollbar
+{
+	width: 15px;
+}
+
+#style::-webkit-scrollbar-thumb
+{
+  background-color: rgba(253, 245, 224, 0.5);
+  border-radius: 8px;
+  border: 3px solid transparent;
+  background-clip: content-box;
+}
+
+#topFrameInfo {
+  top: 0;
+}
+
+#bottomFrameInfo{
+  bottom: 0;
+}
+
+#leftFrameInfo {
+  left: 0;
+}
+
+#rightFrameInfo {
+  right: 0;
+}
+
+.horizontalFrameInfo {
+  position: absolute;
+  width: 100%;
+  height: 8px;
+  background-image: url("../../assets/horizontal_popup.png");
+  background-size: contain;
+  z-index: 10;
+  margin-top: -2px;
+  margin-bottom: -2px;
+}
+
+.verticalFrameInfo {
+  position: absolute;
+  width: 8px;
+  height: 100%;
+  background-image: url("../../assets/vertical_popup.png");
+  background-size: contain;
+  margin-left: -2px;
+  margin-right: -2px;
+  z-index: 5;
+}
+
+#infoContainer
+{
+	padding: 10px;
+	padding-left: 25px;
+	padding-right: 25px;
+	text-align: center;
+}
+
+#leftTopCornerInfo {
+  left: 0;
+  top: 0px;
+  margin-left: -6px;
+  margin-top: -4px;
+}
+
+#rightTopCornerInfo {
+  right: 0;
+  top: 0;
+  margin-right: -6px;
+  margin-top: -4px;
+}
+
+#leftBottomCornerInfo {
+  left: 0;
+  bottom: 0;
+  margin-left: -6px;
+  margin-bottom: -4px;
+}
+
+#rightBottomCornerInfo {
+  right: 0;
+  bottom: 0;
+  margin-right: -6px;
+  margin-bottom: -4px;
+}
+
+.cornerInfo {
+  position: absolute;
+  background-image: url("../../assets/trunk_popup.png");
+  background-size: contain;
+  z-index: 15;
+  width: 14px;
+  height: 14px;
+}

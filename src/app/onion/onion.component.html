@@ -1,0 +1,16 @@
+<div class="center">
+  <div id="mainOnionContainer" class="noIbar">
+    <div id="mainOnion" (click)="clicked($event)"></div>
+
+    <!--(mousedown)="mousedown()" (mouseup)="mouseup()"></div>-->
+    <div id="radialStripes1" style="background-image: url('assets/radial_stripes.svg')"></div>
+    <div id="radialStripes2" style="background-image: url('assets/radial_stripes.svg')"></div>
+
+    <div id="onionCounter" class="noselect">
+      cebule: {{ this.gs.printOnions(this.gs.onions) }}
+    </div>
+    <div id="onionPerSecond" class="noselect">
+      <img id="plusPerSecond" src="assets/plus.svg"/> {{ this.gs.formatedOnionValue(this.gs.onionPerSecond) }} / sec
+    </div>
+  </div>
+</div>

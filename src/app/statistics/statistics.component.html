@@ -1,0 +1,39 @@
+<div id="statisticsMain">
+  <div id="topFrame" class="horizontalFrame"></div>
+  <div id="bottomFrame" class="horizontalFrame"></div>
+  <div id="leftFrame" class="verticalFrame"></div>
+  <div id="rightFrame" class="verticalFrame"></div>
+
+  <div id="leftTop1Corner" class="corner"></div>
+  <div id="leftTop2Corner" class="corner"></div>
+  <div id="rightTop1Corner" class="corner"></div>
+  <div id="rightTop2Corner" class="corner"></div>
+  <div id="leftBottomCorner" class="corner"></div>
+  <div id="rightBottomCorner" class="corner"></div>
+
+  <div id="statisticsContent">
+    <div id="containerLabel"></div>
+    <div id="numberOfCliksLabel" class="labelDiv textDiv noselect noIbar">Kliknięcia w cebule:</div>
+    <div id="numberOfCliksValue" class="textDiv noselect noIbar">
+      {{this.gs.formatedOnionValue(this.gs.statisticsValue.number_of_clicks) }}
+    </div>
+    <div id="numberOfTookOnionsLabel" class="textDiv noselect noIbar">Łącznie zebrane cebule:</div>
+    <div id="numberOfTookOnionsValue" class="textDiv noselect noIbar">{{
+      this.gs.printOnions(this.gs.statisticsValue.collected_cash)}}
+    </div>
+    <div id="numberOfTookOnionsByClickLabel" class="textDiv noselect noIbar">Cebule zebrane kliknięciem:</div>
+    <div id="numberOfTookOnionsByClickValue" class="textDiv noselect noIbar">
+      {{this.gs.formatedOnionValue(this.gs.statisticsValue.cash_from_clicks)}}
+    </div>
+    <div id="numberOfSpendOnionsLabel" class="textDiv noselect noIbar">Łącznie wydane cebule:</div>
+    <div id="numberOfSpendOnionsValue" class="textDiv noselect noIbar">
+      {{this.gs.formatedOnionValue(this.gs.statisticsValue.spent_cash)}}
+    </div>
+    <div id="numberOfStructuresLabel" class="textDiv noselect noIbar">Kupione struktury:</div>
+    <div id="numberOfStructuresValue" class="textDiv noselect noIbar">{{this.gs.numOfAllStructures()}}</div>
+    <div id="numberOfUpgradesLabel" class="textDiv noselect noIbar">Kupione ulepszenia:</div>
+    <div id="numberOfUpgradesValue" class="textDiv noselect noIbar">{{this.gs.numOfAllUpgrades()}}</div>
+    <div id="numberOfDateLabel" class="textDiv noselect noIbar">Rozpoczęcie przygody:</div>
+    <div id="numberOfDateValue" class="textDiv noselect noIbar">{{this.gs.getStartDate()}}</div>
+  </div>
+</div>

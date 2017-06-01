@@ -1,58 +1,144 @@
-<!doctype html>
-<html>
+<html lang="pl-PL">
 <head>
   <meta charset="utf-8">
-  <title>Cebula Kliker</title>
   <base href="/">
-
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <title>Cebula Kliker</title>
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+          integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+          crossorigin="anonymous"></script>
 </head>
 <body>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-	<script src="index.js"></script>
+<div id="bodypaint"></div>
+<div id="grassContainer"></div>
+<div id="statisticsContainer">
+	<app-statistics></app-statistics>
+</div>
+<div id="achievementsContainer">
+	<app-achievements></app-achievements>
+</div>
+<div id="newAchievement">
+  <div id="topFrame" class="horizontalFrame"></div>
+  <div id="bottomFrame" class="horizontalFrame"></div>
+  <div id="leftFrame" class="verticalFrame"></div>
+  <div id="rightFrame" class="verticalFrame"></div>
+  <div id="leftTopCorner" class="corner"></div>
+  <div id="rightTopCorner" class="corner"></div>
+  <div id="leftBottomCorner" class="corner"></div>
+  <div id="rightBottomCorner" class="corner"></div>
+	<div>
+		<img id="newAchIcon" />
+		<div id="newAchName">
+			<div id="newAchInfo">Zdobyto nowe osiągnięcie</div>
+			<div id="newAchTitle">???????????????????????????????????????????????</div>
+		</div>
+	</div>
+</div>
 
 <center>
+  <div class="container">
+    <!-- miejsce na reklame -->
+    <div class="aContainer noselect">
+      <div id="ads" class="carousel" data-ride="carousel" data-pause="false">
+        <div class="carousel-inner">
+          <div class="item active">
+            <img class="carouselImg" src="assets/ad2.png"/>
+          </div>
+          <div class="item">
+            <img class="carouselImg" src="assets/ad3.png"/>
+          </div>
+		  <div class="item">
+            <img class="carouselImg" src="assets/ad4.png"/>
+          </div>
 
-<div>
-	<img src="http://www.natureexports.co.in/images/red-onion-banner.jpg" width="520" height="125" />
-</div> <!-- miejsce na reklame -->
-<hr/>
-<div id="loginContainer"> <!-- obsluga zalogowania -->
-	<table>
-            <tr>
-                <td>Status zalogowania:</td>
-                <td id="is_logged"></td>
-            </tr>
+          <!-- szablon reklamy
+          <div class="item">
+            <img src="path"/>
+          </div>
+          -->
+        </div>
+      </div>
+    </div>
 
-            <tr>
-                <td>Imie i nazwisko:</td>
-                <td id="whoiam"></td>
-            </tr>
-        </table><br/>
+    <!--pasek nawigacyjny -->
+    <div class="navbar navbar-default navbar-static-top">
+      <div class="navbar-header headerSeparator"></div>
+	  <div class="navbar-header noselect noIbar">
+        <a href="/" class="navbar-brand"> Cebula Kliker </a>
+        <div id="whoiam" class="noIbar">Zalogowano:</div>
 
-        <a id="home" href="/">Strona główna</a>
-        <a id="logout" href="/logout">Wyloguj się</a>
-</div>
+        <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+          <div class="collapse navbar-collapse navHeaderCollapse">
+            <ul class="nav navbar-nav navbar-right">
+				<li><a class="noselect" id="musicBtnA" href="#"><img id="musicOn" class="musicBtn" src="assets/music_on.svg"/><img id="musicOff" class="musicBtn" src="assets/music_off.svg"/></a></li>
+				<li><a class="noselect" id="sndBtnA" href="#"><img id="sndOn" class="soundsBtn" src="assets/sound_on.svg"/><img id="sndOff" class="soundsBtn" src="assets/sound_off.svg"/></a></li>
+				<li><a href="#" id="achievementsBtn"><div id="achievementsBtnImg"></div></a></li>
+				<li><a href="#" id="statisticsBtn"><div id="statisticsBtnImg"></div></a></li>
+				<li><a href="/api/logout" id="logoutBtn"><div id="logoutBtnImg"></div></a></li>
+				<li><div class="rightSeparator"></div></li>
+            </ul>
+          </div>
+      </div>
 
+    <!-- sekcja na cebule i ulepszenia -->
 
-<div id="onionCounter"><!-- sekcja na licznik -->
-	0 cebul
-</div>
-<div> <!-- sekcja na cebule i ulepszenia -->
-	<div id="onionContainer" style="display: inline-block"> <!-- cebula -->
-		<img id="mainOnion" src="http://www.pngmart.com/files/1/Onion-Vector-PNG-Clipart.png" />
-	</div>
-	<div style="display: inline-block"> <!-- ulepszenia -->
-		Struktury:<br/>
-		<app-structure>aaa</app-structure>
-	</div>
-</div>
-<div> <!-- sekcja na osiagniecia -->
-	achievementy
-</div>
+    <!-- cebula -->
+    <div class="row">
 
-<app-root>Loading...</app-root>
+      <div class="col-lg-4" id="onionContainer">
+        <app-onion></app-onion>
+      </div>
+      <!-- ulepszenia -->
+      <div class="col-lg-4" id="uppContainer">
+        <div class="panel-group">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+                <h4 class="panel-title">
+                  <div id="struktury_title" class="noselect"></div>
+                </h4>
+              </a>
+            </div>
+            <div id="collapse1" class="panel-collapse collapse in">
+              <div class="panel-body" style="border-style: none">
+                <app-structure></app-structure>
+              </div>
+              <div class="panel-footer"></div>
+            </div>
+          </div>
+        </div>
+		<br/>
+        <div class="panel-group">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+                <h4 class="panel-title">
+                  <div id="ulepszenia_title" class="noselect"></div>
+                </h4>
+              </a>
+            </div>
+            <div id="collapse2" class="panel-collapse collapse in">
+              <div class="panel-body" style="border-style: none">
+                <app-upgrade></app-upgrade>
+              </div>
+              <div class="panel-footer"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
 </center>
 </body>
 </html>

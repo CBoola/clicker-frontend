@@ -1,0 +1,182 @@
+.center {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.noIbar {
+  cursor: default;
+}
+
+#mainOnionContainer {
+  width: 600px;
+  margin: auto;
+  height: 100%;
+  position: relative;
+}
+
+#mainOnion {
+  -webkit-clip-path: polygon(28% 12%, 68% 12%, 75% 100%, 25% 100%);
+  clip-path: polygon(28% 12%, 68% 12%, 75% 100%, 25% 100%);
+  background: no-repeat center;
+  background-size: contain;
+  width: 600px;
+  height: 600px;
+  left: 5px;
+  top: 5px;
+  margin-left: 0px;
+  margin-top: -40px;
+  background-image: url('../../assets/onion_glow.svg');
+}
+
+#radialStripes1 {
+  top: 25px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: no-repeat center;
+  background-size: 100% 100%;
+  z-index: 1;
+
+  -webkit-animation-name: spin1;
+  -webkit-animation-duration: 40000ms;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-name: spin1;
+  -moz-animation-duration: 40000ms;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: linear;
+  -ms-animation-name: spin1;
+  -ms-animation-duration: 40000ms;
+  -ms-animation-iteration-count: infinite;
+  -ms-animation-timing-function: linear;
+
+  animation-name: spin1;
+  animation-duration: 40000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+#radialStripes2 {
+  top: 25px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: no-repeat center;
+  background-size: 100% 100%;
+  z-index: 2;
+  opacity: 0.5;
+
+  -webkit-animation-name: spin2;
+  -webkit-animation-duration: 40000ms;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-name: spin2;
+  -moz-animation-duration: 40000ms;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: linear;
+  -ms-animation-name: spin2;
+  -ms-animation-duration: 40000ms;
+  -ms-animation-iteration-count: infinite;
+  -ms-animation-timing-function: linear;
+
+  animation-name: spin2;
+  animation-duration: 40000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@-moz-keyframes spin1 {
+  from {
+    -moz-transform: rotate(0deg);
+  }
+  to {
+    -moz-transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes spin1 {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin1 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@-moz-keyframes spin2 {
+  from {
+    -moz-transform: rotate(0deg);
+  }
+  to {
+    -moz-transform: rotate(-360deg);
+  }
+}
+
+@-webkit-keyframes spin2 {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(-360deg);
+  }
+}
+
+@keyframes spin2 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+@font-face {
+  font-family: 'Semringah';
+  src: url('../../assets/Semringah.ttf') format('ttf'),
+  url('../../assets/Semringah.ttf') format('truetype'); /* Safari, Android, iOS */
+}
+
+#onionCounter {
+  font-size: 50px;
+  background: -webkit-linear-gradient(#91522c, #7a3827);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Semringah", sans-serif;
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+  z-index: 10;
+}
+
+#onionPerSecond {
+  font-size: 30px;
+  background: -webkit-linear-gradient(#91522c, #7a3827);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Semringah", sans-serif;
+  position: absolute;
+  bottom: -20px;
+  right: 0;
+  left: 0;
+  margin: auto;
+  z-index: 10;
+}
+
+#plusPerSecond {
+  width: 10px;
+  height: 10px;
+  margin-bottom: 5px;
+}

@@ -1,18 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { Http, Response, Headers, RequestOptions } from '@angular/http';
-
-/*
-declare var require: {
-    <T>(path: string): T;
-    (paths: string[], callback: (...modules: any[]) => void): void;
-    ensure: (paths: string[], callback: (require: <T>(path: string) => T) => void) => void;
-};
-*/
-
-interface Structure
-{
-	name:String;
-}
+import {Component, OnInit} from '@angular/core';
+import {GameState} from '../gamestate/gamestate';
+import {GamesoundsService} from '../gamesounds/gamesounds';
 
 @Component({
   selector: 'app-structure',
@@ -21,17 +9,40 @@ interface Structure
 })
 export class StructureComponent implements OnInit {
 
-   structures:Array<Structure> = [];
-  
-  constructor(private http: Http) 
-  { 
-
-	this.http.get('http://51.255.167.114/api/structure/?format=json')
-		.subscribe(data => this.structures = data.json() );
-    
+  constructor(public gs: GameState, public snd: GamesoundsService) {
   }
 
-  
+  clicked(index) {
+    const structureId = this.gs.structures[index].system_id;
+    const price: number = this.priceForLevel(index);
+    // console.log(price+" "+onions);
+    if (price <= this.gs.onions) {
+      this.gs.onions -= price;
+      this.gs.numberOfStructures[structureId]++;
+      this.gs.statisticsValue.spent_cash += price;
+
+      this.snd.playStructureSound(index);
+	  this.gs.structureBought.emit(structureId);
+    }
+    this.gs.onionsPerSecond();
+  }
+
+  priceForLevel2(structureIndex: number, boughtLevels: number) {
+    return Math.round(this.gs.structures[structureIndex].base_prize * Math.pow(1.15, boughtLevels)) * this.gs.appleMultiplier;
+  }
+
+  priceForLevel(structureIndex: number) {
+    const structureId = this.gs.structures[structureIndex].system_id;
+    return this.priceForLevel2(structureIndex, this.gs.numOfStructure(structureId));
+  }
+
+  showStructure(index: number) {
+    if (index === 0) {
+      return true;
+    }
+    return this.gs.numOfStructure(index) > 0;
+  }
+
   ngOnInit() {
   }
 

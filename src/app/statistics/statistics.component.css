@@ -1,0 +1,225 @@
+#statisticsMain {
+  width: 600px;
+  height: 600px;
+}
+
+#statisticsContent {
+  position: absolute;
+  width: 580px;
+  height: 570px;
+  left: 10px;
+  top: 20px;
+  background-color: #fdf5e0;
+}
+
+#topFrame {
+  top: 0;
+  height: 40px;
+}
+
+#bottomFrame {
+  bottom: 0;
+  height: 20px;
+}
+
+#leftFrame {
+  left: 0;
+}
+
+#rightFrame {
+  right: 0;
+}
+
+.horizontalFrame {
+  position: absolute;
+  width: 585px;
+  background-image: url("../../assets/horizontal.png");
+  background-size: contain;
+  z-index: 10;
+  margin: -2px 14px -2px 7px;
+}
+
+.verticalFrame {
+  position: absolute;
+  width: 15px;
+  height: 570px;
+  background-image: url("../../assets/vertical.png");
+  background-size: contain;
+  margin-left: -2px;
+  margin-right: -2px;
+  z-index: 5;
+  margin-top: 25px;
+}
+
+#leftTop1Corner {
+  left: 0;
+  top: 0;
+  margin-left: -5px;
+  margin-top: -3px;
+  width: 22px;
+  height: 22px;
+}
+
+#leftTop2Corner {
+  left: 0;
+  top: 20px;
+  margin-left: -5px;
+  margin-top: -2px;
+  width: 22px;
+  height: 22px;
+}
+
+#rightTop1Corner {
+  right: 0;
+  top: 0;
+  margin-right: -5px;
+  margin-top: -3px;
+  width: 22px;
+  height: 22px;
+}
+
+#rightTop2Corner {
+  right: 0;
+  top: 20px;
+  margin-right: -5px;
+  margin-top: -2px;
+  width: 22px;
+  height: 22px;
+}
+
+#leftBottomCorner {
+  left: 0;
+  bottom: 0;
+  margin-left: -6px;
+  margin-bottom: -2px;
+  width: 22px;
+  height: 22px;
+}
+
+#rightBottomCorner {
+  right: 0;
+  bottom: 0;
+  margin-right: -6px;
+  margin-bottom: -2px;
+  width: 22px;
+  height: 22px;
+}
+
+.corner {
+  position: absolute;
+  background-image: url("../../assets/trunk.svg");
+  background-size: contain;
+  z-index: 15;
+}
+
+@font-face {
+  font-family: 'lovemonster';
+  src: url('../../assets/lovemonster.ttf') format('ttf'),
+  url('../../assets/lovemonster.ttf') format('truetype'); /* Safari, Android, iOS */
+}
+
+.textDiv {
+  color: #9a6d38;
+  font-family: lovemonster, sans-serif;
+  font-size: 40px;
+  font-weight: normal;
+}
+
+.labelDiv {
+  font-weight: 500;
+}
+
+#numberOfCliksLabel {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}
+
+#numberOfCliksValue {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+}
+
+#numberOfTookOnionsLabel {
+  position: absolute;
+  top: 90px;
+  left: 30px;
+}
+
+#numberOfTookOnionsValue {
+  position: absolute;
+  top: 90px;
+  right: 30px;
+}
+
+#numberOfTookOnionsByClickLabel {
+  position: absolute;
+  top: 150px;
+  left: 30px;
+}
+
+#numberOfTookOnionsByClickValue {
+  position: absolute;
+  top: 150px;
+  right: 30px;
+}
+
+#numberOfSpendOnionsLabel {
+  position: absolute;
+  top: 210px;
+  left: 30px;
+}
+
+#numberOfSpendOnionsValue {
+  position: absolute;
+  top: 210px;
+  right: 30px;
+}
+
+#numberOfStructuresLabel {
+  position: absolute;
+  top: 270px;
+  left: 30px;
+}
+
+#numberOfStructuresValue {
+  position: absolute;
+  top: 270px;
+  right: 30px;
+}
+
+#numberOfUpgradesLabel {
+  position: absolute;
+  top: 330px;
+  left: 30px;
+}
+
+#numberOfUpgradesValue {
+  position: absolute;
+  top: 330px;
+  right: 30px;
+}
+
+#numberOfDateLabel {
+  position: absolute;
+  top: 390px;
+  left: 30px;
+}
+
+#numberOfDateValue {
+  position: absolute;
+  top: 390px;
+  right: 30px;
+}
+
+#containerLabel {
+  position: absolute;
+  top: -17px;
+  left: 0;
+  width: 100%;
+  height: 31px;
+  background: url("../../assets/statystyki.svg") no-repeat center;
+  background-size: contain;
+  z-index: 100;
+}
